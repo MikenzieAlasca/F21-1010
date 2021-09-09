@@ -48,3 +48,11 @@ The prompt for the file name will go to ouptut.txt so remember to type in
 your file name.
 
 
+## Links to get the function readNameList
+
+[https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-06/readNameList.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-06/readNameList.py)
+
+
+# Copyright
+
+Copyright (C) University of Wyoming, 2021.
