@@ -35,11 +35,11 @@ French economist’s bestseller “Capital in the Twenty-First Century.”
 ...    he has also fallen prey to sloppy spreadsheets."
 5. Functions
 ```
-def fucntion_name ( parameter1, parameter2 ):
+def fucntion_name ( input1, input2 ):
    do_someting...
    return ( output )
 ```
-6. Input a number
+6. Input a number - differences between strings and numbers and integers and floats
 
 
 ## "if" / True / False
@@ -85,10 +85,29 @@ m4_include(ticket_price.py.nu)
 
 
 
+## Order of Evaluation
+
+```
+m4_include(ticket_price2.py.nu)
+```
+
+## Common Errors - leaving out cases in the logic.
+
+```
+m4_include(ticket_price3.py.nu)
+```
 
 
 
 
+## "and" and "or"
+
+-- TODO
+
+
+## calling functions 
+
+-- TODO
 
 
 

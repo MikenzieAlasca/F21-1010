@@ -763,12 +763,12 @@ French economist’s bestseller “Capital in the Twenty-First Century.”
 
 <li><p>Functions</p>
 
-<pre><code>def fucntion_name ( parameter1, parameter2 ):
+<pre><code>def fucntion_name ( input1, input2 ):
 do_someting...
 return ( output )
 </code></pre></li>
 
-<li><p>Input a number</p></li>
+<li><p>Input a number - differences between strings and numbers and integers and floats</p></li>
 </ol>
 
 <h2>&ldquo;if&rdquo; / True / False</h2>
@@ -803,9 +803,9 @@ return ( output )
 Adult tickets age 18-69 are $59, Youth 5-12 are $40, Teen are $52, Children 4 and under are free, seniors 70 and older are free.</p>
 
 <pre><code>  1: 
-  2: print ( &quot;Input Age&quot; )
+  2: print ( &quot;Input Age\n=&gt; &quot;, end=&quot;&quot; )
   3: age_str = input()
-  4: age = int(str)
+  4: age = int(age_str)
   5: 
   6: ticket_price = 0
   7: if age &lt;= 4:
@@ -816,12 +816,63 @@ Adult tickets age 18-69 are $59, Youth 5-12 are $40, Teen are $52, Children 4 an
  12:     ticket_price = 52
  13: elif age &gt;= 18 and age &lt;= 70:
  14:     ticket_price = 59
- 15: else 
+ 15: else:
  16:     ticket_price = 0
  17: 
- 18: print ( &quot;Ticket Price {}&quot;.format(ticket_price) )
+ 18: print ( &quot;Ticket Price ${}.00 dollars&quot;.format(ticket_price) )
 
 </code></pre>
+
+<h2>Order of Evaluation</h2>
+
+<pre><code>  1: 
+  2: print ( &quot;Input Age\n=&gt; &quot;, end=&quot;&quot; )
+  3: age_str = input()
+  4: age = int(age_str)
+  5: 
+  6: ticket_price = 0
+  7: if age &lt;= 4:
+  8:     ticket_price = 0
+  9: elif age &lt;= 12:
+ 10:     ticket_price = 40
+ 11: elif age &lt;= 17:
+ 12:     ticket_price = 52
+ 13: elif age &lt;= 70:
+ 14:     ticket_price = 59
+ 15: else:
+ 16:     ticket_price = 0
+ 17: 
+ 18: print ( &quot;Ticket Price ${}.00 dollars&quot;.format(ticket_price) )
+
+</code></pre>
+
+<h2>Common Errors - leaving out cases in the logic.</h2>
+
+<pre><code>  1: 
+  2: 
+  3: print ( &quot;Input Age\n=&gt; &quot;, end=&quot;&quot; )
+  4: age_str = input()
+  5: age = int(age_str)
+  6: 
+  7: ticket_price = 59
+  8: if age &lt;= 4:
+  9:     ticket_price = 0
+ 10: elif age &lt;= 12:
+ 11:     ticket_price = 40
+ 12: elif age &lt;= 17:
+ 13:     ticket_price = 52
+ 14: 
+ 15: print ( &quot;Ticket Price ${}.00 dollars&quot;.format(ticket_price) )
+
+</code></pre>
+
+<h2>&ldquo;and&rdquo; and &ldquo;or&rdquo;</h2>
+
+<p>-- TODO</p>
+
+<h2>calling functions</h2>
+
+<p>-- TODO</p>
 
 <h1>Copyright</h1>
 

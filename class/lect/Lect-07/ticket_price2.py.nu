@@ -6,11 +6,11 @@
   6: ticket_price = 0
   7: if age <= 4:
   8:     ticket_price = 0
-  9: elif age >= 5 and age <= 12:
+  9: elif age <= 12:
  10:     ticket_price = 40
- 11: elif age >= 13 and age <= 17:
+ 11: elif age <= 17:
  12:     ticket_price = 52
- 13: elif age >= 18 and age <= 70:
+ 13: elif age <= 70:
  14:     ticket_price = 59
  15: else:
  16:     ticket_price = 0
