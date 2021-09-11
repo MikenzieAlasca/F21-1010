@@ -710,7 +710,57 @@ ol {
 
 <h1>Lab 3 - Questions</h1>
 
-<p>Write a markdown file and answer 2 questions.</p>
+<p>Path to github.com for class to: <a href="https://github.com/Univ-Wyo-Education/F21-1010/">https://github.com/Univ-Wyo-Education/F21-1010</a></p>
+
+<p>Use &ldquo;git&rdquo; to checkout a clone of the class.</p>
+
+<pre><code>$ git clone git@github.com:Univ-Wyo-Education/F21-1010.git
+$ cd F21-1010
+$ pwd
+</code></pre>
+
+<p>Find the &ldquo;&hellip;/lab/lab-03&rdquo; path and &hellip;</p>
+
+<pre><code>$ cd lab
+$ cd lab-03
+$ pwd
+</code></pre>
+
+<p>Using your program that counts words and lines and use it on the book
+Key-Out-of-Time_by_Andre-Norton.txt to find out how many words and
+lines in this novel.   You will need to make a copy of your program
+from where you developed it into this directory.
+The &ldquo;cp&rdquo; command is &ldquo;cp from-file to-directory-or-file&rdquo;
+My &ldquo;copy&rdquo; process for this was:</p>
+
+<pre><code>$ cp ../../../hw3/word-count.py .
+</code></pre>
+
+<p>Each of the &ldquo;../&rdquo; takes me up 1 directory.
+I did my work in hw3.
+I called the file word-count.py.
+the &ldquo;.&rdquo; at the end says - use the current directory.
+<em>Your copy command will be different because you probably did not use the same
+directory paths as I did.</em></p>
+
+<p>The to run it:</p>
+
+<pre><code>$ python word_count.py
+File Name
+Key-Out-of-Time_by_Andre-Nortion.txt
+...
+</code></pre>
+
+<p>Use a pipe to output to a file and turn in the output from running
+your program.</p>
+
+<pre><code>$ python yoru-word-count.py &gt;output.txt
+Key-Out-of-Time_by_Andre-Nortion.txt
+</code></pre>
+
+<p>Turn in the &ldquo;output.txt&rdquo; file for the lab.</p>
+
+<p>Then write a markdown file and answer 2 questions.</p>
 
 <ol>
 <li><p>(50pts)  How many words are in the 3 books.</p>
