@@ -2,7 +2,7 @@
 
 m4_include(../../../setup.m4)
 
-# Lecture 7 - Loops
+# Lecture 8 - Loops / For Loops / Range
 
 
 

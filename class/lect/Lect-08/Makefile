@@ -1,7 +1,7 @@
 
 PP=`pwd`
 FN=Lect-08
-#FN1=lab-word-count
+FN1=sqlite3
 #FN2=git
 DIR=../../../
 IMG=
@@ -13,7 +13,7 @@ all: setup all2
 setup:
 	./mk_all_nu.sh
 
-all2: ${FN}.html 
+all2: ${FN}.html ${FN1}.html 
 
 #${FN1}.html ${FN2}.html 
 
