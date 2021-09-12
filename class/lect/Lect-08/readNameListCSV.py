@@ -2,6 +2,7 @@
 
 import csv
 
+# readNameListCSV opens 'fn' and reads the CSV file into a dictory.
 def readNameListCSV(fn):
 
     f = open(fn,"r")
