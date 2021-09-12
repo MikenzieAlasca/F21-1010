@@ -16,10 +16,10 @@ phone_list = readNameList("50000phone.csv")
 print ( "Enter a Name to Lookup" )
 lookFor = input()
 found = False
-for i in range(len(phone_list)):
-    if lookFor in phone_list[i]:
+for v in phone_list:
+    if lookFor in v:
         found = True
-        print ( "Found {}".format(phone_list[i]) )
+        print ( "Found {}".format(v) )
 if not found:
     print ( "no names found" )
 

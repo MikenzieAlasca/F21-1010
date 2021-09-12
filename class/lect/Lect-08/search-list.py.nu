@@ -16,10 +16,10 @@
  16: print ( "Enter a Name to Lookup" )
  17: lookFor = input()
  18: found = False
- 19: for i in range(len(phone_list)):
- 20:     if lookFor in phone_list[i]:
+ 19: for v in phone_list:
+ 20:     if lookFor in v:
  21:         found = True
- 22:         print ( "Found {}".format(phone_list[i]) )
+ 22:         print ( "Found {}".format(v) )
  23: if not found:
  24:     print ( "no names found" )
  25: 
