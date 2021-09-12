@@ -723,6 +723,84 @@ for i in range(3):
 
 </code></pre>
 
+<p>So&hellip; This uses the &ldquo;range&rdquo; operator.  range encodes a
+set of values that can be used in a loop.</p>
+
+<pre><code>
+print ( range(5) )
+
+
+</code></pre>
+
+<p>When it is specified like this it is the same as <code>range(0, 5)</code>.</p>
+
+<p>A range is a start value that increments up to but not including
+the end value.  So <code>range(0, 5)</code>  will have values 0, 1, 2, 3, 4.</p>
+
+<p>This is useful whenever we have a loop to control how many times
+the loop will go around.</p>
+
+<p>Let&rsquo;s walk through a loop:</p>
+
+<pre><code>
+ll = [ &quot;dog&quot;, &quot;cat&quot;, &quot;goldfish&quot;, &quot;parakeet&quot; ]
+for i in range ( len(ll) ):
+	print ( &quot;i = {} list[{}] = {}&quot;.format ( i, i, ll[i] ) )
+
+</code></pre>
+
+<p>So we can use this to search a list:</p>
+
+<pre><code>
+ll = [ &quot;dog&quot;, &quot;cat&quot;, &quot;goldfish&quot;, &quot;parakeet&quot; ]
+for i in range ( len(ll) ):
+    if ll[i] == &quot;cat&quot;:
+        print ( &quot;found 'cat' in list! list[{}] = {}&quot;.format ( i, ll[i] ) )
+
+
+</code></pre>
+
+<p>We can also use  a for loop to go through the values in a list.</p>
+
+<pre><code>
+ll = [ &quot;dog&quot;, &quot;cat&quot;, &quot;goldfish&quot;, &quot;parakeet&quot; ]
+for i in range ( len(ll) ):
+    if ll[i] == &quot;cat&quot;:
+        print ( &quot;found 'cat' in list! list[{}] = {}&quot;.format ( i, ll[i] ) )
+
+
+</code></pre>
+
+<p>So&hellip; Let&rsquo;s search a bigger list.</p>
+
+<pre><code>  1: 
+  2: def readNameList(fn):
+  3:     f = open(fn,&quot;r&quot;)
+  4:     if f == None:
+  5:         print ( f&quot;Invalid file {fn} - failed to open&quot; )
+  6:         return None
+  7:     dt = f.readlines()
+  8:     f.close()
+  9:     for i in range (len(dt)):
+ 10:         s = dt[i].rstrip()
+ 11:         dt[i] = s
+ 12:     return dt
+ 13: 
+ 14: phone_list = readNameList(&quot;50000phone.csv&quot;)
+ 15: 
+ 16: print ( &quot;Enter a Name to Lookup&quot; )
+ 17: lookFor = input()
+ 18: found = False
+ 19: for i in range(len(phone_list)):
+ 20:     if lookFor in phone_list[i]:
+ 21:         found = True
+ 22:         print ( &quot;Found {}&quot;.format(phone_list[i]) )
+ 23: if not found:
+ 24:     print ( &quot;no names found&quot; )
+ 25: 
+
+</code></pre>
+
 <h1>Copyright</h1>
 
 <p>Copyright &copy; University of Wyoming, 2021.</p>

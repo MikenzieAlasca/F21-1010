@@ -35,8 +35,26 @@ Let's walk through a loop:
 m4_include(ex3.py)
 ```
 
+So we can use this to search a list:
+
+```
+m4_include(ex4.py)
+```
 
 
+We can also use  a for loop to go through the values in a list.
+
+```
+m4_include(ex4.py)
+```
+
+
+So... Let's search a bigger list.
+
+
+```
+m4_include(search-list.py.nu)
+```
 
 
 
