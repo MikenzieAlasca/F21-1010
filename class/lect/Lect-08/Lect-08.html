@@ -883,6 +883,25 @@ as a dictionary.</p>
 
 </code></pre>
 
+<p>And now use a dictionary to search it.</p>
+
+<pre><code>  1: #!/Users/philip/opt/anaconda3/bin/python
+  2: 
+  3: from readNameListCSV import readNameListCSV
+  4: 
+  5: phone_list = readNameListCSV(&quot;50000phone.csv&quot;)
+  6: 
+  7: print ( &quot;Enter a Name to Lookup\n=&gt; &quot;, end=&quot;&quot; )
+  8: lookFor = input()
+  9: 
+ 10: if lookFor in phone_list:
+ 11:     print ( &quot;Found {}&quot;.format(phone_list[lookFor]) )
+ 12: else:
+ 13:     print ( &quot;{} not found&quot;.format(lookFor) )
+ 14: 
+
+</code></pre>
+
 <h1>Copyright</h1>
 
 <p>Copyright &copy; University of Wyoming, 2021.</p>

@@ -95,6 +95,11 @@ as a dictionary.
 m4_include(read-phone5.py.nu)
 ```
 
+And now use a dictionary to search it.
+
+```
+m4_include(search-dict.py.nu)
+```
 
 
 
