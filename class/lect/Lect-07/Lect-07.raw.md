@@ -4,7 +4,8 @@ m4_include(../../../setup.m4)
 
 # Lecture 7 - Control Flow / If Statements            
 
-
+1. We are working on the grading.
+2. Assignment 2 - too hard.
 
 ## Using GIT and Github.com
 
@@ -102,12 +103,77 @@ m4_include(ticket_price3.py.nu)
 
 ## "and" and "or"
 
--- TODO
+When we have "if" the expression is true or false as values.
+
+There are operators that work on Boolean values.  These are *or*, *and*, *not* and
+an exclusive or operator, `^`.
+
+```
+a = 2
+b = 3
+
+r = ( a == 2 ) and ( b == 3 )
+```
+
+
+### Truth Tables
+
+And:
+
+| A     | B     | A and B |
+|-------|-------|---------|
+| False | False | False   |
+| False | True  | False   |
+| True  | False | False   |
+| True  | True  | True    |
+
+Or: 
+
+| A     | B     | A or B |
+|-------|-------|---------|
+| False | False | False   |
+| False | True  | True   |
+| True  | False | True   |
+| True  | True  | True    |
+
+Exclusive Or:
+
+| A     | B     | A `^` B |
+|-------|-------|---------|
+| False | False | False   |
+| False | True  | True   |
+| True  | False | True   |
+| True  | True  | False    |
+
+Not:
+
+| A     | not A |
+|-------|-------|
+| True  | False |
+| False | True  |
 
 
 ## calling functions 
 
--- TODO
+You can also make a function (def) that returns a True/False value and use 
+that in an if.
+
+```
+
+def isRed ( r ):
+	if r == "Red":
+		return True
+	if r == "red":
+		return True
+	return False
+
+
+if isRed("green"):
+	print ( "Its Is Red" )
+else;
+	print ( "Its Is *NOT* Red" )
+
+```
 
 
 

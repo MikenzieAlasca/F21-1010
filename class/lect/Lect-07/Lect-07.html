@@ -710,6 +710,11 @@ ol {
 
 <h1>Lecture 7 - Control Flow / If Statements</h1>
 
+<ol>
+<li>We are working on the grading.</li>
+<li>Assignment 2 - too hard.</li>
+</ol>
+
 <h2>Using GIT and Github.com</h2>
 
 <p>We are basically following most of the steps in <a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners</a>.</p>
@@ -868,11 +873,176 @@ Adult tickets age 18-69 are $59, Youth 5-12 are $40, Teen are $52, Children 4 an
 
 <h2>&ldquo;and&rdquo; and &ldquo;or&rdquo;</h2>
 
-<p>-- TODO</p>
+<p>When we have &ldquo;if&rdquo; the expression is true or false as values.</p>
+
+<p>There are operators that work on Boolean values.  These are <em>or</em>, <em>and</em>, <em>not</em> and
+an exclusive or operator, <code>^</code>.</p>
+
+<pre><code>a = 2
+b = 3
+
+r = ( a == 2 ) and ( b == 3 )
+</code></pre>
+
+<h3>Truth Tables</h3>
+
+<p>And:</p>
+
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A and B</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+
+<tr>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+</tr>
+
+<tr>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+</tr>
+
+<tr>
+<td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+
+<p>Or:</p>
+
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A or B</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+
+<tr>
+<td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+
+<tr>
+<td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+
+<tr>
+<td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+
+<p>Exclusive Or:</p>
+
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A <code>^</code> B</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+
+<tr>
+<td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+
+<tr>
+<td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+
+<tr>
+<td>True</td>
+<td>True</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+
+<p>Not:</p>
+
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>not A</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>True</td>
+<td>False</td>
+</tr>
+
+<tr>
+<td>False</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
 
 <h2>calling functions</h2>
 
-<p>-- TODO</p>
+<p>You can also make a function (def) that returns a True/False value and use
+that in an if.</p>
+
+<pre><code>
+def isRed ( r ):
+	if r == &quot;Red&quot;:
+		return True
+	if r == &quot;red&quot;:
+		return True
+	return False
+
+
+if isRed(&quot;green&quot;):
+	print ( &quot;Its Is Red&quot; )
+else;
+	print ( &quot;Its Is *NOT* Red&quot; )
+
+</code></pre>
 
 <h1>Copyright</h1>
 
