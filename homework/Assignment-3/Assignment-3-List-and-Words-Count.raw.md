@@ -56,6 +56,7 @@ The example code - word-freq.py from class:
 
 [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-06/word-freq.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-06/word-freq.py)
 
+
 # Copyright
 
 Copyright (C) University of Wyoming, 2021.

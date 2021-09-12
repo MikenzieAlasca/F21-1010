@@ -1,0 +1,15 @@
+.ipynb/f848ee40b/6.00 KiB: 1 duplicate(s)
+	/Users/philip/go/src/github.com/Univ-Wyo-Education/F21-1010/class/lect/Lect-03/.ipynb_checkpoints/Sun-Earth-Moon-checkpoint.ipynb
+	/Users/philip/go/src/github.com/Univ-Wyo-Education/F21-1010/class/lect/Lect-03/Sun-Earth-Moon.ipynb
+.html/s294ba903/15.49 KiB: 1 duplicate(s)
+	/Users/philip/go/src/github.com/Univ-Wyo-Education/F21-1010/class/lect/Lect-11/2020/Lect-11.html
+	/Users/philip/go/src/github.com/Univ-Wyo-Education/F21-1010/class/Lect-11/2020/Lect-11.html
+.m4a/s435cf085/3.26 MiB: 1 duplicate(s)
+	/Users/philip/go/src/github.com/Univ-Wyo-Education/F21-1010/class/Lect-11/2020/1015-L-11-pt1-sound.m4a
+	/Users/philip/go/src/github.com/Univ-Wyo-Education/F21-1010/class/lect/Lect-11/2020/1015-L-11-pt1-sound.m4a
+.fna/se37770bc/30.90 MiB: 1 duplicate(s)
+	/Users/philip/go/src/github.com/Univ-Wyo-Education/F21-1010/class/Lect-11/GCF_000001405.39_GRCh38.p41214_genomic.s44a-21.fna
+	/Users/philip/go/src/github.com/Univ-Wyo-Education/F21-1010/class/lect/Lect-11/GCF_000001405.39_GRCh38.p41214_genomic.s44a-21.fna
+.pdf/s32f366fb/109.27 KiB: 1 duplicate(s)
+	/Users/philip/go/src/github.com/Univ-Wyo-Education/F21-1010/class/lect/Lect-11/2020/Lect-11.html.pdf
+	/Users/philip/go/src/github.com/Univ-Wyo-Education/F21-1010/class/Lect-11/2020/Lect-11.html.pdf

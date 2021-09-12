@@ -193,14 +193,106 @@ to to 'https://github.com' and create a free account on the site.
 1. Install XCode (Apple Store)  On your Apple Mac bring up the Apple Store.  Search for "XCode" - it is free. Install.  Once you install XCode you need to start it
 and accept the license terms for XCode.  XCode is free but it requires the "Accept" before it will allow you to run software.   Open the finder in /Applications/Utilities
 and click on Terminal.  The enter: `xcode-select —install` to install the command line tools.
-2. Install brew.  Search for "mac brew".  Cut and paste the line.  Bring up a "terminal" - In the finder brows to your /Applications, then in the Utilities you will find a terminal.  Paste the "brew" install line into that.  Run.   
-3. Now at the command line (in Terminal) do `$ brew install git`. [https://brew.sh/](https://brew.sh/)
+
+![xcode installation](./xcode-1.png)
+
+![xcode installation](./xcode-2.png)
+
+![xcode installation](./xcode-3.png)
+
+![xcode installation](./xcode-4.png)
+
+![xcode installation](./xcode-5.png)
+
+![xcode installation](./xcode-6.png)
+
+![xcode installation](./xcode-7.png)
+
+2. Install brew.  Search for "mac brew".  Cut and paste the line.  Bring up a "terminal" - In the finder brows to your /Applications, then in the Utilities you will find a terminal.  Paste the "brew" install line into that.  Run.
+
+![brew installation](./brew-1.png)
+
+![brew installation](./brew-2.png)
+
+![brew installation](./brew-3.png)
+
+![brew installation](./brew-4.png)
+
+![brew installation](./brew-5.png)
+
+![brew installation](./brew-6.png)
+
+![brew installation](./brew-7.png)
+  
+4. Now at the command line (in Terminal) do `$ brew install git`. [https://brew.sh/](https://brew.sh/)
+
+![git installation](./git-1.png)
+
+![git installation](./git-2.png)
+
 6. Install "iTerm 2.x" [https://iterm2.com/](https://iterm2.com/)   Since this terminal will be used during the semester please configure it to be in you tool bar.  
-3. Install Chrome (if you have not already done it)  (Search for "Download Chrome" - follow googles instructions) [https://www.google.com/chrome/?brand=CHBD&gclid=CjwKCAjwyo36BRAXEiwA24CwGSgDDdrI4XOUKv4CPwFQfs7M2HaXiRJ-MMeszA20rC72r-9U13-8jBoCQV4QAvD_BwE&gclsrc=aw.ds](https://www.google.com/chrome/?brand=CHBD&gclid=CjwKCAjwyo36BRAXEiwA24CwGSgDDdrI4XOUKv4CPwFQfs7M2HaXiRJ-MMeszA20rC72r-9U13-8jBoCQV4QAvD_BwE&gclsrc=aw.ds)
-5. Bring up this page in the "chrome" browser with [.)   Navigate around in the site - this is where all the lectures, assignments and lab handouts are built.
-4. Install VS Code. Search for "Visual Studio Code" Install.  The add the "Python Package to it".  I also installed the "Python Lint" package.  [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
-5. Install Anaconda Python.  Search for  "Mac Install Anaconda Python" - install the anaconda package (Takes a while).  [https://www.anaconda.com/products/individual](https://www.anaconda.com/products/individual)
-6. Install "vim" [https://github.com/macvim-dev/macvim/releases/tag/snapshot-171](https://github.com/macvim-dev/macvim/releases/tag/snapshot-171)
+
+![iterm installation](./iterm-1.png)
+
+![iterm installation](./iterm-2.png)
+
+![iterm installation](./iterm-3.png)
+
+![iterm installation](./iterm-4.png)
+
+![iterm installation](./iterm-5.png)
+
+![iterm installation](./iterm-6.png)
+
+![iterm installation](./iterm-7.png)
+
+![iterm installation](./iterm-8.png)
+
+8. Install Chrome (if you have not already done it)  (Search for "Download Chrome" - follow googles instructions) [https://www.google.com/chrome/?brand=CHBD&gclid=CjwKCAjwyo36BRAXEiwA24CwGSgDDdrI4XOUKv4CPwFQfs7M2HaXiRJ-MMeszA20rC72r-9U13-8jBoCQV4QAvD_BwE&gclsrc=aw.ds](https://www.google.com/chrome/?brand=CHBD&gclid=CjwKCAjwyo36BRAXEiwA24CwGSgDDdrI4XOUKv4CPwFQfs7M2HaXiRJ-MMeszA20rC72r-9U13-8jBoCQV4QAvD_BwE&gclsrc=aw.ds)
+9. Bring up this page in the "chrome" browser with [.)   Navigate around in the site - this is where all the lectures, assignments and lab handouts are built.
+10. Install VS Code. Search for "Visual Studio Code" Install.  The add the "Python Package to it".  I also installed the "Python Lint" package.  [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+
+![vscode installation](./vscodem-1.png)
+
+![vscode installation](./vscodem-2.png)
+
+![vscode installation](./vscodem-3.png)
+
+![vscode installation](./vscodem-4.png)
+
+![vscode installation](./vscodem-5.png)
+
+![vscode installation](./vscodem-6.png)
+
+12. Install Anaconda Python.  Search for  "Mac Install Anaconda Python" - install the anaconda package (Takes a while).  [https://www.anaconda.com/products/individual](https://www.anaconda.com/products/individual)
+
+![anaconda installation](./anacondam-1.png)
+
+![anaconda installation](./anacondam-2.png)
+
+![anaconda installation](./anacondam-3.png)
+
+![anaconda installation](./anacondam-4.png)
+
+![anaconda installation](./anacondam-5.png)
+
+![anaconda installation](./anacondam-6.png)
+
+![anaconda installation](./anacondam-7.png)
+
+![anaconda installation](./anacondam-8.png)
+
+![anaconda installation](./anacondam-9.png)
+
+![anaconda installation](./anacondam-10.png)
+
+![anaconda installation](./anacondam-11.png)
+
+![anaconda installation](./anacondam-12.png)
+
+![anaconda installation](./anacondam-13.png)
+
+14. Install "vim" [https://github.com/macvim-dev/macvim/releases/tag/snapshot-171](https://github.com/macvim-dev/macvim/releases/tag/snapshot-171)
 
 
 

@@ -88,14 +88,12 @@ Let's modify our read-file to read in CSV data.
 m4_include(readNameListCSV.py.nu)
 ```
 
-This gives us our 3 form of "structured" data in python.
-The Tuple.   Tuples are represented with `(` and `)`.
-In math x,y coordinates are a "tuple" of 2 values.
-The order matters.
+Let's read in a sample of the phone numbers
+as a dictionary.
 
-
-
-
+```
+m4_include(read-phone5.py.nu)
+```
 
 
 

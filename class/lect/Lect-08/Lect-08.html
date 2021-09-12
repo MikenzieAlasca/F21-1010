@@ -801,6 +801,88 @@ for i in range ( len(ll) ):
 
 </code></pre>
 
+<p>So&hellip; What is a .csv file - you can save them from excl or from programs like
+numbers on a mac.   If you double-click on a .csv it will take you into a
+spreadsheet.</p>
+
+<p>Let&rsquo;s take a look in VI at the file.</p>
+
+<p>CSV stands for comma separated value.  Usually values with commas in them
+will need to be quoted.</p>
+
+<p>It is very common for programs that need to produce structure data to
+output that data in CSV format.</p>
+
+<p>For example the US Census has data in .csv format.</p>
+
+<pre><code>ID,STATE_CODE,STATE_NAME,CITY,COUNTY,LATITUDE,LONGITUDE
+1,AK,Alaska,Adak,&quot;Aleutians West&quot;,55.999722,-161.207778
+2,AK,Alaska,Akiachak,Bethel,60.891854,-161.39233
+3,AK,Alaska,Akiak,Bethel,60.890632,-161.199325
+4,AK,Alaska,Akutan,&quot;Aleutians East&quot;,54.143012,-165.785368
+...
+</code></pre>
+
+<p>Notice in this data the first line is a &ldquo;header&rdquo; line.</p>
+
+<p>Let&rsquo;s modify our read-file to read in CSV data.</p>
+
+<pre><code>  1: 
+  2: 
+  3: import csv
+  4: 
+  5: # readNameListCSV opens 'fn' and reads the CSV file into a dictory.
+  6: def readNameListCSV(fn):
+  7: 
+  8:     f = open(fn,&quot;r&quot;)
+  9:     if f == None:
+ 10:         print ( f&quot;Invalid file {fn} - failed to open&quot; )
+ 11:         return None
+ 12:     csvR = csv.reader(f)
+ 13:     dt = {}
+ 14:     for row in csvR:
+ 15:         dt[row[0]] = row[1]
+ 16:     f.close()
+ 17:     return dt
+ 18: 
+ 19: 
+ 20: # Automated Test
+ 21: if __name__ == &quot;__main__&quot;:
+ 22:     n_err = 0
+ 23: 
+ 24:     got = readNameListCSV(&quot;2names.txt&quot;)
+ 25:     # print ( &quot;got= {}&quot;.format(got))
+ 26:     expect = {
+ 27:         &quot;Gunter, Dolly R&quot;:&quot;(072) 123-4760&quot;,
+ 28:         &quot;Polk, Hattie S&quot;:&quot;(563) 404-0792&quot;
+ 29:         }
+ 30:     if got[&quot;Polk, Hattie S&quot;] != expect[&quot;Polk, Hattie S&quot;]:
+ 31:         n_err = n_err + 1
+ 32:         print ( &quot;Error: Test 1: file read error expected {} got {}&quot;.
+ 33:            format (  expect[&quot;Polk, Hattie S&quot;], got[&quot;Polk, Hattie S&quot;] ) )
+ 34: 
+ 35:     if n_err == 0 :
+ 36:         print ( &quot;PASS&quot; )
+ 37:     else:
+ 38:         print ( &quot;FAILED&quot; )
+ 39: 
+
+</code></pre>
+
+<p>Let&rsquo;s read in a sample of the phone numbers
+as a dictionary.</p>
+
+<pre><code>  1: 
+  2: from readNameListCSV import readNameListCSV
+  3: 
+  4: x = readNameListCSV(&quot;5-lines.phone.csv&quot; )
+  5: 
+  6: for key in x:
+  7:     print ( &quot;name={}         phone={}&quot;.format(key,x[key]))
+  8: 
+
+</code></pre>
+
 <h1>Copyright</h1>
 
 <p>Copyright &copy; University of Wyoming, 2021.</p>

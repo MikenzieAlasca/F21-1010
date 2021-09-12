@@ -166,7 +166,7 @@ class.
 |             |          | *Textbook Chapter 11 - Testing*         |
 |             |          |                                         |
 | Thr Sep 9   | 6        | More on Lists, Dictionaries Maps.       |
-|             |          | Very basic use of git.                  |
+|             |          | Very basic use of Git.                  |
 |             |          | *Textbook Chapter 4*                    |
 |             |          |                                         |
 |             |          |                                         |
@@ -380,15 +380,14 @@ if you get your lab work done and turned in during the lab.
 | 1            | Mon Sep 6  | 100  | Lab 1: Hello World in Python                       |
 |              |            |      | Due as a part of your lab.                         |
 |              |            |      |                                                    |
-| 2            | Mon Sep 13 | 100  | Assignment 1: Basic Unit Conversion                |
-|              |            | 100  | Lab 2: Testing of Unit Conversion.                 |
-|              |            |      |                                                    |
-| 3            | Mon Sep 20 | 100  | Assignment 2: Distance to Planets (with test code) |
+| 2            | Mon Sep 13 | 100  | Assignment 2: Distance to Planets (with test code) |
 |              |            | 100  | Lab 3: Planet/Star Distances questions Due.        |
 |              |            |      | Due as a part of your lab.                         |
 |              |            |      |                                                    |
-| 4            | Mon Sep 27 | 100  | Read in a matrix and add up values.                |
-|              |            |      | Model spread of virus.                             |
+| 3            | Mon Sep 20 | 100  | Assignment 3: Count the words in a file.           |
+|              |            | 100  | Lab 3: Use git to get to some files.               |
+|              |            |      |                                                    |
+| 4            | Mon Sep 27 | 100  | Assignment 3: Read in a list and search it.        |
 |              |            | 100  | Lab 4: Setup and use git and a branch.             |
 |              |            |      |                                                    |
 | 5            | Mon Oct 4  | 100  | Sort and Search data. Read csv, sort, output.      |

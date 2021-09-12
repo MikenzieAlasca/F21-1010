@@ -132,9 +132,19 @@ Part 1: 75pts - Write a program that will:
 $ mkdir hw2
 $ cd hw2
 ```
+Or Windows/PowerShell
+```
+H:\> mkdir hw2
+H:\> cd hw2
+```
 0. Create a file with the conversion code in it, `conv.py`.
 ```
 $ vi conv.py
+... edit file
+```
+Or Windows/PowerShell
+```
+H:\hw2\> vi conv.py
 ... edit file
 ```
 1. use a "def" in `conv.py` for the conversions
@@ -146,11 +156,18 @@ $ vi conv.py
 $ vi main.py
 ... edit file
 ```
+Or Windows/PowerShell
+```
+H:\hw2\> vi main.py
+... edit file
+```
 3. The main program will
 	- Print out a prompt for the value.
 	- Read in from the terminal a value in kilometers.
 	- Apply a conversion from that unit to tennis ball model. (Call the function)
 	- Output a value in miles, kilometers and feet plus inches (or fractions of an inch).
+
+<div class="pagebreak"></div>
 
 Example Code: from lecture...
 
