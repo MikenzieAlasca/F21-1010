@@ -37,7 +37,8 @@ French economist’s bestseller “Capital in the Twenty-First Century.”
 5. Functions
 ```
 def fucntion_name ( input1, input2 ):
-   do_someting...
+   # do_someting... with input1, input2
+   # produce some output
    return ( output )
 ```
 6. Input a number - differences between strings and numbers and integers and floats
