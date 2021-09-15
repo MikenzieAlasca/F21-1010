@@ -1,6 +1,6 @@
 
 PP=`pwd`
-FN=Lab-03.questions
+FN=new-lab-03
 DIR=./../../
 IMG=
 PY=
