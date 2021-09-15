@@ -4,7 +4,7 @@ import csv
 
 def readNameListCSV(fn):
 
-    f = open(fn,"r")
+    f = open(fn,"r",encoding="utf8")
     if f == None:
         print ( f"Invalid file {fn} - failed to open" )
         return None
