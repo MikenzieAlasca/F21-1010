@@ -1,3 +1,1 @@
-
 print ( range(5) )
-

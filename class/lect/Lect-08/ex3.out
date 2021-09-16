@@ -1,0 +1,7 @@
+list = ['dog', 'cat', 'goldfish', 'parakeet']
+length of list = 4
+i = 0 list[0] = dog
+i = 1 list[1] = cat
+i = 2 list[2] = goldfish
+i = 3 list[3] = parakeet
+done

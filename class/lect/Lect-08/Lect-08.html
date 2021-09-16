@@ -714,21 +714,17 @@ ol {
 tools.  The first is functions that call themselves - this is
 recursion.</p>
 
-<p>The second is Loops.   Loops are the more common.</p>
+<p>The second is Loops.   Loops are the more common (ex1.py).</p>
 
-<pre><code>
-for i in range(3):
-	print ( &quot;i = {}&quot;.format(i) )
-
+<pre><code>  1: for i in range(3):
+  2:     print ( &quot;i = {}&quot;.format(i) )
 
 </code></pre>
 
 <p>So&hellip; This uses the &ldquo;range&rdquo; operator.  range encodes a
 set of values that can be used in a loop.</p>
 
-<pre><code>
-print ( range(5) )
-
+<pre><code>  1: print ( range(5) )
 
 </code></pre>
 
@@ -740,165 +736,72 @@ the end value.  So <code>range(0, 5)</code>  will have values 0, 1, 2, 3, 4.</p>
 <p>This is useful whenever we have a loop to control how many times
 the loop will go around.</p>
 
-<p>Let&rsquo;s walk through a loop:</p>
+<p>Let&rsquo;s walk through a loop (ex3.py):</p>
 
-<pre><code>
-ll = [ &quot;dog&quot;, &quot;cat&quot;, &quot;goldfish&quot;, &quot;parakeet&quot; ]
-for i in range ( len(ll) ):
-	print ( &quot;i = {} list[{}] = {}&quot;.format ( i, i, ll[i] ) )
-
-</code></pre>
-
-<p>So we can use this to search a list:</p>
-
-<pre><code>
-ll = [ &quot;dog&quot;, &quot;cat&quot;, &quot;goldfish&quot;, &quot;parakeet&quot; ]
-for i in range ( len(ll) ):
-    if ll[i] == &quot;cat&quot;:
-        print ( &quot;found 'cat' in list! list[{}] = {}&quot;.format ( i, ll[i] ) )
-
+<pre><code>  1: ll = [ &quot;dog&quot;, &quot;cat&quot;, &quot;goldfish&quot;, &quot;parakeet&quot; ]
+  2: print ( &quot;list = {}&quot;.format(ll) )
+  3: print ( &quot;length of list = {}&quot;.format(len(ll)) )
+  4: for i in range ( len(ll) ):
+  5:     print ( &quot;i = {} list[{}] = {}&quot;.
+  6:             format ( i, i, ll[i] ) )
+  7: print ( &quot;done&quot; )
 
 </code></pre>
 
-<p>We can also use  a for loop to go through the values in a list.</p>
+<p>So we can use this to search a list (ex4.py):</p>
 
-<pre><code>
-ll = [ &quot;dog&quot;, &quot;cat&quot;, &quot;goldfish&quot;, &quot;parakeet&quot; ]
-for i in range ( len(ll) ):
-    if ll[i] == &quot;cat&quot;:
-        print ( &quot;found 'cat' in list! list[{}] = {}&quot;.format ( i, ll[i] ) )
-
-
-</code></pre>
-
-<p>So&hellip; Let&rsquo;s search a bigger list.</p>
-
-<pre><code>  1: 
-  2: def readNameList(fn):
-  3:     f = open(fn,&quot;r&quot;)
-  4:     if f == None:
-  5:         print ( f&quot;Invalid file {fn} - failed to open&quot; )
-  6:         return None
-  7:     dt = f.readlines()
-  8:     f.close()
-  9:     for i in range (len(dt)):
- 10:         s = dt[i].rstrip()
- 11:         dt[i] = s
- 12:     return dt
- 13: 
- 14: phone_list = readNameList(&quot;50000phone.csv&quot;)
- 15: 
- 16: print ( &quot;Enter a Name to Lookup&quot; )
- 17: lookFor = input()
- 18: found = False
- 19: for v in phone_list:
- 20:     if lookFor in v:
- 21:         found = True
- 22:         print ( &quot;Found {}&quot;.format(v) )
- 23: if not found:
- 24:     print ( &quot;no names found&quot; )
- 25: 
+<pre><code>  1: ll = [ &quot;dog&quot;, &quot;cat&quot;, &quot;goldfish&quot;, &quot;parakeet&quot; ]
+  2: for i in range ( len(ll) ):
+  3:     if ll[i] == &quot;cat&quot;:
+  4:         print ( &quot;found 'cat' in list! list[{}] = {}&quot;.
+  5:                 format ( i, ll[i] ) )
 
 </code></pre>
 
-<p>So&hellip; What is a .csv file - you can save them from excl or from programs like
-numbers on a mac.   If you double-click on a .csv it will take you into a
-spreadsheet.</p>
+<p>A better way to search the values is to use the for loop with
+the value instead of an index (ex5.py).</p>
 
-<p>Let&rsquo;s take a look in VI at the file.</p>
-
-<p>CSV stands for comma separated value.  Usually values with commas in them
-will need to be quoted.</p>
-
-<p>It is very common for programs that need to produce structure data to
-output that data in CSV format.</p>
-
-<p>For example the US Census has data in .csv format.</p>
-
-<pre><code>ID,STATE_CODE,STATE_NAME,CITY,COUNTY,LATITUDE,LONGITUDE
-1,AK,Alaska,Adak,&quot;Aleutians West&quot;,55.999722,-161.207778
-2,AK,Alaska,Akiachak,Bethel,60.891854,-161.39233
-3,AK,Alaska,Akiak,Bethel,60.890632,-161.199325
-4,AK,Alaska,Akutan,&quot;Aleutians East&quot;,54.143012,-165.785368
-...
-</code></pre>
-
-<p>Notice in this data the first line is a &ldquo;header&rdquo; line.</p>
-
-<p>Let&rsquo;s modify our read-file to read in CSV data.</p>
-
-<pre><code>  1: 
-  2: 
-  3: import csv
-  4: 
-  5: # readNameListCSV opens 'fn' and reads the CSV file into a dictory.
-  6: def readNameListCSV(fn):
-  7: 
-  8:     f = open(fn,&quot;r&quot;)
-  9:     if f == None:
- 10:         print ( f&quot;Invalid file {fn} - failed to open&quot; )
- 11:         return None
- 12:     csvR = csv.reader(f)
- 13:     dt = {}
- 14:     for row in csvR:
- 15:         dt[row[0]] = row[1]
- 16:     f.close()
- 17:     return dt
- 18: 
- 19: 
- 20: # Automated Test
- 21: if __name__ == &quot;__main__&quot;:
- 22:     n_err = 0
- 23: 
- 24:     got = readNameListCSV(&quot;2names.txt&quot;)
- 25:     # print ( &quot;got= {}&quot;.format(got))
- 26:     expect = {
- 27:         &quot;Gunter, Dolly R&quot;:&quot;(072) 123-4760&quot;,
- 28:         &quot;Polk, Hattie S&quot;:&quot;(563) 404-0792&quot;
- 29:         }
- 30:     if got[&quot;Polk, Hattie S&quot;] != expect[&quot;Polk, Hattie S&quot;]:
- 31:         n_err = n_err + 1
- 32:         print ( &quot;Error: Test 1: file read error expected {} got {}&quot;.
- 33:            format (  expect[&quot;Polk, Hattie S&quot;], got[&quot;Polk, Hattie S&quot;] ) )
- 34: 
- 35:     if n_err == 0 :
- 36:         print ( &quot;PASS&quot; )
- 37:     else:
- 38:         print ( &quot;FAILED&quot; )
- 39: 
+<pre><code>  1: ll = [ &quot;dog&quot;, &quot;cat&quot;, &quot;goldfish&quot;, &quot;parakeet&quot; ]
+  2: for v in ll:
+  3:     if v == &quot;cat&quot;:
+  4:         print ( &quot;found 'cat' in list!  {}&quot;.format ( v ) )
 
 </code></pre>
 
-<p>Let&rsquo;s read in a sample of the phone numbers
-as a dictionary.</p>
+<p>Python has a 2nd kind of loop, a while loop (ex6.py).</p>
 
-<pre><code>  1: 
-  2: from readNameListCSV import readNameListCSV
-  3: 
-  4: x = readNameListCSV(&quot;5-lines.phone.csv&quot; )
-  5: 
-  6: for key in x:
-  7:     print ( &quot;name={}         phone={}&quot;.format(key,x[key]))
-  8: 
+<pre><code>  1: i = 0
+  2: while ( i &lt; 3 ):
+  3:     print ( &quot;i = {}&quot;.format ( i ) )
+  4:     i = i + 1
 
 </code></pre>
 
-<p>And now use a dictionary to search it.</p>
+<p>We can change this to print 1, 2, 3 (ex7.py):</p>
 
-<pre><code>  1: #!/Users/philip/opt/anaconda3/bin/python
-  2: 
-  3: from readNameListCSV import readNameListCSV
-  4: 
-  5: phone_list = readNameListCSV(&quot;50000phone.csv&quot;)
-  6: 
-  7: print ( &quot;Enter a Name to Lookup\n=&gt; &quot;, end=&quot;&quot; )
-  8: lookFor = input()
-  9: 
- 10: if lookFor in phone_list:
- 11:     print ( &quot;Found {}&quot;.format(phone_list[lookFor]) )
- 12: else:
- 13:     print ( &quot;{} not found&quot;.format(lookFor) )
- 14: 
+<pre><code>  1: i = 0
+  2: while ( i &lt; 3 ):
+  3:     i = i + 1
+  4:     print ( &quot;i = {}&quot;.format ( i ) )
+
+</code></pre>
+
+<p>We can go thru our pets (ex8.py):</p>
+
+<pre><code>  1: ll = [ &quot;dog&quot;, &quot;cat&quot;, &quot;goldfish&quot;, &quot;parakeet&quot; ]
+  2: i = 0
+  3: while ( i &lt; len(ll) ):
+  4:     print ( &quot;i = {} list[{}] = {}&quot;.format ( i, i, ll[i] ) )
+  5:     i = i + 1
+
+</code></pre>
+
+<p>But&hellip;. We can also break it (ex9.py).</p>
+
+<pre><code>  1: i = 0
+  2: while ( i &lt; 3 ):
+  3:     print ( &quot;i = {}&quot;.format ( i ) )
+  4:     # bad loop!
 
 </code></pre>
 

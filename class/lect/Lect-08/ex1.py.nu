@@ -1,4 +1,2 @@
-  1: 
-  2: for i in range(3):
-  3:     print ( "i = {}".format(i) )
-  4: 
+  1: for i in range(3):
+  2:     print ( "i = {}".format(i) )
