@@ -8,10 +8,11 @@ if age >= 0 and age <= 4:
 elif age >= 5 and age <= 12:
 	ticket_price = 38
 elif age >= 13 and age <= 17:
-# Add Code
-# Add Code
-# Add Code
-# Add Code
+	ticket_price = 48
+    # Add Code
+    # Add Code
+    # Add Code
+    # Add Code
 else:
 	print ( "Impossile Age" )
 
