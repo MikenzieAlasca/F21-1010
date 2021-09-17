@@ -17,10 +17,7 @@ m4_include(age.py)
 ```
 
 ### Windows Vim/gVim
-
-Take the above code and type it into a file called
-age.py.  Save the file.  gVim should be on your 
-desktop.
+Open gVim on your desktop and then paste the code. Save the file as age.py
 
 Bring up the Anaconda Power Shell.
 
@@ -61,6 +58,8 @@ At the command line run python age.py
 | 18 to 70 | 59 |
 | over 70 | 0 |
 
+## Testing your code
+Run your code with different ages as input and see if your code is printing the output according to the values in the table above.
 
 ## Turn in 
 
