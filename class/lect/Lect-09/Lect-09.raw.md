@@ -128,13 +128,14 @@ m4_include(main_2.py.nu)
 ```
 
 
+## Tax table 
+
+![tax-table.png](tax-table.png)
 
 
 
 
-
-
-
+<div class="pagebreak"></div>
 
 # Copyright
 
