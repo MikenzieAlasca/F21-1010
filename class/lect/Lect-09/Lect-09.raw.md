@@ -3,6 +3,7 @@ m4_include(../../../setup.m4)
 
 ## Test Question / if-else
 
+TODO
 
 ## A Few Questions
 
@@ -10,16 +11,33 @@ m4_include(../../../setup.m4)
 
 Question: What is a good example of using a while loop where a for loop would make it much more difficult.
 
+```
+m4_include(wh11.py.nu)
+```
+
+or with a different way of offsetting to 0
+
+
+```
+m4_include(wh12.py.nu)
+```
+
+
 ### Formatting.
 
 Question:  Is the `{}` a dictionary in the format statement.
 
 ### Nested Loops
 
+TODO
+
 ### What can go in a list
+
+TODO
 
 ### string operations
 
+TODO
 
 ### A better if-else example
 
@@ -88,7 +106,34 @@ from file imort function
 ```
 
 
+Let's try it (this is the all in one directory version):
 
+```
+m4_include(main_0.py.nu)
+```
+
+
+```
+m4_include(jane.py.nu)
+```
+
+Multiple Directories Version:
+
+
+```
+m4_include(main.py.nu)
+```
+
+
+```
+m4_include(x/bob.py.nu)
+```
+
+or we can just import a single function
+
+```
+m4_include(main_2.py.nu)
+```
 
 
 

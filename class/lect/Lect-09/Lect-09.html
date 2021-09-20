@@ -710,11 +710,46 @@ ol {
 
 <h2>Test Question / if-else</h2>
 
+<p>TODO</p>
+
 <h2>A Few Questions</h2>
 
 <h3>While loop.</h3>
 
 <p>Question: What is a good example of using a while loop where a for loop would make it much more difficult.</p>
+
+<pre><code>  1: 
+  2: # Example of why to use a &quot;while&quot; - reverse a string
+  3: 
+  4: vIn = &quot;abcd&quot;
+  5: vOut = &quot;&quot;
+  6: i = len(vIn)
+  7: while ( i &gt; 0 ):
+  8:     i = i - 1
+  9:     vOut = vOut + vIn[i]
+ 10: 
+ 11: print ( &quot;vOut = -&gt;{}&lt;-&quot;.format(vOut ) )
+ 12: 
+
+</code></pre>
+
+<p>or with a different way of offsetting to 0</p>
+
+<pre><code>  1: 
+  2: 
+  3: # Example of why to use a &quot;while&quot; - reverse a string
+  4: 
+  5: vIn = &quot;abcd&quot;
+  6: vOut = &quot;&quot;
+  7: i = len(vIn)-1
+  8: while ( i &gt;= 0 ):
+  9:     vOut = vOut + vIn[i]
+ 10:     i = i - 1
+ 11: 
+ 12: print ( &quot;vOut = -&gt;{}&lt;-&quot;.format(vOut ) )
+ 13: 
+
+</code></pre>
 
 <h3>Formatting.</h3>
 
@@ -722,9 +757,15 @@ ol {
 
 <h3>Nested Loops</h3>
 
+<p>TODO</p>
+
 <h3>What can go in a list</h3>
 
+<p>TODO</p>
+
 <h3>string operations</h3>
+
+<p>TODO</p>
 
 <h3>A better if-else example</h3>
 
@@ -947,6 +988,50 @@ Python deals with this with the &ldquo;import&rdquo; statement.</p>
 <p>and</p>
 
 <pre><code>from file imort function
+</code></pre>
+
+<p>Let&rsquo;s try it (this is the all in one directory version):</p>
+
+<pre><code>  1: 
+  2: import jane
+  3: 
+  4: jane.janefunc()
+  5: 
+
+</code></pre>
+
+<pre><code>  1: 
+  2: def janefunc():
+  3:     print ( &quot;jane&quot; )
+  4: 
+
+</code></pre>
+
+<p>Multiple Directories Version:</p>
+
+<pre><code>  1: 
+  2: imort x.bob
+  3: 
+  4: x.bob.bobfunc()
+  5: 
+
+</code></pre>
+
+<pre><code>  1: 
+  2: def bobfunc():
+  3:     print ( &quot;bob&quot; )
+  4: 
+
+</code></pre>
+
+<p>or we can just import a single function</p>
+
+<pre><code>  1: 
+  2: from x.bob import bobfunc
+  3: 
+  4: bobfunc()
+  5: 
+
 </code></pre>
 
 <h1>Copyright</h1>

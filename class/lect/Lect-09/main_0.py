@@ -1,0 +1,5 @@
+
+import jane
+
+jane.janefunc()
+

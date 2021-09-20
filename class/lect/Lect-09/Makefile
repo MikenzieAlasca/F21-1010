@@ -10,6 +10,7 @@ all: setup all2
 
 setup:
 	./mk_all_nu.sh
+	( cd x ; ./mk_all_nu.sh )
 
 all2: ${FN}.html 
 

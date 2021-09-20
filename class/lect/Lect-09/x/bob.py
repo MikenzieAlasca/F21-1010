@@ -1,4 +1,4 @@
 
-def bob():
+def bobfunc():
     print ( "bob" )
 
