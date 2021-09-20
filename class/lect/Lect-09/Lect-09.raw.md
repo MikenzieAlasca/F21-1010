@@ -27,17 +27,12 @@ m4_include(wh12.py.nu)
 
 Question:  Is the `{}` a dictionary in the format statement.
 
-### Nested Loops
-
-TODO
-
-### What can go in a list
-
-TODO
-
-### string operations
-
-TODO
+```
+>>> a = 1.2345
+>>> print ( "X Decimal Places {}".format(a) )
+>>> print ( "2 Decimal Places {:.2f}".format(a) )
+>>> print ( "In Order {} second {} third {}".format( "1st", 2, "last" ) )
+```
 
 ### A better if-else example
 
