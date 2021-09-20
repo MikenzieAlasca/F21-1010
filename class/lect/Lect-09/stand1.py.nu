@@ -1,23 +1,20 @@
-  1:  
-  2: print ( "1 for single taxpayers. " )
-  3: print ( "2 for married taxpayers filing separately.  " )
-  4: print ( "3 for heads of households.  " )
-  5: print ( "4 for married taxpayers filing jointly. " )
-  6: 
-  7: maritul_status = input()
-  8: 
-  9: standard_decuction = 12550
- 10: if maritul_status == "1" :
- 11:     standard_decuction = 12550
- 12: elif maritul_status == "2" :
- 13:     standard_decuction = 12550
- 14: elif maritul_status == "3" :
- 15:     standard_decuction = 18800
- 16: elif maritul_status == "4" :
- 17:     standard_decuction = 25100
- 18: else:
- 19:     print ( "invalid input, should be 1, 2, 3, or 4" )
- 20: 
- 21: print ( "Standard Deduction = {}".format( standard_decuction ) )
- 22: 
- 23: 
+  1: print ( "1 for single taxpayers. " )
+  2: print ( "2 for married taxpayers filing separately.  " )
+  3: print ( "3 for heads of households.  " )
+  4: print ( "4 for married taxpayers filing jointly. " )
+  5: 
+  6: maritul_status = input()
+  7: 
+  8: standard_decuction = 12550
+  9: if maritul_status == "1" :
+ 10:     standard_decuction = 12550
+ 11: elif maritul_status == "2" :
+ 12:     standard_decuction = 12550
+ 13: elif maritul_status == "3" :
+ 14:     standard_decuction = 18800
+ 15: elif maritul_status == "4" :
+ 16:     standard_decuction = 25100
+ 17: else:
+ 18:     print ( "invalid input, should be 1, 2, 3, or 4" )
+ 19: 
+ 20: print ( "Standard Deduction = {}".format( standard_decuction ) )

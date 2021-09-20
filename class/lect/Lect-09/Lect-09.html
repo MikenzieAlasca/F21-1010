@@ -708,46 +708,37 @@ ol {
 
 <div class="markdown-body">
 
-<h2>Test Question / if-else</h2>
-
-<p>TODO</p>
-
 <h2>A Few Questions</h2>
 
 <h3>While loop.</h3>
 
 <p>Question: What is a good example of using a while loop where a for loop would make it much more difficult.</p>
 
-<pre><code>  1: 
-  2: # Example of why to use a &quot;while&quot; - reverse a string
-  3: 
-  4: vIn = &quot;abcd&quot;
-  5: vOut = &quot;&quot;
-  6: i = len(vIn)
-  7: while ( i &gt; 0 ):
-  8:     i = i - 1
-  9:     vOut = vOut + vIn[i]
- 10: 
- 11: print ( &quot;vOut = -&gt;{}&lt;-&quot;.format(vOut ) )
- 12: 
+<pre><code>  1: # Example of why to use a &quot;while&quot; - reverse a string
+  2: 
+  3: vIn = &quot;abcd&quot;
+  4: vOut = &quot;&quot;
+  5: i = len(vIn)
+  6: while ( i &gt; 0 ):
+  7:     i = i - 1
+  8:     vOut = vOut + vIn[i]
+  9: 
+ 10: print ( &quot;vOut = -&gt;{}&lt;-&quot;.format(vOut ) )
 
 </code></pre>
 
 <p>or with a different way of offsetting to 0</p>
 
-<pre><code>  1: 
+<pre><code>  1: # Example of why to use a &quot;while&quot; - reverse a string
   2: 
-  3: # Example of why to use a &quot;while&quot; - reverse a string
-  4: 
-  5: vIn = &quot;abcd&quot;
-  6: vOut = &quot;&quot;
-  7: i = len(vIn)-1
-  8: while ( i &gt;= 0 ):
-  9:     vOut = vOut + vIn[i]
- 10:     i = i - 1
- 11: 
- 12: print ( &quot;vOut = -&gt;{}&lt;-&quot;.format(vOut ) )
- 13: 
+  3: vIn = &quot;abcd&quot;
+  4: vOut = &quot;&quot;
+  5: i = len(vIn)-1
+  6: while ( i &gt;= 0 ):
+  7:     vOut = vOut + vIn[i]
+  8:     i = i - 1
+  9: 
+ 10: print ( &quot;vOut = -&gt;{}&lt;-&quot;.format(vOut ) )
 
 </code></pre>
 
@@ -760,6 +751,8 @@ ol {
 &gt;&gt;&gt; print ( &quot;2 Decimal Places {:.2f}&quot;.format(a) )
 &gt;&gt;&gt; print ( &quot;In Order {} second {} third {}&quot;.format( &quot;1st&quot;, 2, &quot;last&quot; ) )
 </code></pre>
+
+<div class="pagebreak"></div>
 
 <h3>A better if-else example</h3>
 
@@ -802,29 +795,26 @@ Let&rsquo;s say you have $88,000.00 a year in pay.  What do the &ldquo;tax&rdquo
 
 <p>This looks like a table we can turn into an &ldquo;if&rdquo;/&ldquo;else&rdquo; in python.</p>
 
-<pre><code>  1:  
-  2: print ( &quot;1 for single taxpayers. &quot; )
-  3: print ( &quot;2 for married taxpayers filing separately.  &quot; )
-  4: print ( &quot;3 for heads of households.  &quot; )
-  5: print ( &quot;4 for married taxpayers filing jointly. &quot; )
-  6: 
-  7: maritul_status = input()
-  8: 
-  9: standard_decuction = 12550
- 10: if maritul_status == &quot;1&quot; :
- 11:     standard_decuction = 12550
- 12: elif maritul_status == &quot;2&quot; :
- 13:     standard_decuction = 12550
- 14: elif maritul_status == &quot;3&quot; :
- 15:     standard_decuction = 18800
- 16: elif maritul_status == &quot;4&quot; :
- 17:     standard_decuction = 25100
- 18: else:
- 19:     print ( &quot;invalid input, should be 1, 2, 3, or 4&quot; )
- 20: 
- 21: print ( &quot;Standard Deduction = {}&quot;.format( standard_decuction ) )
- 22: 
- 23: 
+<pre><code>  1: print ( &quot;1 for single taxpayers. &quot; )
+  2: print ( &quot;2 for married taxpayers filing separately.  &quot; )
+  3: print ( &quot;3 for heads of households.  &quot; )
+  4: print ( &quot;4 for married taxpayers filing jointly. &quot; )
+  5: 
+  6: maritul_status = input()
+  7: 
+  8: standard_decuction = 12550
+  9: if maritul_status == &quot;1&quot; :
+ 10:     standard_decuction = 12550
+ 11: elif maritul_status == &quot;2&quot; :
+ 12:     standard_decuction = 12550
+ 13: elif maritul_status == &quot;3&quot; :
+ 14:     standard_decuction = 18800
+ 15: elif maritul_status == &quot;4&quot; :
+ 16:     standard_decuction = 25100
+ 17: else:
+ 18:     print ( &quot;invalid input, should be 1, 2, 3, or 4&quot; )
+ 19: 
+ 20: print ( &quot;Standard Deduction = {}&quot;.format( standard_decuction ) )
 
 </code></pre>
 
@@ -876,108 +866,100 @@ then pay 12% on the next chunk of money.</p>
 
 <p>Let&rsquo;s implement that.</p>
 
-<pre><code>  1: 
-  2: print ( &quot;What is your per year income&quot; )
-  3: income_str = input()
-  4: income = float(income_str)
-  5: 
-  6: print ( &quot;1 for single taxpayers. &quot; )
-  7: print ( &quot;2 for married taxpayers filing separately.  &quot; )
-  8: print ( &quot;3 for heads of households.  &quot; )
-  9: print ( &quot;4 for married taxpayers filing jointly. &quot; )
- 10: 
- 11: maritul_status = input()
- 12: 
- 13: 
- 14: #| Amount  | Description                          |
- 15: #|---------|--------------------------------------|
- 16: #| $12,550 | single taxpayers.                    |
- 17: #| $12,550 | married taxpayers filing separately. |
- 18: #| $18,800 | heads of households.                 |
- 19: #| $25,100 | married taxpayers filing jointly.    |
- 20: 
- 21: tax = 0
- 22: standard_decuction = 12550
- 23: 
- 24: if maritul_status == &quot;1&quot; or maritul_status == &quot;2&quot; : # Single, Married File Separately
- 25:     standard_decuction = 12550
- 26:     income = income - standard_decuction 
- 27: 
- 28:     tax = (10/100) * income
- 29:     if income &gt;= 9951:
- 30:         tax = tax + (2/100) * ( income - 14200 )
- 31:     if income &gt;= 40526:
- 32:         tax = tax + (10/100) * ( income - 54200 )
- 33:     if income &gt;= 86376:
- 34:         tax = tax + (2/100) * ( income - 86350 )
- 35:     if income &gt;= 164926: 
- 36:         tax = tax + (10/100) * ( income - 164925 )
- 37:     if income &gt;= 209426:
- 38:         tax = tax + (3/100) * ( income - 209425 )
- 39:     if income &gt;= 523601:
- 40:         tax = tax + (2/100) * ( income - 523600 )
+<pre><code>  1: print ( &quot;What is your per year income&quot; )
+  2: income_str = input()
+  3: income = float(income_str)
+  4: 
+  5: print ( &quot;1 for single taxpayers. &quot; )
+  6: print ( &quot;2 for married taxpayers filing separately.  &quot; )
+  7: print ( &quot;3 for heads of households.  &quot; )
+  8: print ( &quot;4 for married taxpayers filing jointly. &quot; )
+  9: 
+ 10: maritul_status = input()
+ 11: 
+ 12: tax = 0
+ 13: standard_decuction = 12550
+ 14: 
+ 15: if maritul_status == &quot;1&quot; or maritul_status == &quot;2&quot; : # Single, Married File Separately
+ 16:     standard_decuction = 12550
+ 17:     income = income - standard_decuction 
+ 18: 
+ 19:     tax = (10/100) * income
+ 20:     if income &gt;= 9951:
+ 21:         tax = tax + (2/100) * ( income - 14200 )
+ 22:     if income &gt;= 40526:
+ 23:         tax = tax + (10/100) * ( income - 54200 )
+ 24:     if income &gt;= 86376:
+ 25:         tax = tax + (2/100) * ( income - 86350 )
+ 26:     if income &gt;= 164926: 
+ 27:         tax = tax + (10/100) * ( income - 164925 )
+ 28:     if income &gt;= 209426:
+ 29:         tax = tax + (3/100) * ( income - 209425 )
+ 30:     if income &gt;= 523601:
+ 31:         tax = tax + (2/100) * ( income - 523600 )
+ 32: 
+ 33: 
+ 34: 
+ 35: 
+ 36: 
+ 37: elif maritul_status == &quot;3&quot; :        # Head of Household
+ 38:     standard_decuction = 18800
+ 39: 
+ 40:     income = income - standard_decuction 
  41: 
- 42: elif maritul_status == &quot;3&quot; :        # Head of Household
- 43:     standard_decuction = 18800
- 44: 
- 45:     income = income - standard_decuction 
- 46: 
- 47:     tax = (10/100) * income
- 48:     if income &gt;= 14201:
- 49:         tax = tax + (2/100) * (income - 14200)
- 50:     if income &gt;= 54201:
- 51:         tax = tax + (10/100) * (income - 54200)
- 52:     if income &gt;= 86351:
- 53:         tax = tax + (2/100) * (income - 86350)
- 54:     if income &gt;= 164901: 
- 55:         tax = tax + (10/100) * (income - 164900) 
- 56:     if income &gt;= 209401:
- 57:         tax = tax + (3/100) * (income - 209400)
- 58:     if income &gt;= 523601:
- 59:         tax = tax + (2/100) * (income - 523501)
+ 42:     tax = (10/100) * income
+ 43:     if income &gt;= 14201:
+ 44:         tax = tax + (2/100) * (income - 14200)
+ 45:     if income &gt;= 54201:
+ 46:         tax = tax + (10/100) * (income - 54200)
+ 47:     if income &gt;= 86351:
+ 48:         tax = tax + (2/100) * (income - 86350)
+ 49:     if income &gt;= 164901: 
+ 50:         tax = tax + (10/100) * (income - 164900) 
+ 51:     if income &gt;= 209401:
+ 52:         tax = tax + (3/100) * (income - 209400)
+ 53:     if income &gt;= 523601:
+ 54:         tax = tax + (2/100) * (income - 523501)
+ 55: 
+ 56: elif maritul_status == &quot;4&quot; :
+ 57:     standard_decuction = 25100
+ 58: 
+ 59:     income = income - standard_decuction 
  60: 
- 61: elif maritul_status == &quot;4&quot; :
- 62:     standard_decuction = 25100
- 63: 
- 64:     income = income - standard_decuction 
- 65: 
- 66:     tax = (10/100) * income
- 67:     if income &gt;= 14201:
- 68:         tax = tax + (2/100) * (income - 14200)
- 69:     if income &gt;= 54201:
- 70:         tax = tax + (10/100) * (income - 54200)
- 71:     if income &gt;= 86351:
- 72:         tax = tax + (2/100) * (income - 86350)
- 73:     if income &gt;= 164901: 
- 74:         tax = tax + (10/100) * (income - 164900) 
- 75:     if income &gt;= 209401:
- 76:         tax = tax + (3/100) * (income - 209400)
- 77:     if income &gt;= 523601:
- 78:         tax = tax + (2/100) * (income - 523501)
+ 61:     tax = (10/100) * income
+ 62:     if income &gt;= 14201:
+ 63:         tax = tax + (2/100) * (income - 14200)
+ 64:     if income &gt;= 54201:
+ 65:         tax = tax + (10/100) * (income - 54200)
+ 66:     if income &gt;= 86351:
+ 67:         tax = tax + (2/100) * (income - 86350)
+ 68:     if income &gt;= 164901: 
+ 69:         tax = tax + (10/100) * (income - 164900) 
+ 70:     if income &gt;= 209401:
+ 71:         tax = tax + (3/100) * (income - 209400)
+ 72:     if income &gt;= 523601:
+ 73:         tax = tax + (2/100) * (income - 523501)
+ 74: 
+ 75: else:
+ 76:     print ( &quot;invalid input, should be 1, 2, 3, or 4&quot; )
+ 77: 
+ 78: print ( &quot;Standard Deduction = {}&quot;.format( standard_decuction ) )
  79: 
- 80: else:
- 81:     print ( &quot;invalid input, should be 1, 2, 3, or 4&quot; )
- 82: 
- 83: print ( &quot;Standard Deduction = {}&quot;.format( standard_decuction ) )
- 84: 
+ 80: print ( &quot;total tax for the year = {:.2f}&quot;.format(tax) )
+ 81: 
+ 82: print ( &quot;What is monthly witholding&quot; )
+ 83: withold_str = input()
+ 84: withold = float(withold_str)
  85: 
  86: 
  87: 
- 88: print ( &quot;total tax for the year = {:.2f}&quot;.format(tax) )
- 89: 
- 90: print ( &quot;What is monthly witholding&quot; )
- 91: withold_str = input()
- 92: withold = float(withold_str)
- 93: 
- 94: owe = tax - ( 12 * withold )
- 95: if owe &lt; 0 :
- 96:     print ( &quot;You get a tax refund of {:.2f}&quot;.format(-owe) )
- 97: elif owe == 0:
- 98:     print ( &quot;You don't owe any and you don't get a refund&quot; )
- 99: elif owe &gt; 0:
-100:     print ( &quot;Send the IRS: {:.2f}&quot;.format(owe) )
-101: 
-102:         
+ 88: owe = tax - ( 12 * withold )
+ 89: if owe &lt; 0 :
+ 90:     print ( &quot;You get a tax refund of {:.2f}&quot;.format(-owe) )
+ 91: elif owe == 0:
+ 92:     print ( &quot;You don't owe any and you don't get a refund&quot; )
+ 93: elif owe &gt; 0:
+ 94:     print ( &quot;Send the IRS: {:.2f}&quot;.format(owe) )
 
 </code></pre>
 
@@ -998,45 +980,35 @@ Python deals with this with the &ldquo;import&rdquo; statement.</p>
 
 <p>Let&rsquo;s try it (this is the all in one directory version):</p>
 
-<pre><code>  1: 
-  2: import jane
-  3: 
-  4: jane.janefunc()
-  5: 
+<pre><code>  1: import jane
+  2: 
+  3: jane.janefunc()
 
 </code></pre>
 
-<pre><code>  1: 
-  2: def janefunc():
-  3:     print ( &quot;jane&quot; )
-  4: 
+<pre><code>  1: def janefunc():
+  2:     print ( &quot;jane&quot; )
 
 </code></pre>
 
 <p>Multiple Directories Version:</p>
 
-<pre><code>  1: 
-  2: imort x.bob
-  3: 
-  4: x.bob.bobfunc()
-  5: 
+<pre><code>  1: imort x.bob
+  2: 
+  3: x.bob.bobfunc()
 
 </code></pre>
 
-<pre><code>  1: 
-  2: def bobfunc():
-  3:     print ( &quot;bob&quot; )
-  4: 
+<pre><code>  1: def bobfunc():
+  2:     print ( &quot;bob&quot; )
 
 </code></pre>
 
 <p>or we can just import a single function</p>
 
-<pre><code>  1: 
-  2: from x.bob import bobfunc
-  3: 
-  4: bobfunc()
-  5: 
+<pre><code>  1: from x.bob import bobfunc
+  2: 
+  3: bobfunc()
 
 </code></pre>
 

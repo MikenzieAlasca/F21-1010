@@ -1,10 +1,6 @@
 
 m4_include(../../../setup.m4)
 
-## Test Question / if-else
-
-TODO
-
 ## A Few Questions
 
 ### While loop.
@@ -33,6 +29,8 @@ Question:  Is the `{}` a dictionary in the format statement.
 >>> print ( "2 Decimal Places {:.2f}".format(a) )
 >>> print ( "In Order {} second {} third {}".format( "1st", 2, "last" ) )
 ```
+
+<div class="pagebreak"></div>
 
 ### A better if-else example
 
@@ -77,7 +75,6 @@ Let's implement that.
 ```
 m4_include(stand2.py.nu)
 ```
-
 
 
 

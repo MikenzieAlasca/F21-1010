@@ -1,5 +1,3 @@
-  1: 
-  2: imort x.bob
-  3: 
-  4: x.bob.bobfunc()
-  5: 
+  1: imort x.bob
+  2: 
+  3: x.bob.bobfunc()

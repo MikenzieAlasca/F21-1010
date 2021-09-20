@@ -1,4 +1,3 @@
- 
 print ( "1 for single taxpayers. " )
 print ( "2 for married taxpayers filing separately.  " )
 print ( "3 for heads of households.  " )
@@ -19,5 +18,3 @@ else:
     print ( "invalid input, should be 1, 2, 3, or 4" )
 
 print ( "Standard Deduction = {}".format( standard_decuction ) )
-
-

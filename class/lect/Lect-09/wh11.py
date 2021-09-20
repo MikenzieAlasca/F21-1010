@@ -1,4 +1,3 @@
-
 # Example of why to use a "while" - reverse a string
 
 vIn = "abcd"
@@ -9,4 +8,3 @@ while ( i > 0 ):
     vOut = vOut + vIn[i]
 
 print ( "vOut = ->{}<-".format(vOut ) )
-

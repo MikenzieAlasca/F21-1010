@@ -1,4 +1,2 @@
-
 def janefunc():
     print ( "jane" )
-

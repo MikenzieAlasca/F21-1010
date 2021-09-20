@@ -1,4 +1,2 @@
-  1: 
-  2: def bobfunc():
-  3:     print ( "bob" )
-  4: 
+  1: def bobfunc():
+  2:     print ( "bob" )

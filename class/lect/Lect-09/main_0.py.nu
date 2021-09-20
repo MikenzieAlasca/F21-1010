@@ -1,5 +1,3 @@
-  1: 
-  2: import jane
-  3: 
-  4: jane.janefunc()
-  5: 
+  1: import jane
+  2: 
+  3: jane.janefunc()
