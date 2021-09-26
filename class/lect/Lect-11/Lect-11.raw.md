@@ -98,3 +98,41 @@ m4_include(dna_input.py)
 And then join it to make 1 string.
 
 
+## How to get to a section of a string
+
+Let's say we have a string
+
+```
+bb = "abc123def" 
+```
+
+and we want to get to the 123 part of the string.  We can pull out just
+those three characters with:
+
+```
+x3 = bb[3:6]
+```
+
+So a little program that will do this is:
+
+```
+m4_include(sub.py)
+```
+
+## Replace - modifying a string
+
+
+## Convert to upper/lower case
+
+
+## Functions for Lab 05
+
+
+## A Program to go from DNA to Amino Acids.
+
+
+
+
+# Copyright
+
+Copyright (C) University of Wyoming, 2021.
