@@ -1,4 +1,4 @@
-  1: 
+  1: #!/Users/philip/opt/anaconda3/bin/python
   2: 
   3: # RNA codon table
   4: rna_codon = {

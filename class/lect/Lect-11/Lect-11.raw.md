@@ -68,3 +68,33 @@ Note: going from DAN to RNA change 'T' to 'U'
 
 
 
+## First convert to one string
+
+We have a list of strings.  We need just one.
+"How do you convert a list of strings to a single string?"
+
+Join them tougher.  There is a string operation to do this 
+called join.   Join gives us the ability to join with a separator
+between each string.
+
+```
+m4_include(join01.py)
+```
+
+We can also join with a 0 length separator (this is what we will
+want in our code).
+
+
+```
+m4_include(join02.py)
+```
+
+So we start out with the data in the program:
+
+```
+m4_include(dna_input.py)
+```
+
+And then join it to make 1 string.
+
+

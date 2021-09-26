@@ -15,3 +15,6 @@
  15: 
  16: print ( dna_input )
  17: 
+ 18: single_string = "".join(dna_input )
+ 19: 
+ 20: print ( single_string )

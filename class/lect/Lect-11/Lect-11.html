@@ -769,5 +769,59 @@ It has a good explanation of how to do this - but not exactly our requirements.
 
 <p>Note: going from DAN to RNA change &rsquo;T&rsquo; to &lsquo;U&rsquo;</p>
 
+<h2>First convert to one string</h2>
+
+<p>We have a list of strings.  We need just one.
+&ldquo;How do you convert a list of strings to a single string?&rdquo;</p>
+
+<p>Join them tougher.  There is a string operation to do this
+called join.   Join gives us the ability to join with a separator
+between each string.</p>
+
+<pre><code>#!/Users/philip/opt/anaconda3/bin/python
+
+a = [ &quot;aa&quot;, &quot;bb&quot;, &quot;cc&quot; ]
+
+print ( &quot;, &quot;.join(a) )
+
+
+</code></pre>
+
+<p>We can also join with a 0 length separator (this is what we will
+want in our code).</p>
+
+<pre><code>#!/Users/philip/opt/anaconda3/bin/python
+
+a = [ &quot;aa&quot;, &quot;bb&quot;, &quot;cc&quot; ]
+
+print ( &quot;&quot;.join(a) )
+
+
+</code></pre>
+
+<p>So we start out with the data in the program:</p>
+
+<pre><code>#!/Users/philip/opt/anaconda3/bin/python
+
+dna_input = [
+&quot;taaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaacccta&quot;,
+&quot;accctaaccctaaccctaaccctaacccaaccctaaccctaaccctaaccctaaccctaaccctaacccctaaccctaac&quot;,
+&quot;cctaaccctaaccctaacctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaacccctaaccc&quot;,
+&quot;taaccctaaaccctaaaccctaaccctaaccctaaccctaaccctaaccccaaccccaaccccaaccccaaccccaaccc&quot;,
+&quot;caaccctaacccctaaccctaaccctaaccctaccctaaccctaaccctaaccctaaccctaaccctaacccctaacccc&quot;,
+&quot;taaccctaaccctaaccctaaccctaaccctaaccctaacccctaaccctaaccctaaccctaacccaugCGGTACCCTC&quot;,
+&quot;AGCCGGCCCGCCCGCCCGGGTCTGACCTGAGGAGAACTGTGCTCCGCCTTCAGAGTACCACCGAAATCTGTGCAGAGGAc&quot;,
+&quot;aacgcagctccgccctcgcggtGCTCtccgggtctgtgctgaggagaacgCAACTCCGCCGTTGCAAAGGCGcgccgcgc&quot;,
+&quot;cggcgcaggcgcagagaggcgcgccgcgccggcgcaggcgcagagaggcgUGAcgcgccggcgcaggcgcagagaggcgc&quot;,
+&quot;gccgcgccggcgcaggcgcagagaggcgcgccgcgccggcgcaggcgcagagaggcgcgccgcgccggcgcaggcgcaga&quot;,
+]
+
+print ( dna_input )
+
+
+</code></pre>
+
+<p>And then join it to make 1 string.</p>
+
 </div>
 
