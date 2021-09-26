@@ -1,25 +1,32 @@
 
 PP=`pwd`
 FN=Lect-11
-# FN1=syllabus-5010
-# DIR=../F20-1015
 DIR=../../../
 IMG=
-PY=
+PY= \
+	feet_to_inches.py
 
-all: ${FN}.html ${FN}.pdf
+all: setup all2
 
-#${FN1}.html 
+setup:
+	./mk_all_nu.sh
 
-%.pdf: %.md
-	~/bin/md-to-pdf.sh $<
+all2: ${FN}.html 
 
-%.md: %.raw.md $(PY) $(IMG)
-	m4 -P $< >$@
+#${FN1}.html ${FN2}.html 
 
-%.html: %.md
-	blackfriday-tool ./$< $@
-	echo cat ./${DIR}/css/md.css $@ >/tmp/$@
-	cat ./${DIR}/css/pre ./${DIR}/css/markdown.css ./${DIR}/css/post ./${DIR}/css/md.css ./${DIR}/css/hpre $@ ./${DIR}/css/hpost >/tmp/$@
-	mv /tmp/$@ ./$@
-	echo "file://${PP}/$@" >>open.1
+%.html: %.raw.md
+	./mk_html.sh $< $@ 
+
+#%.pdf: %.md
+#	~/bin/md-to-pdf.sh $<
+#
+#%.md: %.raw.md $(PY) $(IMG)
+#	m4 -P $< >$@
+#
+#%.html: %.md
+#	blackfriday-tool ./$< $@
+#	echo cat ./${DIR}/css/md.css $@ >/tmp/$@
+#	cat ./${DIR}/css/pre ./${DIR}/css/markdown.css ./${DIR}/css/post ./${DIR}/css/md.css ./${DIR}/css/hpre $@ ./${DIR}/css/hpost >/tmp/$@
+#	mv /tmp/$@ ./$@
+#	echo "file://${PP}/$@" >>open.1

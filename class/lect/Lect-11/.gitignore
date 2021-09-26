@@ -2,3 +2,9 @@ GCF_000001405.39_GRCh38.p41214_genomic.s44a-21.fna
 2020
 2020
 GCF_000001405.39_GRCh38.p41214_genomic.s44a-21.fna
+.bak1
+conv_t_to_u.py
+conv_t_to_u.py.nu
+rna_lookup.py
+rna_lookup.py.nu
+__pycache__

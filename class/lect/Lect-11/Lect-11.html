@@ -708,6 +708,35 @@ ol {
 
 <div class="markdown-body">
 
+<h1>Lecture 11 - String processing.</h1>
+
+<h2>Let&rsquo;s start with some data</h2>
+
+<pre><code>taaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaacccta
+accctaaccctaaccctaaccctaacccaaccctaaccctaaccctaaccctaaccctaaccctaacccctaaccctaac
+cctaaccctaaccctaacctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaacccctaaccc
+taaccctaaaccctaaaccctaaccctaaccctaaccctaaccctaaccccaaccccaaccccaaccccaaccccaaccc
+caaccctaacccctaaccctaaccctaaccctaccctaaccctaaccctaaccctaaccctaaccctaacccctaacccc
+taaccctaaccctaaccctaaccctaaccctaaccctaacccctaaccctaaccctaaccctaaccctcgCGGTACCCTC
+AGCCGGCCCGCCCGCCCGGGTCTGACCTGAGGAGAACTGTGCTCCGCCTTCAGAGTACCACCGAAATCTGTGCAGAGGAc
+aacgcagctccgccctcgcggtGCTCtccgggtctgtgctgaggagaacgCAACTCCGCCGTTGCAAAGGCGcgccgcgc
+cggcgcaggcgcagagaggcgcgccgcgccggcgcaggcgcagagaggcgcgccgcgccggcgcaggcgcagagaggcgc
+gccgcgccggcgcaggcgcagagaggcgcgccgcgccggcgcaggcgcagagaggcgcgccgcgccggcgcaggcgcaga
+</code></pre>
+
+<p>This is from the file:</p>
+
+<p><a href="http://uw-s20-2015.s3.amazonaws.com/GCF_000001405.39_GRCh38.p41214_genomic.s44a-21.fna">GCF_000001405.39_GRCh38.p41214_genomic.s44a-21.fna</a></p>
+
+<h2>What we want to do is convert this to Amino Acids.</h2>
+
+<p>1st thing to note is that the data is upper/lower case.  Our life will be simpler if we make it all lower case.</p>
+
+<p>2nd thing is that this is DNA data.  It has &ldquo;T&rdquo; in it.  Let&rsquo;s make our conversion from messenger RNA that uses
+U instead of T.  So we need a function to start cleaning up the data.</p>
+
+<h2>Background on generation of Amino Acids from RNA</h2>
+
 <p><img src="./Aminoacids_table.svg" alt="Aminoacids_table.svg" />
 <a href="By Mouagip - Codons aminoacids table.png, Public Domain, https://commons.wikimedia.org/w/index.php?curid=5986132">Amino Acid Chart</a></p>
 
@@ -715,7 +744,7 @@ ol {
 
 <p>Le&rsquo;s do a google search and you might find:</p>
 
-<p><a href="[https://github.com/T101J/Translating_RNA_to_Protein">https://github.com/T101J/Translating_RNA_to_Protein</a></p>
+<p><a href="https://github.com/T101J/Translating_RNA_to_Protein">https://github.com/T101J/Translating_RNA_to_Protein</a></p>
 
 <p>this is cool.    A click on the code, and &hellip;
 It kind of is what is in the homework &hellip; that has promise.  What is the license?
