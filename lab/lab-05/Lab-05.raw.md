@@ -34,10 +34,9 @@ Link on github.com: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/la
 ## Part 2
 
 Implement a function that uses a dictionary to lookup the amino acid
-that corresponds to a set of 3 RNA letters. 
-This is to
-verify that you have worked with code that splits into 3 letter 
-groupings.
+that corresponds to a set of 3 RNA letters.    The lookup takes in
+a 3 letter codon string and returns a single letter amino acid.
+If the three letter is not found then return '!'.
 
 Example Input: "ccu" 
 
@@ -61,7 +60,7 @@ Link on github.com: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/la
 
 ## Part 3
 
-Use the supplied main program (link below) that imports the functions from Part 1 and Part 2 and
+Run the supplied main program (link below) that imports the functions from Part 1 and Part 2 and
 calls them in order to produce the amino acid sequence.
 
 Expected Output:
