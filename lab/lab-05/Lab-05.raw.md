@@ -13,10 +13,14 @@ m4_include(./../../setup.m4)
 Write a python function that will: 
 
 1.  Convert the input parameter to all lower case
-2.  Change all the T's and t's to u's
+2.  Change all the t's to u's
 3.  Return the converted string.
 
 This is very close to the example in class.
+
+Use the `example-conv_t_to_u.py` as a starting point.
+
+Link on github.com: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/example-conv_t_to_u.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/example-conv_t_to_u.py)
 
 Input Example: aaTggTaaa
 
@@ -25,9 +29,7 @@ Output Example:  aaugguaaa
 Implements a test that verifies that this works.  Call the function `conv_t_to_u`
 Put it into the file `conv_t_to_u.py`.
 
-Use the `example-conv_t_to_u.py` as a starting point.  
 
-Link on github.com: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/example-conv_t_to_u.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/example-conv_t_to_u.py)
 
 
 ## Part 2
