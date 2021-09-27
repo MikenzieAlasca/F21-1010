@@ -139,7 +139,7 @@ replace with a longer string
 m4_include(rep3.py.nu)
 ```
 
-Replace just the 1st occurance
+Replace just the 1st occurrence
 
 ```
 m4_include(rep4.py.nu)
@@ -161,7 +161,38 @@ m4_include(uc1.py.nu)
 
 ## Functions for Lab 05
 
-TODO
+First is a function to take our input, convert from upper/lower case to lower,
+then replace the `t`s with `u`s.
+
+Second is to use a dictionary lookup.
+
+To create a dictionary in Python
+
+```
+d = { "name": 1, "name2", 2 }
+```
+
+or to lookup other strings
+
+```
+d = { "in1": "out1", "in2", "out2" }
+```
+
+So we can lookup our 3 letter codon with a dictionary.
+
+
+```
+m4_include(rna_dictionary.py)
+```
+
+We can see if a value is in the lookup table with an "if"
+
+```
+m4_include(r1.py)
+```
+
+
+
 
 ## A Program to go from DNA to Amino Acids.
 

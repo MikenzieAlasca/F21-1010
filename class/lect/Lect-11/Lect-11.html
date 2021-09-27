@@ -877,7 +877,7 @@ print ( &quot;x3 = {}&quot;.format(x3) )
 
 </code></pre>
 
-<p>Replace just the 1st occurance</p>
+<p>Replace just the 1st occurrence</p>
 
 <pre><code>  1: # Replace just the 1st B with a longer string.
   2: 
@@ -904,7 +904,57 @@ print ( &quot;x3 = {}&quot;.format(x3) )
 
 <h2>Functions for Lab 05</h2>
 
-<p>TODO</p>
+<p>First is a function to take our input, convert from upper/lower case to lower,
+then replace the <code>t</code>s with <code>u</code>s.</p>
+
+<p>Second is to use a dictionary lookup.</p>
+
+<p>To create a dictionary in Python</p>
+
+<pre><code>d = { &quot;name&quot;: 1, &quot;name2&quot;, 2 }
+</code></pre>
+
+<p>or to lookup other strings</p>
+
+<pre><code>d = { &quot;in1&quot;: &quot;out1&quot;, &quot;in2&quot;, &quot;out2&quot; }
+</code></pre>
+
+<p>So we can lookup our 3 letter codon with a dictionary.</p>
+
+<pre><code>#!/Users/philip/opt/anaconda3/bin/python
+
+# RNA codon table
+rna_codon = {
+    &quot;aaa&quot; : &quot;K&quot;, &quot;aac&quot; : &quot;N&quot;, &quot;aag&quot; : &quot;K&quot;, &quot;aau&quot; : &quot;N&quot;, &quot;aca&quot; : &quot;T&quot;, &quot;acc&quot; : &quot;T&quot;, &quot;acg&quot; : &quot;T&quot;,
+    &quot;acu&quot; : &quot;T&quot;, &quot;aga&quot; : &quot;R&quot;, &quot;agc&quot; : &quot;S&quot;, &quot;agg&quot; : &quot;R&quot;, &quot;agu&quot; : &quot;S&quot;, &quot;aua&quot; : &quot;I&quot;, &quot;auc&quot; : &quot;I&quot;,
+    &quot;aug&quot; : &quot;M&quot;, &quot;auu&quot; : &quot;I&quot;, &quot;caa&quot; : &quot;Q&quot;, &quot;cac&quot; : &quot;H&quot;, &quot;cag&quot; : &quot;Q&quot;, &quot;cau&quot; : &quot;H&quot;, &quot;cca&quot; : &quot;P&quot;,
+    &quot;ccc&quot; : &quot;P&quot;, &quot;ccg&quot; : &quot;P&quot;, &quot;ccu&quot; : &quot;P&quot;, &quot;cga&quot; : &quot;R&quot;, &quot;cgc&quot; : &quot;R&quot;, &quot;cgg&quot; : &quot;R&quot;, &quot;cgu&quot; : &quot;R&quot;,
+    &quot;cua&quot; : &quot;L&quot;, &quot;cuc&quot; : &quot;L&quot;, &quot;cug&quot; : &quot;L&quot;, &quot;cuu&quot; : &quot;L&quot;, &quot;gaa&quot; : &quot;E&quot;, &quot;gac&quot; : &quot;D&quot;, &quot;gag&quot; : &quot;E&quot;,
+    &quot;gau&quot; : &quot;D&quot;, &quot;gca&quot; : &quot;A&quot;, &quot;gcc&quot; : &quot;A&quot;, &quot;gcg&quot; : &quot;A&quot;, &quot;gcu&quot; : &quot;A&quot;, &quot;gga&quot; : &quot;G&quot;, &quot;ggc&quot; : &quot;G&quot;,
+    &quot;ggg&quot; : &quot;G&quot;, &quot;ggu&quot; : &quot;G&quot;, &quot;gua&quot; : &quot;V&quot;, &quot;guc&quot; : &quot;V&quot;, &quot;gug&quot; : &quot;V&quot;, &quot;guu&quot; : &quot;V&quot;, &quot;uaa&quot; : &quot;.&quot;,
+    &quot;uac&quot; : &quot;Y&quot;, &quot;uag&quot; : &quot;.&quot;, &quot;uau&quot; : &quot;Y&quot;, &quot;uca&quot; : &quot;S&quot;, &quot;ucc&quot; : &quot;S&quot;, &quot;ucg&quot; : &quot;S&quot;, &quot;ucu&quot; : &quot;S&quot;,
+    &quot;uga&quot; : &quot;.&quot;, &quot;ugc&quot; : &quot;C&quot;, &quot;ugg&quot; : &quot;W&quot;, &quot;ugu&quot; : &quot;C&quot;, &quot;uua&quot; : &quot;L&quot;, &quot;uuc&quot; : &quot;F&quot;, &quot;uug&quot; : &quot;L&quot;,
+    &quot;uuu&quot; : &quot;F&quot;
+}
+
+
+</code></pre>
+
+<p>We can see if a value is in the lookup table with an &ldquo;if&rdquo;</p>
+
+<pre><code>from rna_lookup import rna_codon
+
+if &quot;xyz&quot; in rna_codon:
+   print ( &quot;found&quot; )
+else:
+   print ( &quot;not found&quot; )
+
+if &quot;gac&quot; in rna_codon:
+   print ( &quot;found value = {}&quot;.format(rna_codon[&quot;gac&quot;] ) )
+else:
+   print ( &quot;not found&quot; )
+
+</code></pre>
 
 <h2>A Program to go from DNA to Amino Acids.</h2>
 
