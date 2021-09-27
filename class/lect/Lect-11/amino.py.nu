@@ -34,7 +34,7 @@
  34:         i = i + 3
  35:     elif st == "encode" and amino == ".":
  36:         st = "before"
- 37:         print ("Protein String: ", amino_string)
+ 37:         print ("Protein : ", amino_string)
  38:         i = i + 3
  39:     elif st == "encode" :
  40:         amino_string = amino_string + amino

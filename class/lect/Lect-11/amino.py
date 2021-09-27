@@ -34,7 +34,7 @@ while i < len(rna)-2:
         i = i + 3
     elif st == "encode" and amino == ".":
         st = "before"
-        print ("Protein String: ", amino_string)
+        print ("Protein : ", amino_string)
         i = i + 3
     elif st == "encode" :
         amino_string = amino_string + amino

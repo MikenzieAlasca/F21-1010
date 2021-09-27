@@ -1,3 +1,4 @@
+#!/Users/philip/opt/anaconda3/bin/python
 
 bb = "abc123def" 
 x3 = bb[3:6]
