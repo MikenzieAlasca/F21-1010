@@ -8,10 +8,13 @@ m4_include(./../../setup.m4)
 
 
 
-1. Write a python function that will  
-- Convert the input parameter to all lower case
-- Change all the T's and t's to u's
-- Return the converted string.
+## Part 1
+
+Write a python function that will: 
+
+1.  Convert the input parameter to all lower case
+2.  Change all the T's and t's to u's
+3.  Return the converted string.
 
 This is very close to the example in class.
 
@@ -28,7 +31,9 @@ Use the `example-conv_t_to_u.py` as a starting point.
 Link on github.com: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/example-conv_t_to_u.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/example-conv_t_to_u.py)
 
 
-2. Implement a function that uses a dictionary to lookup the amino acid
+## Part 2
+
+Implement a function that uses a dictionary to lookup the amino acid
 that corresponds to a set of 3 RNA letters. 
 This is to
 verify that you have worked with code that splits into 3 letter 
@@ -54,7 +59,9 @@ Link on github.com: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/la
 
 
 
-3. Use the supplied main program that imports the functions from 1,2 and
+## Part 3
+
+Use the supplied main program (link below) that imports the functions from Part 1 and Part 2 and
 calls them in order to produce the amino acid sequence.
 
 Expected Output:
@@ -62,6 +69,10 @@ Expected Output:
 ```
 RYPQPARPPGSDLRRTVLRLQSTTEICAEDNAAPPSRCSPGLC
 ```
+
+Link on github.com: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/amino.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/amino.py)
+
+
 
 
 # Turn in
