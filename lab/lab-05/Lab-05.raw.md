@@ -25,6 +25,7 @@ Put it into the file `conv_t_to_u.py`.
 
 Use the `example-conv_t_to_u.py` as a starting point.  
 
+Link on github.com: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/example-conv_t_to_u.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/example-conv_t_to_u.py)
 
 
 2. Implement a function that uses a dictionary to lookup the amino acid
@@ -47,6 +48,7 @@ Use the `example-rna_lookkup.py` as a starting point.    It has the dictionary i
 and some of the other code.  You will need to implement some test cases.  Look at
 the previous code and copy, then modify the tests to be appropriate for this.
 
+Link on github.com: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/example-rna_lookkup.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/example-rna_lookkup.py)
 
 
 
@@ -62,7 +64,9 @@ RYPQPARPPGSDLRRTVLRLQSTTEICAEDNAAPPSRCSPGLC
 ```
 
 
-# Turn in your 2 functions with test code.
+# Turn in
+
+Your 2 functions with test code.
 
 
 
