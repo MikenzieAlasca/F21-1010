@@ -121,15 +121,55 @@ m4_include(sub.py)
 
 ## Replace - modifying a string
 
+Python has a builtin string function to replace strings.
+
+```
+m4_include(rep1.py.nu)
+```
+
+Use replace to remove a string.
+
+```
+m4_include(rep2.py.nu)
+```
+
+replace with a longer string
+
+```
+m4_include(rep3.py.nu)
+```
+
+Replace just the 1st occurance
+
+```
+m4_include(rep4.py.nu)
+```
 
 ## Convert to upper/lower case
 
+To convert to lower case
+
+```
+m4_include(lc1.py.nu)
+```
+
+To convert to upper case
+
+```
+m4_include(uc1.py.nu)
+```
 
 ## Functions for Lab 05
 
+TODO
 
 ## A Program to go from DNA to Amino Acids.
 
+Program State
+
+```
+m4_include(amino.py.nu)
+```
 
 
 

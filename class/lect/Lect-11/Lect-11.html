@@ -849,11 +849,113 @@ print ( &quot;x3 = {}&quot;.format(x3) )
 
 <h2>Replace - modifying a string</h2>
 
+<p>Python has a builtin string function to replace strings.</p>
+
+<pre><code>  1: s = &quot;aBBcBBd&quot;
+  2: t = s.replace(&quot;B&quot;,&quot;-&quot;)
+  3: print ( t )
+
+</code></pre>
+
+<p>Use replace to remove a string.</p>
+
+<pre><code>  1: # Remove Bs
+  2: 
+  3: s = &quot;aBBcBBd&quot;
+  4: t = s.replace(&quot;B&quot;,&quot;&quot;)
+  5: print ( t )
+
+</code></pre>
+
+<p>replace with a longer string</p>
+
+<pre><code>  1: # Replace Bs with a longer string.
+  2: 
+  3: s = &quot;aBBcBBd&quot;
+  4: t = s.replace(&quot;B&quot;,&quot;--hi--&quot;)
+  5: print ( t )
+
+</code></pre>
+
+<p>Replace just the 1st occurance</p>
+
+<pre><code>  1: # Replace just the 1st B with a longer string.
+  2: 
+  3: s = &quot;aBBcBBd&quot;
+  4: t = s.replace(&quot;B&quot;,&quot;--hi--&quot;,1)
+  5: print ( t )
+
+</code></pre>
+
 <h2>Convert to upper/lower case</h2>
+
+<p>To convert to lower case</p>
+
+<pre><code>  1: a = &quot;This is A Mixed Case&quot;
+  2: b = a.upper()
+  3: print ( b )
+
+</code></pre>
+
+<p>To convert to upper case</p>
+
+<pre><code>
+</code></pre>
 
 <h2>Functions for Lab 05</h2>
 
+<p>TODO</p>
+
 <h2>A Program to go from DNA to Amino Acids.</h2>
+
+<p>Program State</p>
+
+<pre><code>  1: #!/Users/philip/opt/anaconda3/bin/python
+  2: 
+  3: import conv_t_to_u
+  4: import rna_lookup
+  5: 
+  6: dna_input = [
+  7: &quot;taaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaacccta&quot;,
+  8: &quot;accctaaccctaaccctaaccctaacccaaccctaaccctaaccctaaccctaaccctaaccctaacccctaaccctaac&quot;,
+  9: &quot;cctaaccctaaccctaacctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaaccctaacccctaaccc&quot;,
+ 10: &quot;taaccctaaaccctaaaccctaaccctaaccctaaccctaaccctaaccccaaccccaaccccaaccccaaccccaaccc&quot;,
+ 11: &quot;caaccctaacccctaaccctaaccctaaccctaccctaaccctaaccctaaccctaaccctaaccctaacccctaacccc&quot;,
+ 12: &quot;taaccctaaccctaaccctaaccctaaccctaaccctaacccctaaccctaaccctaaccctaacccaugCGGTACCCTC&quot;,
+ 13: &quot;AGCCGGCCCGCCCGCCCGGGTCTGACCTGAGGAGAACTGTGCTCCGCCTTCAGAGTACCACCGAAATCTGTGCAGAGGAc&quot;,
+ 14: &quot;aacgcagctccgccctcgcggtGCTCtccgggtctgtgctgaggagaacgCAACTCCGCCGTTGCAAAGGCGcgccgcgc&quot;,
+ 15: &quot;cggcgcaggcgcagagaggcgcgccgcgccggcgcaggcgcagagaggcgUGAcgcgccggcgcaggcgcagagaggcgc&quot;,
+ 16: &quot;gccgcgccggcgcaggcgcagagaggcgcgccgcgccggcgcaggcgcagagaggcgcgccgcgccggcgcaggcgcaga&quot;,
+ 17: ]
+ 18: 
+ 19: amino_string = &quot;&quot;
+ 20: 
+ 21: rna = conv_t_to_u.conv_t_to_u ( &quot;&quot;.join(dna_input) )
+ 22: 
+ 23: st = &quot;before&quot;
+ 24: i = 0
+ 25: while i &lt; len(rna)-2:
+ 26:     three = rna[i:i+3]
+ 27:     # print ( &quot;st {} three &gt;{}&lt; at i={}&quot;.format(st, three,i)) 
+ 28:     amino = rna_lookup.rna_to_amino_acid(three)
+ 29:     if amino == '!' :
+ 30:         print ( &quot;Invalid 3 letter sequence {} at {}&quot;.format(three, i ) )
+ 31:         break
+ 32:     if st == &quot;before&quot; and amino == &quot;M&quot; :
+ 33:         st = &quot;encode&quot;
+ 34:         i = i + 3
+ 35:     elif st == &quot;encode&quot; and amino == &quot;.&quot;:
+ 36:         st = &quot;before&quot;
+ 37:         print (&quot;Protein : &quot;, amino_string)
+ 38:         i = i + 3
+ 39:     elif st == &quot;encode&quot; :
+ 40:         amino_string = amino_string + amino
+ 41:         i = i + 3
+ 42:     else:
+ 43:         i = i + 1
+ 44: 
+
+</code></pre>
 
 <h1>Copyright</h1>
 
