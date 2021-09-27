@@ -13,11 +13,8 @@ def conv_t_to_u(s) :
 if __name__ == "__main__":
     n_err = 0
 
-    s = conv_t_to_u("atATGct")
-    ex =  "auaugcu"
-    if s != ex :
-        n_err = n_err + 1
-        print ( "Error: Test 1: conversion not working, expected {} got {}".format ( ex, s ) )
+    # Add you test code - call conv_t_to_u
+    # Add your check that this is correct.
 
     if n_err == 0 :
         print ( "PASS" )

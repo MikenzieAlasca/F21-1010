@@ -23,7 +23,6 @@ Input Example: aaTggTaaa
 Output Example:  aaugguaaa
 
 Implements a test that verifies that this works.  Call the function `conv_t_to_u`
-This program is an intermediate step.   We won't actually call this in the main program.
 Put it into the file `conv_t_to_u.py`.
 
 Use the `example-conv_t_to_u.py` as a starting point.  
@@ -40,7 +39,7 @@ If the three letter is not found then return '!'.
 
 Example Input: "ccu" 
 
-Example Example: "P"
+Example Output: "P"
 
 For starts codons, "aug",  it returns 'M' for stop, "uaa", "uag", "uga" it returns '.'
 
