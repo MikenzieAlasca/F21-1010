@@ -11,6 +11,9 @@ Amino Acid Coding Table
 
 ![Aminoacids_table.svg](./Aminoacids_table.svg)
 
+Information that you need for this lab is in the lecture notes.
+[https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-11/Lect-11.html.pdf](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-11/Lect-11.html.pdf)
+
 ## Part 1
 
 Write a python function that will: 
