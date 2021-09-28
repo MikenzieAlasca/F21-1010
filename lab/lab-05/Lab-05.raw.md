@@ -7,6 +7,9 @@ m4_include(./../../setup.m4)
 100pts each part (2 parts), 200 pts total.
 
 
+Amino Acid Coding Table
+
+![Aminoacids_table.svg](./Aminoacids_table.svg)
 
 ## Part 1
 
