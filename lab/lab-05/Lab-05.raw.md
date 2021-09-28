@@ -16,6 +16,8 @@ Information that you need for this lab is in the lecture notes.
 
 ## Part 1
 
+Create a new file conv_t_to_u.py.
+
 Write a python function that will: 
 
 1.  Convert the input parameter to all lower case
@@ -32,16 +34,17 @@ Input Example: aaTggTaaa
 
 Output Example:  aaugguaaa
 
-Implements a test that verifies that this works.  Call the function `conv_t_to_u`
-Put it into the file `conv_t_to_u.py`.
+Implement a test that verifies that this works. See example-conv_t_to_u.py for testing code as well.
 
 
 
 
 ## Part 2
 
+Create a new file rna_lookup.py.
+
 Implement a function that uses a dictionary to lookup the amino acid
-that corresponds to a set of 3 RNA letters.    The lookup takes in
+that corresponds to a set of 3 RNA letters. The lookup takes in
 a 3 letter codon string and returns a single letter amino acid.
 If the three letter is not found then return '!'.
 
@@ -52,7 +55,7 @@ Example Output: "P"
 For starts codons, "aug",  it returns 'M' for stop, "uaa", "uag", "uga" it returns '.'
 
 Call the function `rna_to_amino_acid`.  Passing the 3 letter amino sequence.
-Put this in the file `rna_lookup.py`.
+
 Return the single letter coding for the amino acid as a string.
 
 Use the `example-rna_lookkup.py` as a starting point.    It has the dictionary in it
@@ -67,7 +70,9 @@ Link on github.com: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/la
 
 ## Part 3
 
-Run the supplied main program (link below) that imports the functions from Part 1 and Part 2 and
+Download amino.py from [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/amino.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/amino.py).
+
+Run the file amino.py that imports the functions from Part 1 and Part 2 and
 calls them in order to produce the amino acid sequence.
 
 Expected Output:
@@ -76,14 +81,11 @@ Expected Output:
 RYPQPARPPGSDLRRTVLRLQSTTEICAEDNAAPPSRCSPGLC
 ```
 
-Link on github.com: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/amino.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-05/amino.py)
-
-
-
+Make sure you have all the files in the same folder.
 
 # Turn in
 
-Your 2 functions with test code.
+Your 2 python files conv_t_to_u.py and rna_lookup.py.
 
 
 
