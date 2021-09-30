@@ -38,6 +38,12 @@ Lot's of text formats:
 5. "css"
 6. "js"
 
+What about common binary image formats
+
+1. Images ( .png, .jpg )
+2. Some images are not binary (.svg)
+3. Movies ( .mp4, .mkv )
+
 Where are they:
 
 1. On your local computer.
@@ -50,22 +56,35 @@ How are they organized.
 
 ## Reading a File
 
-```
+First we need a file to read:
 
 ```
+m4_include(sample.txt)
+```
 
-<!--
+Files are composed of "lines".  Each line has an end of line marker.
 
-3. Files - What are they
-	- what are they composed of
-	- what is a "markdown" file
-	- what is a "html" page
-	- what is a "css" page
-	- what is a ".js" page
-	- what is a ".png/.jpg/.svg" image
-4. Whatis a "file system"
-4. How do we read a file
-4. How do we write a file
-5. What is "dropbox" or google-drive or onedrive
+```
+m4_include(readFile.py.nu)
+```
 
--->
+## Writing a File
+
+Create and write to a file
+
+```
+m4_include(write1.py.nu)
+```
+
+You can also just add to an existing file.
+
+```
+m4_include(write2.py.nu)
+```
+
+
+
+## What are Dropbox, OneDrive 
+
+
+

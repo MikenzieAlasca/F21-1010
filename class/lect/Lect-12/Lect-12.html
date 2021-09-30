@@ -712,6 +712,8 @@ ol {
 
 <h2>First - Searching Strings</h2>
 
+<p>How to find one string inside another.</p>
+
 <pre><code>  1: s = &quot;We The People, In order for form a more perfect union&quot;
   2: 
   3: pos = s.index(&quot;The&quot;)
@@ -729,15 +731,107 @@ ol {
 
 </code></pre>
 
-<!--
+<p>This introduces &ldquo;exception&rdquo; handling.</p>
 
-1. Searing Strings - index
-2. Loops to Search List
+<h2>Search in a list</h2>
+
+<pre><code>  1: 
+  2: ll = [ &quot;abc&quot;, &quot;def&quot;, &quot;ghi&quot; ]
+  3: lookFor = &quot;def&quot;
+  4: 
+  5: found = False
+  6: i = 0
+  7: while i &lt; len(ll):
+  8:     if lookFor == ll[i]:
+  9:         print ( &quot;Found at {}&quot;.format(i) )
+ 10:         found = True
+ 11:         break
+ 12:     i = i + 1
+ 13: if not found :
+ 14:     print ( &quot;Not Found&quot; )
+ 15: 
+
+</code></pre>
+
+<h2>Files - what are they</h2>
+
+<p>Two types: text and binary</p>
+
+<p>Binary tend to be in some proprietary format.</p>
+
+<p>Text tend to have a &ldquo;format&rdquo; that you can use and write programs with.</p>
+
+<p>Lot&rsquo;s of text formats:</p>
+
+<ol>
+<li>Our Python Programs</li>
+<li>Other Programs</li>
+<li>&ldquo;markdown&rdquo;</li>
+<li>&ldquo;html&rdquo;</li>
+<li>&ldquo;css&rdquo;</li>
+<li>&ldquo;js&rdquo;</li>
+</ol>
+
+<p>What about common binary image formats</p>
+
+<ol>
+<li>Images ( .png, .jpg )</li>
+<li>Some images are not binary (.svg)</li>
+<li>Movies ( .mp4, .mkv )</li>
+</ol>
+
+<p>Where are they:</p>
+
+<ol>
+<li>On your local computer.</li>
+<li>On a remote computer. (dropbox, onedrive)</li>
+</ol>
+
+<p>How are they organized.</p>
+
+<ol>
+<li>A hierarchy - Directory Tree</li>
+<li>By Name</li>
+</ol>
+
+<h2>Reading a File</h2>
+
+<p>First we need a file to read:</p>
+
+<pre><code>This is
+a short
+file of
+text
+
+</code></pre>
+
+<pre><code>  1: #!/Users/philip/opt/anaconda3/bin/python
+  2: 
+  3: def readFile(fn):
+  4: 
+  5:     f = open(fn,&quot;r&quot;,encoding=&quot;utf8&quot;)
+  6:     if f == None:
+  7:         print ( f&quot;Invalid file {fn} - failed to open&quot; )
+  8:         return 
+  9: 
+ 10:     line_no = 0
+ 11:     while True:
+ 12:         line_no = line_no + 1
+ 13:         line = f.readline()
+ 14:         if not line:
+ 15:             break
+ 16:         print(&quot;Line {}: {}&quot;.format(line_no, line.strip()))
+ 17: 
+ 18:     f.close()
+ 19: 
+ 20: readFile ( &quot;sample.txt&quot; )
+
+</code></pre>
+
+<!--
 
 3. Files - What are they
     - what are they composed of
-    - what is a "binary" file
-    - what is a "text" file
     - what is a "markdown" file
     - what is a "html" page
     - what is a "css" page
