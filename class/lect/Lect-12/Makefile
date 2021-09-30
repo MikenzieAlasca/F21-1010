@@ -4,29 +4,34 @@ FN=Lect-12
 DIR=../../../
 IMG=
 PY= \
-	feet_to_inches.py
+	readFile.py \
+	search1.py \
+	search2.py \
+	write1.py \
+	write2.py
+
 
 all: setup all2
 
 setup:
 	../mk_all_nu.sh
 
-all2: ${FN}.html 
+all2: ${FN}.html ${PY}
 
-#${FN1}.html ${FN2}.html 
 
-%.html: %.raw.md
-	../mk_html.sh $< $@ 
+#%.html: %.raw.md
+#	../mk_html.sh $< $@ 
 
 #%.pdf: %.md
 #	~/bin/md-to-pdf.sh $<
-#
-#%.md: %.raw.md $(PY) $(IMG)
-#	m4 -P $< >$@
-#
-#%.html: %.md
-#	blackfriday-tool ./$< $@
-#	echo cat ./${DIR}/css/md.css $@ >/tmp/$@
-#	cat ./${DIR}/css/pre ./${DIR}/css/markdown.css ./${DIR}/css/post ./${DIR}/css/md.css ./${DIR}/css/hpre $@ ./${DIR}/css/hpost >/tmp/$@
-#	mv /tmp/$@ ./$@
-#	echo "file://${PP}/$@" >>open.1
+
+.PRECIOUS: %.md 
+%.md: %.raw.md $(PY) $(IMG)
+	m4 -P $< >$@
+
+%.html: %.md
+	blackfriday-tool ./$< $@
+	echo cat ./${DIR}/css/md.css $@ >/tmp/$@
+	cat ./${DIR}/css/pre ./${DIR}/css/markdown.css ./${DIR}/css/post ./${DIR}/css/md.css ./${DIR}/css/hpre $@ ./${DIR}/css/hpost >/tmp/$@
+	mv /tmp/$@ ./$@
+	echo "file://${PP}/$@" >>open.1

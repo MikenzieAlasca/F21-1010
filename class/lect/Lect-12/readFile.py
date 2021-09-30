@@ -1,5 +1,3 @@
-#!/Users/philip/opt/anaconda3/bin/python
-
 def readFile(fn):
     f = open(fn,"r",encoding="utf8")
     if f == None:

@@ -1,7 +1,7 @@
 
 m4_include(../../../setup.m4)
 
-# Lecture 12 - Files and Reading Files
+# Lecture 12 - More on Strings, Files Reading and Writing
 
 ## First - Searching Strings
 

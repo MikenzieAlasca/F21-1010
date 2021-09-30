@@ -708,7 +708,7 @@ ol {
 
 <div class="markdown-body">
 
-<h1>Lecture 12 - Files and Reading Files</h1>
+<h1>Lecture 12 - More on Strings, Files Reading and Writing</h1>
 
 <h2>First - Searching Strings</h2>
 
@@ -805,44 +805,50 @@ text
 
 </code></pre>
 
-<pre><code>  1: #!/Users/philip/opt/anaconda3/bin/python
-  2: 
-  3: def readFile(fn):
-  4: 
-  5:     f = open(fn,&quot;r&quot;,encoding=&quot;utf8&quot;)
-  6:     if f == None:
-  7:         print ( f&quot;Invalid file {fn} - failed to open&quot; )
-  8:         return 
-  9: 
- 10:     line_no = 0
- 11:     while True:
- 12:         line_no = line_no + 1
- 13:         line = f.readline()
- 14:         if not line:
- 15:             break
- 16:         print(&quot;Line {}: {}&quot;.format(line_no, line.strip()))
- 17: 
- 18:     f.close()
- 19: 
- 20: readFile ( &quot;sample.txt&quot; )
+<p>Files are composed of &ldquo;lines&rdquo;.  Each line has an end of line marker.</p>
+
+<pre><code>  1: def readFile(fn):
+  2:     f = open(fn,&quot;r&quot;,encoding=&quot;utf8&quot;)
+  3:     if f == None:
+  4:         print ( f&quot;Invalid file {fn} - failed to open&quot; )
+  5:         return 
+  6: 
+  7:     line_no = 0
+  8:     while True:
+  9:         line_no = line_no + 1
+ 10:         line = f.readline()
+ 11:         if not line:
+ 12:             break
+ 13:         print(&quot;Line {}: {}&quot;.format(line_no, line.strip()))
+ 14: 
+ 15:     f.close()
+ 16: 
+ 17: readFile ( &quot;sample.txt&quot; )
 
 </code></pre>
 
-<!--
+<h2>Writing a File</h2>
 
-3. Files - What are they
-    - what are they composed of
-    - what is a "markdown" file
-    - what is a "html" page
-    - what is a "css" page
-    - what is a ".js" page
-    - what is a ".png/.jpg/.svg" image
-4. Whatis a "file system"
-4. How do we read a file
-4. How do we write a file
-5. What is "dropbox" or google-drive or onedrive
+<p>Create and write to a file</p>
 
--->
+<pre><code>  1: 
+  2: f = open(&quot;sample.out.txt&quot;, &quot;w&quot;)
+  3: f.write(&quot;some data&quot;)
+  4: f.write(&quot;some more&quot;)
+  5: f.close()
+
+</code></pre>
+
+<p>You can also just add to an existing file.</p>
+
+<pre><code>  1: f = open(&quot;sample.out.txt&quot;, &quot;a&quot;)
+  2: f.write(&quot;Yes data&quot;)
+  3: f.write(&quot;Yes more data&quot;)
+  4: f.close()
+
+</code></pre>
+
+<h2>What are Dropbox, OneDrive</h2>
 
 </div>
 
