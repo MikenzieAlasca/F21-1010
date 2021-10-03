@@ -63,7 +63,7 @@ ll = [
 You have a function that will reverse strings:
 
 ```
-m4_import(reverse.py.nu)
+m4_include(reverse.py.nu)
 ```
 
 Write a program that will take the input list above and find the strings with
@@ -126,7 +126,7 @@ Question  10: 60 pts.  You have the following code.  It is not working correctly
 Fix it. (file is q10.py)
 
 *Hint: you may want to fix the code before you run it - or remember that a 
-control-c will terminate a program in the middle of running it*
+control-C will terminate a program in the middle of running it*
 
 ```
 m4_include(q10.py.nu)

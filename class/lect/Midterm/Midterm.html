@@ -758,7 +758,36 @@ last 3 characters in the following list of strings:</p>
 
 <p>You have a function that will reverse strings:</p>
 
-<pre><code>m4_import(reverse.py.nu)
+<pre><code>  1: 
+  2: # revers will reverse a string, putting the last character first etc.
+  3: def reverse(s):
+  4:     i = len(s)-1
+  5:     o = &quot;&quot;
+  6:     while ( i &gt;= 0 ):
+  7:         o = o + s[i]
+  8:         i = i - 1
+  9:     return ( o )
+ 10: 
+ 11: 
+ 12: # Automated Test
+ 13: if __name__ == &quot;__main__&quot;:
+ 14:     n_err = 0
+ 15:     x = reverse ( &quot;The quick brown fox jumps over the lazy dog.&quot; )
+ 16:     expect = &quot;.god yzal eht revo spmuj xof nworb kciuq ehT&quot;
+ 17:     if x != expect:
+ 18:         n_err = n_err + 1
+ 19:         print ( &quot;Error: Test 1: conversion not working, expected {} got {}&quot;.format (  expect, x ) )
+ 20:     x = reverse ( &quot;&quot; )
+ 21:     if x != &quot;&quot;:
+ 22:         n_err = n_err + 1
+ 23:         print ( &quot;Error: Test 2: conversion not working, expected -&gt;{}&lt;- got -&gt;{}&lt;-&quot;.format ( &quot;&quot;, x ) )
+ 24: 
+ 25:     if n_err == 0 :
+ 26:         print ( &quot;PASS&quot; )
+ 27:     else:
+ 28:         print ( &quot;FAILED&quot; )
+ 29: 
+
 </code></pre>
 
 <p>Write a program that will take the input list above and find the strings with
@@ -928,7 +957,7 @@ Fix it. (file is q9.py)</p>
 Fix it. (file is q10.py)</p>
 
 <p><em>Hint: you may want to fix the code before you run it - or remember that a
-control-c will terminate a program in the middle of running it</em></p>
+control-C will terminate a program in the middle of running it</em></p>
 
 <pre><code>  1: 
   2: def double_values_in_list ( ll ):
