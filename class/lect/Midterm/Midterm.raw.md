@@ -1,30 +1,6 @@
 
 m4_include(../../../setup.m4)
 
-```
-Outline
-
-600 ptes 
-15 questions
-
-5 * 60 = 300
-10 * 30 = 300
-
-10 questions
-60 pts each
-
-*1. Function to convert from feet to maters with test
-2. Function to find X number in list
-3. Function to convert input strings list to a single string
-4. Calculate the `a+2x+2x**2` with big numbs
-5. Sting - first 3 are reverse of last 3 and a string in the middle.
-6. if/else question
-7. for-loop question
-8. read-program and fix defect with incorrect return value
-9. read-program and fix defect with infinite loop
-10. read-program and show steps
-
-```
 
 # Midterm
 
@@ -111,13 +87,31 @@ Implement a test that checks this.
 
 
 
-Question  7: 60 pts.
+Question  7: 60 pts.  Given the following code:
 
-xyzzy TODO
+```
+m4_include(q7.py.nu)
+```
 
-Question  8: 60 pts.
+Show the output from the 3 line program.
 
-xyzzy TODO
+
+Question  8: 60 pts.  Using the following code
+
+```
+m4_include(rev1.py.nu)
+```
+
+Hand trace what is happening int this code.   Complete the following table.
+
+| Line No / Time | s | i | o | notes |
+|----------------|---|---|---|---------|
+| 1l / t1        | abc | | | |
+| l2 / t2        | abc | 2 | | |
+| l3 / t3        | abc | 2 | "" | |
+| l4 / t4        | abc | 2 | "" | while is true, enter loop |
+| l5 / t5        | abc | 2 | "c | |
+
 
 
 Question  9: 60 pts.  You have the following code.  It is not working correctly.
