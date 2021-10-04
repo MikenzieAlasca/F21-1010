@@ -40,9 +40,13 @@ Our process for searching this is:
 4. Search the data to see if the pattern is in the data.   `string.index(patter)` can be used to do this.  It returns the location of a pattern in a string.  If not found it throws an error.  This means we will need to put it in a try/except block to catch the error.
 
 
+Turn in your python program and the output location of the pattern if it is found.
 
 
 
 
 
 
+# Copyright
+
+Copyright (C) University of Wyoming, 2021.
