@@ -708,292 +708,42 @@ ol {
 
 <div class="markdown-body">
 
-<h1>Midterm</h1>
+<h1>Lab 06 - Identify if a genetic mutation exists.</h1>
 
-<p>Total 600 pts.  10 questions.</p>
+<p>200pts pts total.</p>
 
-<p>Question 1: 60 pts. Implement a function with a set of test code that converts from
-feet to inches.   Call the file <code>feet_to_in.py</code>.</p>
+<h2>Problem</h2>
 
-<p>Question 2: 60 pts. Use a loop to search a list and find if a value is in the list.
-Implement a function, <code>find_in_list</code> that takes 2 parameters.</p>
+<p>Some diseases are the result of a single letter genetic mutation.  Cystic Fibrosis (CF) is one of these.
+Usually CF is fatal by age 28.   There is a treatment for CF that is very effective.  The problem with
+the treatment is that it is fatal if given to people that do not have the CF genetic mutation.</p>
 
-<pre><code>def find_in_list ( theList, lookFor ):
+<p>We have some genetic data (not actually Stephie&rsquo;s) that we are going to search to see if it has
+a genetic mutation.</p>
+
+<p>The pattern we are looking for is:</p>
+
+<pre><code>ACTGGCTGGCCTAGTGACTTCCAGCTGCACAGCTATCGACCCAGGGCTGGACAGCCCCTGCCTGGC
 </code></pre>
 
-<p>and returns True if <code>lookFor</code> is in the list.</p>
+<p>If the pattern is found then the mutation exists.</p>
 
-<p>Implement a simple test for the function, <code>find_in_list</code>.  Put the code in the file <code>find_in_list.py</code>.</p>
+<p>The genetic data is 32 meg out of 2.3 gig of a full genetic sequence.
+To download the data use the link in the Announcement - from your browser and Right-Click on Windows
+or Control-Click on a mac and get the context menu, then pick &ldquo;Save Link&rdquo; in the menu.</p>
 
-<p>An example of calling the function (can be used in your test) is:</p>
+<p>The link is:</p>
 
-<pre><code>	ll = [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ]
-	found = find_in_list ( ll, &quot;b&quot; )
-</code></pre>
+<p><a href="http://uw-s20-2015.s3.amazonaws.com/GCF_000001405.39_GRCh38.p41214_genomic.s44a-21.fna">http://uw-s20-2015.s3.amazonaws.com/GCF_000001405.39_GRCh38.p41214_genomic.s44a-21.fna</a></p>
 
-<p>Question 3:  60 pts. Implement a function to convert an input list of strings to a single string.
-(This is very similar to lab 5 code)  Have a set of test code for it.</p>
+<p>Our process for searching this is:</p>
 
-<p>Question 4:  60 pts.  Use Python (either write a very short program, or use it interactively)
-to calculate:</p>
-
-<pre><code>y = k + 4 * x  + 2 * x * x
-</code></pre>
-
-<p>where k = 92827828272222</p>
-
-<p>and x = 48938493289499000009939393939393947829202020920020202072722243433</p>
-
-<p>Turn in the resulting &lsquo;y&rsquo; value in a text file, called <code>question4.txt</code>.</p>
-
-<div class="pagebreak"></div>
-
-<p>Question 5: 60 pts.  You want to find strings where the first 3 characters are the reverse of the
-last 3 characters in the following list of strings:</p>
-
-<pre><code>ll = [
-	&quot;abc earth cba&quot;,
-	&quot;abc mars abc&quot;,
-	&quot;abcba&quot;
-]
-</code></pre>
-
-<p>You have a function that will reverse strings:</p>
-
-<pre><code>  1: 
-  2: # revers will reverse a string, putting the last character first etc.
-  3: def reverse(s):
-  4:     i = len(s)-1
-  5:     o = &quot;&quot;
-  6:     while ( i &gt;= 0 ):
-  7:         o = o + s[i]
-  8:         i = i - 1
-  9:     return ( o )
- 10: 
- 11: 
- 12: # Automated Test
- 13: if __name__ == &quot;__main__&quot;:
- 14:     n_err = 0
- 15:     x = reverse ( &quot;The quick brown fox jumps over the lazy dog.&quot; )
- 16:     expect = &quot;.god yzal eht revo spmuj xof nworb kciuq ehT&quot;
- 17:     if x != expect:
- 18:         n_err = n_err + 1
- 19:         print ( &quot;Error: Test 1: conversion not working, expected {} got {}&quot;.format (  expect, x ) )
- 20:     x = reverse ( &quot;&quot; )
- 21:     if x != &quot;&quot;:
- 22:         n_err = n_err + 1
- 23:         print ( &quot;Error: Test 2: conversion not working, expected -&gt;{}&lt;- got -&gt;{}&lt;-&quot;.format ( &quot;&quot;, x ) )
- 24: 
- 25:     if n_err == 0 :
- 26:         print ( &quot;PASS&quot; )
- 27:     else:
- 28:         print ( &quot;FAILED&quot; )
- 29: 
-
-</code></pre>
-
-<p>Write a program that will take the input list above and find the strings
-that have the first 3 character matching the reverse of the last 3 characters.</p>
-
-<div class="pagebreak"></div>
-
-<p>Question 6: 60 pts. You have a table</p>
-
-<table>
-<thead>
-<tr>
-<th>age bracket</th>
-<th>expected value</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>0 to 14</td>
-<td>0</td>
-</tr>
-
-<tr>
-<td>15 to 16</td>
-<td>2000</td>
-</tr>
-
-<tr>
-<td>17 to 18</td>
-<td>6000</td>
-</tr>
-
-<tr>
-<td>19 to 23</td>
-<td>24000</td>
-</tr>
-
-<tr>
-<td>24 to 40</td>
-<td>38200</td>
-</tr>
-
-<tr>
-<td>41 to 67</td>
-<td>51000</td>
-</tr>
-
-<tr>
-<td>67 and older</td>
-<td>18200</td>
-</tr>
-</tbody>
-</table>
-
-<p>Implement this as a function with  if/elif/else and return the value from the 2nd column.
-Implement a test that checks this.</p>
-
-<p>Question  7: 60 pts.  Given the following code:</p>
-
-<pre><code>  1: ll = [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot; ]
-  2: for i in range(len(ll) ):
-  3:     print ( &quot;i={} ll[{}]= -&gt;{}&lt;-&quot;.format ( i, i, ll[i] ) )
-  4: print ( &quot;that's all folks....&quot; )
-
-</code></pre>
-
-<p>Show the output from the 4 line program.</p>
-
-<p>Question  8: 60 pts.  Using the following code</p>
-
-<pre><code>  1: s = &quot;abc&quot;
-  2: i = len(s)-1
-  3: o = &quot;&quot;
-  4: while ( i &gt;= 0 ):
-  5:     o = o + s[i]
-  6:     i = i - 1
-  7: print ( &quot;o = {}&quot;.format(o) )
-
-</code></pre>
-
-<div class="pagebreak"></div>
-
-<p>Hand trace what is happening in this code.   Complete the following table.</p>
-
-<table>
-<thead>
-<tr>
-<th>Line No / Time</th>
-<th>s</th>
-<th>i</th>
-<th>o</th>
-<th>notes</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>1l / t1</td>
-<td>abc</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td>l2 / t2</td>
-<td>abc</td>
-<td>2</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td>l3 / t3</td>
-<td>abc</td>
-<td>2</td>
-<td>&rdquo;&rdquo;</td>
-<td></td>
-</tr>
-
-<tr>
-<td>l4 / t4</td>
-<td>abc</td>
-<td>2</td>
-<td>&rdquo;&rdquo;</td>
-<td>while is true, enter loop</td>
-</tr>
-
-<tr>
-<td>l5 / t5</td>
-<td>abc</td>
-<td>2</td>
-<td>&ldquo;c</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-<p>Question  9: 60 pts.  You have the following code.  It is not working correctly.
-Fix it. (file is q9.py)</p>
-
-<pre><code>  1: 
-  2: # Convert from feet to yards
-  3: def feet_to_yards ( feet ):
-  4:     conv = 3
-  5:     yards = feet * conv
-  6:     return (feet)
-  7: 
-  8: # Automated Test
-  9: if __name__ == &quot;__main__&quot;:
- 10:     n_err = 0
- 11:     x = feet_to_yards ( 3 )
- 12:     if x !=  1:
- 13:         n_err = n_err + 1
- 14:         print ( &quot;Error: Test 1: conversion not working, expected {} got {}&quot;.format (  1, x ) )
- 15:     x = feet_to_yards ( 0 )
- 16:     if x != 0:
- 17:         n_err = n_err + 1
- 18:         print ( &quot;Error: Test 2: conversion not working, expected {} got {}&quot;.format ( 0, x ) )
- 19: 
- 20:     if n_err == 0 :
- 21:         print ( &quot;PASS&quot; )
- 22:     else:
- 23:         print ( &quot;FAILED&quot; )
- 24: 
-
-</code></pre>
-
-<div class="pagebreak"></div>
-
-<p>Question  10: 60 pts.  You have the following code.  It is not working correctly.
-Fix it. (file is q10.py)</p>
-
-<p><em>Hint: you may want to fix the code before you run it - or remember that a
-control-C will terminate a program in the middle of running it</em></p>
-
-<pre><code>  1: 
-  2: def double_values_in_list ( ll ):
-  3:     i = 0
-  4:     while ( i &lt; len(ll) ):
-  5:         ll[i] = ll[i] * 2
-  6:         print ( &quot;ll[{}] = {}&quot;.format( i, ll[i] ) )
-  7: 
-  8:     return ll
-  9: 
- 10: 
- 11: 
- 12: # Automated Test
- 13: if __name__ == &quot;__main__&quot;:
- 14:     n_err = 0
- 15:     ll = [ 1, 2, 3 ]
- 16:     x = double_values_in_list ( ll )
- 17:     if x[0] != 2:
- 18:         n_err = n_err + 1
- 19:         print ( &quot;Error: Test 1: conversion not working, expected {} got {}&quot;.format (  2, x[0] ) )
- 20: 
- 21:     if n_err == 0 :
- 22:         print ( &quot;PASS&quot; )
- 23:     else:
- 24:         print ( &quot;FAILED&quot; )
- 25: 
-
-</code></pre>
+<ol>
+<li>Using the function to read a file, <code>xyzzy.py</code> read in the data.</li>
+<li>Convert the data from a list of strings to a single string.   The python function <code>&quot;&quot;.join(list)</code> will do this for us.</li>
+<li>Clean up the data - in this case it is mixed case and we have an all upper case pattern.  So convert it to upper case.  <code>string.upper()</code> will do this for us.</li>
+<li>Search the data to see if the pattern is in the data.   <code>string.index(patter)</code> can be used to do this.  It returns the location of a pattern in a string.  If not found it throws an error.  This means we will need to put it in a try/except block to catch the error.</li>
+</ol>
 
 </div>
 

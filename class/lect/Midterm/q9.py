@@ -2,7 +2,7 @@
 # Convert from feet to yards
 def feet_to_yards ( feet ):
     conv = 3
-    inches = feet * conv
+    yards = feet * conv
     return (feet)
 
 # Automated Test

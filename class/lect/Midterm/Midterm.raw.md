@@ -12,7 +12,7 @@ feet to inches.   Call the file `feet_to_in.py`.
 
 
 
-Question 2: 60 pts. Use a loop to search a list and find if a value is in a list.
+Question 2: 60 pts. Use a loop to search a list and find if a value is in the list.
 Implement a function, `find_in_list` that takes 2 parameters.
 
 ```
@@ -21,7 +21,7 @@ def find_in_list ( theList, lookFor ):
 
 and returns True if `lookFor` is in the list.
 
-Implement a simple test for the function.  Put the code in the file `find_in_list.py`.
+Implement a simple test for the function, `find_in_list`.  Put the code in the file `find_in_list.py`.
 
 An example of calling the function (can be used in your test) is:
 
@@ -35,7 +35,7 @@ Question 3:  60 pts. Implement a function to convert an input list of strings to
 (This is very similar to lab 5 code)  Have a set of test code for it.
 
 
-Question 4:  60 pts.  Use python (either write a very short program, or use it interactively)
+Question 4:  60 pts.  Use Python (either write a very short program, or use it interactively)
 to calculate:
 
 ```
@@ -46,8 +46,10 @@ where k = 92827828272222
 
 and x = 48938493289499000009939393939393947829202020920020202072722243433
 
-Turn the resulting 'y' value.
+Turn in the resulting 'y' value in a text file, called `question4.txt`.
 
+
+<div class="pagebreak"></div>
 
 Question 5: 60 pts.  You want to find strings where the first 3 characters are the reverse of the
 last 3 characters in the following list of strings:
@@ -66,9 +68,10 @@ You have a function that will reverse strings:
 m4_include(reverse.py.nu)
 ```
 
-Write a program that will take the input list above and find the strings with
-that have the first matching the last 3 reversed.
+Write a program that will take the input list above and find the strings 
+that have the first 3 character matching the reverse of the last 3 characters.
 
+<div class="pagebreak"></div>
 
 Question 6: 60 pts. You have a table
 
@@ -93,7 +96,7 @@ Question  7: 60 pts.  Given the following code:
 m4_include(q7.py.nu)
 ```
 
-Show the output from the 3 line program.
+Show the output from the 4 line program.
 
 
 Question  8: 60 pts.  Using the following code
@@ -102,7 +105,9 @@ Question  8: 60 pts.  Using the following code
 m4_include(rev1.py.nu)
 ```
 
-Hand trace what is happening int this code.   Complete the following table.
+<div class="pagebreak"></div>
+
+Hand trace what is happening in this code.   Complete the following table.
 
 | Line No / Time | s | i | o | notes |
 |----------------|---|---|---|---------|
@@ -121,6 +126,7 @@ Fix it. (file is q9.py)
 m4_include(q9.py.nu)
 ```
 
+<div class="pagebreak"></div>
 
 Question  10: 60 pts.  You have the following code.  It is not working correctly.
 Fix it. (file is q10.py)
