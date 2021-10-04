@@ -34,7 +34,7 @@ http://uw-s20-2015.s3.amazonaws.com/GCF_000001405.39_GRCh38.p41214_genomic.s44a-
 
 Our process for searching this is:
 
-1. Using the function to read a file, `xyzzy.py` read in the data.
+1. Using the function to read a file, `readGeneticData.py` read in the data.  [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-06/readGeneticData.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-06/readGeneticData.py)
 2. Convert the data from a list of strings to a single string.   The python function `"".join(list)` will do this for us.
 3. Clean up the data - in this case it is mixed case and we have an all upper case pattern.  So convert it to upper case.  `string.upper()` will do this for us.
 4. Search the data to see if the pattern is in the data.   `string.index(patter)` can be used to do this.  It returns the location of a pattern in a string.  If not found it throws an error.  This means we will need to put it in a try/except block to catch the error.
