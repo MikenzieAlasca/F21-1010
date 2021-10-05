@@ -36,10 +36,11 @@ Your program must print the starting location of the pattern in the data file. I
 
 Our process for searching this is:
 
-1. Import the file readGeneticData. Using the function to read a file, `readGeneticData.py` read in the data.  [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-06/readGeneticData.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-06/readGeneticData.py). The function returns all the lines in a list. For eg: ["line 1", line 2"].
-2. Concatenate all the strings in the list to one single string. The python function `"".join(list)` will do this for us.
-3. Clean up the data - in this case it is mixed case and we have an all upper case pattern.  So convert the string to upper case.  `string.upper()` will do this for us.
-4. Search the data to see if the pattern is in the data.   `string.index(pattern)` can be used to do this.  It returns the location of a pattern in a string.  If not found it throws an error.  This means we will need to put it in a try/except block to catch the error.
+1. Create a varible and assign the pattern we are looking for to the variable.
+2. Import the file readGeneticData. Use the function readGeneticData in the file `readGeneticData.py` to read the data.  [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-06/readGeneticData.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-06/readGeneticData.py). The function takes the filepath as the input and it returns all the lines in the files as a list. For eg: ["line 1", line 2"].
+3. Concatenate all the strings in the list to one single string. The python function `"".join(list)` will do this for us.
+4. Clean up the data - in this case it is mixed case and we have an all upper case pattern.  So convert the string to upper case.  `stringname.upper()` will do this for us.
+5. Search the data to see if the pattern is in the data.   `stringname.index(pattern)` can be used to do this.  It returns the location of a pattern in a string.  If not found it throws an error.  This means we will need to put it in a try/except block to catch the error.
 
 
 Turn in your python program and the output location of the pattern if it is found.
