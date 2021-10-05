@@ -32,9 +32,11 @@ The link is:
 http://uw-s20-2015.s3.amazonaws.com/GCF_000001405.39_GRCh38.p41214_genomic.s44a-21.fna
 
 Create a new file to write the program. 
-Your program must print the starting location of the pattern in the data file. If the pattern is not found then print "pattern not found"
+Your program must print the starting location of the pattern in the data file. If the pattern is not found then print "pattern not found".
 
-Our process for searching this is:
+You can refer to the first program in the file [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-12/Lect-12.html.pdf](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-12/Lect-12.html.pdf) if you have any questions.
+
+The process is:
 
 1. Create a varible and assign the pattern we are looking for to the variable.
 2. Import the file readGeneticData. Use the function readGeneticData in the file `readGeneticData.py` to read the data.  [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-06/readGeneticData.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-06/readGeneticData.py). The function takes the filepath as the input and it returns all the lines in the files as a list. For eg: ["line 1", line 2"].
