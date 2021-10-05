@@ -736,13 +736,19 @@ or Control-Click on a mac and get the context menu, then pick &ldquo;Save Link&r
 
 <p><a href="http://uw-s20-2015.s3.amazonaws.com/GCF_000001405.39_GRCh38.p41214_genomic.s44a-21.fna">http://uw-s20-2015.s3.amazonaws.com/GCF_000001405.39_GRCh38.p41214_genomic.s44a-21.fna</a></p>
 
-<p>Our process for searching this is:</p>
+<p>Create a new file to write the program.
+Your program must print the starting location of the pattern in the data file. If the pattern is not found then print &ldquo;pattern not found&rdquo;.</p>
+
+<p>You can refer to the first program in the file <a href="https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-12/Lect-12.html.pdf">https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-12/Lect-12.html.pdf</a> if you have any questions.</p>
+
+<p>The process is:</p>
 
 <ol>
-<li>Using the function to read a file, <code>readGeneticData.py</code> read in the data.  <a href="https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-06/readGeneticData.py">https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-06/readGeneticData.py</a></li>
-<li>Convert the data from a list of strings to a single string.   The python function <code>&quot;&quot;.join(list)</code> will do this for us.</li>
-<li>Clean up the data - in this case it is mixed case and we have an all upper case pattern.  So convert it to upper case.  <code>string.upper()</code> will do this for us.</li>
-<li>Search the data to see if the pattern is in the data.   <code>string.index(patter)</code> can be used to do this.  It returns the location of a pattern in a string.  If not found it throws an error.  This means we will need to put it in a try/except block to catch the error.</li>
+<li>Create a varible and assign the pattern we are looking for to the variable.</li>
+<li>Import the file readGeneticData. Use the function readGeneticData in the file <code>readGeneticData.py</code> to read the data.  <a href="https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-06/readGeneticData.py">https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-06/readGeneticData.py</a>. The function takes the filepath as the input and it returns all the lines in the files as a list. For eg: [&ldquo;line 1&rdquo;, line 2&rdquo;].</li>
+<li>Concatenate all the strings in the list to one single string. The python function <code>&quot;&quot;.join(list)</code> will do this for us.</li>
+<li>Clean up the data - in this case it is mixed case and we have an all upper case pattern.  So convert the string to upper case.  <code>stringname.upper()</code> will do this for us.</li>
+<li>Search the data to see if the pattern is in the data.   <code>stringname.index(pattern)</code> can be used to do this.  It returns the location of a pattern in a string.  If not found it throws an error.  This means we will need to put it in a try/except block to catch the error.</li>
 </ol>
 
 <p>Turn in your python program and the output location of the pattern if it is found.</p>
