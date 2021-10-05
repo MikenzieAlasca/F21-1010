@@ -718,5 +718,88 @@ ol {
 
 <p><a href="stephie_1.mp4">stephie_1.mp4</a></p>
 
+<p>Get Data / Read in data.</p>
+
+<pre><code>import readGeneticData 
+data = readGeneticData.readGeneticData (filepath)
+</code></pre>
+
+<p>Searching for a pattern in DNA</p>
+
+<pre><code>pattern = 'ACTGGCTGGCCTAGTGACTTCCAGCTGCACAGCTATCGACCCAGGGCTGGACAGCCCCTGCCTGGC'
+</code></pre>
+
+<p>Convert file to a single string.  Clean up data.</p>
+
+<pre><code>data_str = &quot;&quot;.join(data)
+data_str = data_str.upper()
+</code></pre>
+
+<p>Search it.</p>
+
+<pre><code>x = data_str.index ( pattern )
+</code></pre>
+
+<p>Better Search it:</p>
+
+<pre><code>try:
+    x = data_str.index ( pattern )
+    print ( &quot;Pattern Found at {}&quot;.format( x ))
+except:
+    print ( &quot;Not Found&quot; )
+</code></pre>
+
+<h2>Review</h2>
+
+<h3>Create a function.</h3>
+
+<pre><code>def name ( param1 ):
+	# add stuff
+</code></pre>
+
+<p>With a test&hellip;</p>
+
+<pre><code># Automated Test
+if __name__ == &quot;__main__&quot;:
+    n_err = 0
+    x = name ( 3 )				# change this
+    expect = value				# change this
+    if x !=  expect:
+        n_err = n_err + 1
+        print ( &quot;Error: Test 1: conversion not working, expected {} got {}&quot;.format (  expect, x ) )
+
+    if n_err == 0 :
+        print ( &quot;PASS&quot; )
+    else:
+        print ( &quot;FAILED&quot; )
+
+</code></pre>
+
+<h3>Test a function</h3>
+
+<ol>
+<li>get the code.</li>
+<li>run the code.</li>
+<li>What is the &ldquo;expectation&rdquo;</li>
+<li>Why did it fail to meat this &ldquo;expectation&rdquo;</li>
+
+<li><p>Where in the code did it fail.</p>
+
+<pre><code>ll = [ 1, 2 ]
+i = 0
+while ( i &lt; 2 ):
+	print ( &quot;ll[{}] = {}&quot;.format( i, ll[i] ))
+</code></pre></li>
+</ol>
+
+<p>Another example</p>
+
+<pre><code>ll = [ 1, 2 ]
+i = 0
+while ( i &lt; 2 ):
+	i = i + 1
+	print ( &quot;ll[{}] = {}&quot;.format( i, ll[i] ))
+</code></pre>
+
 </div>
 
