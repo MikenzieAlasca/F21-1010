@@ -7,9 +7,12 @@ DIR=../../../
 IMG=
 PY=
 
-all: ${FN}.html ${FN}.pdf
+all: setup ${FN}.html ${FN}.pdf
 
 #${FN1}.html 
+
+setup:
+	../mk_all_nu.sh
 
 %.pdf: %.md
 	~/bin/md-to-pdf.sh $<

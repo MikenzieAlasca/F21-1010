@@ -718,7 +718,14 @@ ol {
 
 <p>We could store data in lists</p>
 
-<pre><code>
+<pre><code>  1: kirk = [&quot;James Kirk&quot;, 34, &quot;Captain&quot;, 2265]
+  2: spock = [&quot;Spock&quot;, 35, &quot;Science Officer&quot;, 2254]
+  3: mccoy = [&quot;Leonard McCoy&quot;, &quot;Chief Medical Officer&quot;, 2266]
+  4: 
+  5: print ( kirk[1] )
+  6: print ( spock[1] )
+  7: print ( mccoy[1] )
+
 </code></pre>
 
 <p>From:
@@ -732,13 +739,20 @@ ore called &ldquo;methods&rdquo;.</p>
 
 <p>Create a Class:</p>
 
-<pre><code>
+<pre><code>  1: class Dog:
+  2:     pass
+
 </code></pre>
 
 <p>Initialization is important - so with a class we have a special function called <code>__init__</code> that setups the
 data and initializes it.</p>
 
-<pre><code>
+<pre><code>  1: class Dog:
+  2:     def __init__(self, name, age):
+  3:         self.name = name
+  4:         self.age = age
+  5:         self.food = &quot;&quot;
+
 </code></pre>
 
 <p>This introduces the term <code>self</code> - in other languages it is often called <code>this</code>.
@@ -749,17 +763,80 @@ data for this class.</p>
 <p>By doing the <code>__init__</code> in this way we require that creating a <code>Dog</code> means that you
 must pass 2 values, then name and the age.</p>
 
-<pre><code>
+<pre><code>  1: class Dog:
+  2:     def __init__(self, name, age):
+  3:         self.name = name
+  4:         self.age = age
+  5:         self.food = &quot;&quot;
+  6: 
+  7: spot = Dog('Spot',2)
+  8: kitty = Dog('Kitty',5)
+
+</code></pre>
+
+<p>And&hellip;</p>
+
+<p>Access some values in the data.</p>
+
+<pre><code>  1: 
+  2: class Dog:
+  3:     def __init__(self, name, age):
+  4:         self.name = name
+  5:         self.age = age
+  6:         self.food = &quot;&quot;
+  7: 
+  8: spot = Dog('Spot',2)
+  9: kitty = Dog('Kitty',5)
+ 10: 
+ 11: print ( spot )
+ 12: 
+ 13: 
+
 </code></pre>
 
 <p>We can create functions that change parts of the class data.</p>
 
-<pre><code>
+<pre><code>  1: 
+  2: class Dog:
+  3:     def __init__(self, name, age):
+  4:         self.name = name
+  5:         self.age = age
+  6:         self.food = &quot;&quot;
+  7: 
+  8:     def setFood(self, food):
+  9:         self.food = food
+ 10: 
+ 11:     def getFood(self):
+ 12:         return self.food
+ 13: 
+ 14:     def getName(self):
+ 15:         return self.name
+ 16: 
+
 </code></pre>
 
 <p>We control how the values are changed inside the class.</p>
 
-<pre><code>
+<pre><code>  1: 
+  2: class Dog:
+  3:     def __init__(self, name, age):
+  4:         self.name = name
+  5:         self.age = age
+  6: 
+  7:     def setFood(self, food):
+  8:         self.food = food
+  9: 
+ 10:     def getFood(self):
+ 11:         return self.food
+ 12: 
+ 13:     def birthDay(self):
+ 14:         self.age = self.age + 1
+ 15: 
+ 16:     def getAge(self):
+ 17:         return self.age
+ 18: 
+ 19: 
+
 </code></pre>
 
 </div>

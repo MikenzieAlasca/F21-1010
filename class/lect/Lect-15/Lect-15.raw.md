@@ -12,7 +12,7 @@ Separation of Data from Operations on data.
 We could store data in lists
 
 ```
-m4_include(d1.py.m4)
+m4_include(d1.py.nu)
 ```
 
 From: 
@@ -27,14 +27,14 @@ ore called "methods".
 Create a Class:
 
 ```
-m4_include(create1.py.m4)
+m4_include(create1.py.nu)
 ```
 
 Initialization is important - so with a class we have a special function called `__init__` that setups the
 data and initializes it.
 
 ```
-m4_include(create2.py.m4)
+m4_include(create2.py.nu)
 ```
 
 This introduces the term `self` - in other languages it is often called `this`.
@@ -46,13 +46,22 @@ By doing the `__init__` in this way we require that creating a `Dog` means that 
 must pass 2 values, then name and the age.
 
 ```
-m4_include(instance1.py.m4)
+m4_include(instance1.py.nu)
 ```
+
+And...
+
+Access some values in the data.
+
+```
+m4_include(instance2.py.nu)
+```
+
 
 We can create functions that change parts of the class data.
 
 ```
-m4_include(food1.py.m4)
+m4_include(food1.py.nu)
 ```
 
 
@@ -76,5 +85,5 @@ m4_include(food1.py.m4)
 We control how the values are changed inside the class.
 
 ```
-m4_include(bday1.py.m4)
+m4_include(bday1.py.nu)
 ```
