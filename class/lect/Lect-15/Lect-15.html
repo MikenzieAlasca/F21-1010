@@ -710,5 +710,57 @@ ol {
 
 <h1>Lecture 17 - Objects and State</h1>
 
+<h2>Motivation and History</h2>
+
+<p>State, Collections of data.</p>
+
+<p>Separation of Data from Operations on data.</p>
+
+<p>We could store data in lists</p>
+
+<pre><code>
+</code></pre>
+
+<p>From:
+<a href="https://realpython.com/python3-object-oriented-programming/">https://realpython.com/python3-object-oriented-programming/</a></p>
+
+<h2>Python&rsquo;s Implementation is Objects</h2>
+
+<p>Objects are created as a package that defines the layout and names for data
+and combines that with functions that operate on the data.  These functions
+ore called &ldquo;methods&rdquo;.</p>
+
+<p>Create a Class:</p>
+
+<pre><code>
+</code></pre>
+
+<p>Initialization is important - so with a class we have a special function called <code>__init__</code> that setups the
+data and initializes it.</p>
+
+<pre><code>
+</code></pre>
+
+<p>This introduces the term <code>self</code> - in other languages it is often called <code>this</code>.
+<code>self</code> refers to the set of data that this class is going to work on.   In the constructor, the special
+function called <code>__init__</code>, <code>self.name</code> creates a variable called <code>name</code> that is tied to the instance
+data for this class.</p>
+
+<p>By doing the <code>__init__</code> in this way we require that creating a <code>Dog</code> means that you
+must pass 2 values, then name and the age.</p>
+
+<pre><code>
+</code></pre>
+
+<p>We can create functions that change parts of the class data.</p>
+
+<pre><code>
+</code></pre>
+
+<p>We control how the values are changed inside the class.</p>
+
+<pre><code>
+</code></pre>
+
 </div>
 
