@@ -15,6 +15,10 @@ Make a method called `describe_restaurant()` that prints these two
 pieces of information, and a method called `open_restaurant()` that
 prints a message indicating that the restaurant is open.
 
+Have a function that sets the boolean flag that makes the restaurant
+open or closed.  Call this `set_is_open` and it should take a
+single parameter of True or False.
+
 Make two instances of the restaurant using your class.  One with a
 restaurant called 'Good Eats', and the other with a restaurant called
 'Family Diner'.
