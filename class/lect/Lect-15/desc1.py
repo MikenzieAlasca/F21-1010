@@ -7,13 +7,16 @@ class Dog:
     def setFood(self, food):
         self.food = food
 
+    def getFood(self):
+        return self.food
+
     def getName(self):
         return self.name
+
+    def desc(self):
+        return "{} is {} years old.".format(self.name, self.age)
 
 spot = Dog('Spot',2)
 kitty = Dog('Kitty',5)
 
-spot.setFood ( "Kibbles" )
-kitty.setFood ( "Purena Dog Chow" )
-
-print ( "{}'s favorite food is {}".format(spot.name, spot.food) )
+print ( kitty.desc() )

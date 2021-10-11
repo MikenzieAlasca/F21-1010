@@ -64,9 +64,19 @@ We can create functions that change parts of the class data.
 m4_include(food1.py.nu)
 ```
 
+You can compare to see if they are euqal.
 
 
+```
+m4_include(equal1.py.nu)
+```
 
+
+We can put the format of name/age into the class itself.
+
+```
+m4_include(desc1.py.nu)
+```
 
 
 

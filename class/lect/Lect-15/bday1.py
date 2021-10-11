@@ -1,4 +1,3 @@
-
 class Dog:
     def __init__(self, name, age):
         self.name = name
@@ -15,5 +14,3 @@ class Dog:
 
     def getAge(self):
         return self.age
-
-

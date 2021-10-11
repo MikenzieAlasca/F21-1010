@@ -778,50 +778,50 @@ must pass 2 values, then name and the age.</p>
 
 <p>Access some values in the data.</p>
 
-<pre><code>  1: 
-  2: class Dog:
-  3:     def __init__(self, name, age):
-  4:         self.name = name
-  5:         self.age = age
-  6:         self.food = &quot;&quot;
-  7: 
-  8: spot = Dog('Spot',2)
-  9: kitty = Dog('Kitty',5)
- 10: 
- 11: print ( spot )
- 12: 
- 13: 
+<pre><code>  1: class Dog:
+  2:     def __init__(self, name, age):
+  3:         self.name = name
+  4:         self.age = age
+  5:         self.food = &quot;&quot;
+  6: 
+  7: spot = Dog('Spot',2)
+  8: kitty = Dog('Kitty',5)
+  9: 
+ 10: print ( spot )
 
 </code></pre>
 
 <p>We can create functions that change parts of the class data.</p>
 
-<pre><code>  1: 
-  2: class Dog:
-  3:     def __init__(self, name, age):
-  4:         self.name = name
-  5:         self.age = age
-  6:         self.food = &quot;&quot;
-  7: 
-  8:     def setFood(self, food):
-  9:         self.food = food
- 10: 
- 11:     def getFood(self):
- 12:         return self.food
- 13: 
- 14:     def getName(self):
- 15:         return self.name
- 16: 
+<pre><code>  1: class Dog:
+  2:     def __init__(self, name, age):
+  3:         self.name = name
+  4:         self.age = age
+  5:         self.food = &quot;&quot;
+  6: 
+  7:     def setFood(self, food):
+  8:         self.food = food
+  9: 
+ 10:     def getName(self):
+ 11:         return self.name
+ 12: 
+ 13: spot = Dog('Spot',2)
+ 14: kitty = Dog('Kitty',5)
+ 15: 
+ 16: spot.setFood ( &quot;Kibbles&quot; )
+ 17: kitty.setFood ( &quot;Purena Dog Chow&quot; )
+ 18: 
+ 19: print ( &quot;{}'s favorite food is {}&quot;.format(spot.name, spot.food) )
 
 </code></pre>
 
-<p>We control how the values are changed inside the class.</p>
+<p>You can compare to see if they are euqal.</p>
 
-<pre><code>  1: 
-  2: class Dog:
-  3:     def __init__(self, name, age):
-  4:         self.name = name
-  5:         self.age = age
+<pre><code>  1: class Dog:
+  2:     def __init__(self, name, age):
+  3:         self.name = name
+  4:         self.age = age
+  5:         self.food = &quot;&quot;
   6: 
   7:     def setFood(self, food):
   8:         self.food = food
@@ -829,13 +829,62 @@ must pass 2 values, then name and the age.</p>
  10:     def getFood(self):
  11:         return self.food
  12: 
- 13:     def birthDay(self):
- 14:         self.age = self.age + 1
+ 13:     def getName(self):
+ 14:         return self.name
  15: 
- 16:     def getAge(self):
- 17:         return self.age
- 18: 
+ 16: 
+ 17: spot = Dog('Spot',2)
+ 18: kitty = Dog('Kitty',5)
  19: 
+ 20: print ( &quot;are they the same? {}&quot;.format( spot == kitty ) )
+
+</code></pre>
+
+<p>We can put the format of name/age into the class itself.</p>
+
+<pre><code>  1: class Dog:
+  2:     def __init__(self, name, age):
+  3:         self.name = name
+  4:         self.age = age
+  5:         self.food = &quot;&quot;
+  6: 
+  7:     def setFood(self, food):
+  8:         self.food = food
+  9: 
+ 10:     def getFood(self):
+ 11:         return self.food
+ 12: 
+ 13:     def getName(self):
+ 14:         return self.name
+ 15: 
+ 16:     def desc(self):
+ 17:         return &quot;{} is {} years old.&quot;.format(self.name, self.age)
+ 18: 
+ 19: spot = Dog('Spot',2)
+ 20: kitty = Dog('Kitty',5)
+ 21: 
+ 22: print ( kitty.desc() )
+
+</code></pre>
+
+<p>We control how the values are changed inside the class.</p>
+
+<pre><code>  1: class Dog:
+  2:     def __init__(self, name, age):
+  3:         self.name = name
+  4:         self.age = age
+  5: 
+  6:     def setFood(self, food):
+  7:         self.food = food
+  8: 
+  9:     def getFood(self):
+ 10:         return self.food
+ 11: 
+ 12:     def birthDay(self):
+ 13:         self.age = self.age + 1
+ 14: 
+ 15:     def getAge(self):
+ 16:         return self.age
 
 </code></pre>
 

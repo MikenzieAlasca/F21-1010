@@ -1,4 +1,3 @@
-
 class Dog:
     def __init__(self, name, age):
         self.name = name
@@ -9,5 +8,3 @@ spot = Dog('Spot',2)
 kitty = Dog('Kitty',5)
 
 print ( spot )
-
-
