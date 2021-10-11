@@ -22,6 +22,13 @@ restaurant called 'Good Eats', and the other with a restaurant called
 Implement an automated test that checks that `open_resturant()`
 works correctly.
 
+## Class Example
+
+An example of a simple class with an automated test.
+
+```
+m4_include(ex1.py)
+```
 
 
 

@@ -729,6 +729,42 @@ restaurant called &lsquo;Good Eats&rsquo;, and the other with a restaurant calle
 <p>Implement an automated test that checks that <code>open_resturant()</code>
 works correctly.</p>
 
+<h2>Class Example</h2>
+
+<p>An example of a simple class with an automated test.</p>
+
+<pre><code>
+class Name:
+	def __init__(self, name):
+		self.name = name
+
+	def printName(self):
+		print ( &quot;Name is: {}&quot;.format(self.name) )
+
+	def reverseMyName(self):
+		i = len(self.name)-1
+		s = &quot;&quot;
+		while i &gt;= 0:
+			s = s + self.name[i]
+			i = i - 1
+		return s
+
+# Automated Test
+if __name__ == &quot;__main__&quot;:
+	n_err = 0
+	myName = Name(&quot;Philip&quot;)			# Create Instance of Class
+	x = myName.reverseMyName()		# Call Method
+	if x != &quot;pilihP&quot;:				# Validate results of Call
+		n_err = n_err + 1
+		print ( &quot;Error: Test 1: Name not working, expected {} got {}&quot;.format (  'pilihP', x ) )
+
+	if n_err == 0 :
+		print ( &quot;PASS&quot; )
+	else:
+		print ( &quot;FAILED&quot; )
+
+</code></pre>
+
 <h1>Copyright</h1>
 
 <p>Copyright &copy; University of Wyoming, 2021.</p>
