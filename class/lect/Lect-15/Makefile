@@ -20,6 +20,7 @@ setup:
 %.md: %.raw.md $(PY) $(IMG)
 	m4 -P $< >$@
 
+.PRECIOUS: %.md
 %.html: %.md
 	blackfriday-tool ./$< $@
 	echo cat ./${DIR}/css/md.css $@ >/tmp/$@

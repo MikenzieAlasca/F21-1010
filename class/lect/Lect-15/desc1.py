@@ -16,7 +16,13 @@ class Dog:
     def desc(self):
         return "{} is {} years old.".format(self.name, self.age)
 
+    def says(self, word):
+        return f"{self.name} says {word}."
+
 spot = Dog('Spot',2)
 kitty = Dog('Kitty',5)
 
 print ( kitty.desc() )
+
+print ( kitty.says("Bark Bark") )
+
