@@ -1,99 +1,93 @@
   1: import current_data
   2: 
-  3: # -----------------------------------------------------------
-  4: # -----------------------------------------------------------
-  5: class SensorParent:
-  6:     def __init__(self,name):
-  7:         self.name = name
-  8:         self.value = 0
-  9: 
- 10:     def get_value(self):
- 11:         self.value = current_data.get_data(self.name)
- 12:         return self.value
+  3: # ===========================================================
+  4: class SensorParent:
+  5:     def __init__(self,name):
+  6:         self.name = name
+  7:         self.value = 0
+  8: 
+  9:     def get_value(self):
+ 10:         self.value = current_data.get_data(self.name)
+ 11:         return self.value
+ 12: 
  13: 
- 14: 
- 15: # -----------------------------------------------------------
- 16: class BatteryTempSensor(SensorParent):
- 17:     def __init__(self,name):
- 18:         super().__init__('battery-sensor')
- 19:     def too_hi():
- 20:         x = self.get_value()
- 21:         if x >= 130:
- 22:             return True    
- 23:         return False
- 24:     def too_low():
- 25:         x = self.get_value()
- 26:         if x <= 0:
- 27:             return True    
- 28:         return False
- 29: 
- 30: # -----------------------------------------------------------
- 31: class SolarSensor(SensorParent):
- 32:     def __init__(self,name):
- 33:         super().__init__('solar-avail')
- 34:     def is_avail(self):
- 35:         if self.get_value() == 1:
- 36:             return True
- 37:         return False
- 38: 
- 39: # -----------------------------------------------------------
- 40: # -----------------------------------------------------------
- 41: class SystemDevice:
- 42:     def __init__(self,name):
- 43:         self.name = name
- 44: 
- 45:     def turn_on():
- 46:         current_data.device_on(self.name)
- 47: 
- 48:     def turn_off():
- 49:         current_data.device_off(self.name)
- 50: 
- 51: # -----------------------------------------------------------
- 52: class AcDev(SystemDevice):
- 53:     def __init__(self,name):
- 54:         super().__init__('ac-device')
- 55: 
- 56: # -----------------------------------------------------------
- 57: class HeatDev(SystemDevice):
- 58:     def __init__(self,name):
- 59:         super().__init__('heat-device')
- 60: 
- 61: # -----------------------------------------------------------
- 62: # 
- 63: # Bat-Temp | Solar Avail | Heat |  AC | 
- 64: # --------  ------------   ----- -----
- 65: #  low     |   True      |  On  |  0  | 
- 66: #  hi      |   True      |  0   |  On | 
- 67: #   OK     |   True      |  0   |  0  | 
- 68: #  low     |    False    |  0   |  0  |  
- 69: #  hi      |    False    |  0   |  0  |  
- 70: #   OK     |    False    |  0   |  0  | 
- 71: # 
- 72: 
- 73: def main():
- 74:     current_data.init_sysetm()
- 75: 
- 76:     # Inputs
- 77:     bat_temp = BatteryTempSensor()
- 78:     solar_avail = SolarSensor()
- 79: 
- 80:     # Outputs
- 81:     ac_dev = ACDev()
- 82:     heat_dev = HeatDev()
- 83: 
- 84:     while True:
- 85:         current_data.advance_time()
- 86: 
- 87:         if not solar_avail.is_avail() :
- 88:             heat_dev.turn_off()
- 89:             ac_dev.turn_off()
- 90:         elif bat_temp.too_low() and solar_avail.is_avail():
- 91:             heat_dev.turn_on()
- 92:             ac_dev.turn_off()
- 93:         elif bat_temp.too_hi() and solar_avail.is_avail() :
- 94:             heat_dev.turn_off()
- 95:             ac_dev.turn_on()
- 96:         else:
- 97:             heat_dev.turn_off()
- 98:             ac_dev.turn_off()
- 99: 
+ 14: # -----------------------------------------------------------
+ 15: class BatteryTempSensor(SensorParent):
+ 16:     def __init__(self,name):
+ 17:         super().__init__('battery-sensor')
+ 18:     def too_hi():
+ 19:         x = self.get_value()
+ 20:         if x >= 130:
+ 21:             return True    
+ 22:         return False
+ 23:     def too_low():
+ 24:         x = self.get_value()
+ 25:         if x <= 0:
+ 26:             return True    
+ 27:         return False
+ 28: 
+ 29: # -----------------------------------------------------------
+ 30: class SolarSensor(SensorParent):
+ 31:     def __init__(self,name):
+ 32:         super().__init__('solar-avail')
+ 33:     def is_avail(self):
+ 34:         if self.get_value() == 1:
+ 35:             return True
+ 36:         return False
+ 37: 
+ 38: # ===========================================================
+ 39: class SystemDevice:
+ 40:     def __init__(self,name):
+ 41:         self.name = name
+ 42: 
+ 43:     def turn_on():
+ 44:         current_data.device_on(self.name)
+ 45: 
+ 46:     def turn_off():
+ 47:         current_data.device_off(self.name)
+ 48: 
+ 49: # -----------------------------------------------------------
+ 50: class AcDev(SystemDevice):
+ 51:     def __init__(self,name):
+ 52:         super().__init__('ac-device')
+ 53: 
+ 54: # -----------------------------------------------------------
+ 55: class HeatDev(SystemDevice):
+ 56:     def __init__(self,name):
+ 57:         super().__init__('heat-device')
+ 58: 
+ 59: # -----------------------------------------------------------
+ 60: # Bat-Temp | Solar Avail | Heat |  AC | 
+ 61: # --------  ------------   ----- -----
+ 62: #  low     |   True      |  On  |  0  | 
+ 63: #  hi      |   True      |  0   |  On | 
+ 64: #   OK     |   True      |  0   |  0  | 
+ 65: #  low     |    False    |  0   |  0  |  
+ 66: #  hi      |    False    |  0   |  0  |  
+ 67: #   OK     |    False    |  0   |  0  | 
+ 68: def main():
+ 69:     current_data.init_sysetm()
+ 70: 
+ 71:     # Inputs
+ 72:     bat_temp = BatteryTempSensor()
+ 73:     solar_avail = SolarSensor()
+ 74: 
+ 75:     # Outputs
+ 76:     ac_dev = ACDev()
+ 77:     heat_dev = HeatDev()
+ 78: 
+ 79:     while True:
+ 80:         current_data.advance_time()
+ 81: 
+ 82:         if not solar_avail.is_avail() :
+ 83:             heat_dev.turn_off()
+ 84:             ac_dev.turn_off()
+ 85:         elif bat_temp.too_low() and solar_avail.is_avail():
+ 86:             heat_dev.turn_on()
+ 87:             ac_dev.turn_off()
+ 88:         elif bat_temp.too_hi() and solar_avail.is_avail() :
+ 89:             heat_dev.turn_off()
+ 90:             ac_dev.turn_on()
+ 91:         else:
+ 92:             heat_dev.turn_off()
+ 93:             ac_dev.turn_off()

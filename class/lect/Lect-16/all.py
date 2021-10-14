@@ -1,7 +1,6 @@
 import current_data
 
-# -----------------------------------------------------------
-# -----------------------------------------------------------
+# ===========================================================
 class SensorParent:
     def __init__(self,name):
         self.name = name
@@ -36,8 +35,7 @@ class SolarSensor(SensorParent):
             return True
         return False
 
-# -----------------------------------------------------------
-# -----------------------------------------------------------
+# ===========================================================
 class SystemDevice:
     def __init__(self,name):
         self.name = name
@@ -59,7 +57,6 @@ class HeatDev(SystemDevice):
         super().__init__('heat-device')
 
 # -----------------------------------------------------------
-# 
 # Bat-Temp | Solar Avail | Heat |  AC | 
 # --------  ------------   ----- -----
 #  low     |   True      |  On  |  0  | 
@@ -68,8 +65,6 @@ class HeatDev(SystemDevice):
 #  low     |    False    |  0   |  0  |  
 #  hi      |    False    |  0   |  0  |  
 #   OK     |    False    |  0   |  0  | 
-# 
-
 def main():
     current_data.init_sysetm()
 
@@ -96,4 +91,3 @@ def main():
         else:
             heat_dev.turn_off()
             ac_dev.turn_off()
-
