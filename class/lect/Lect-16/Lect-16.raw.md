@@ -3,6 +3,14 @@ m4_include(../../../setup.m4)
 
 # Lecture 16 - More on Objects - An example
 
+## Student / Person Example
+
+```
+m4_include(student_ex.py.nu)
+```
+
+## More Concrete Example
+
 One of the abilities of classes is that we can set them up as a hierarchy.
 This is called "inheritance".
 

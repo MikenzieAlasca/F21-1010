@@ -710,6 +710,29 @@ ol {
 
 <h1>Lecture 16 - More on Objects - An example</h1>
 
+<h2>Student / Person Example</h2>
+
+<pre><code>  1: class Person:
+  2:   def __init__(self, fname, lname):
+  3:     self.firstname = fname
+  4:     self.lastname = lname
+  5: 
+  6:   def printname(self):
+  7:     print(self.firstname, self.lastname)
+  8: 
+  9: class Student(Person):
+ 10:   def __init__(self, fname, lname, year):
+ 11:     super().__init__(fname, lname)
+ 12:     self.graduationyear = year
+ 13: 
+ 14: x = Student(&quot;Philip&quot;, &quot;Schlump&quot;, 1989)
+ 15: print(x.graduationyear)
+ 16: 
+
+</code></pre>
+
+<h2>More Concrete Example</h2>
+
 <p>One of the abilities of classes is that we can set them up as a hierarchy.
 This is called &ldquo;inheritance&rdquo;.</p>
 
