@@ -264,3 +264,49 @@ Some things from the program:
 
 
 
+## MatPlotLib
+
+
+MatPlotLib is a 2d plotting library that is nicely integrated with Pandas.
+You can also use it on it's own.
+
+It can output to the screen, to hard-copy (images).
+
+It is also directly integrated into Jupyter Notebook and has a way to be
+used on a website to produce plots.
+
+If you are familiar with MATLAB then `matplotlib.pyplot` will be to your
+liking.  It works just like the plotting system in MATLAB.
+
+Plotting a Line Graph:
+
+```
+  1: import matplotlib.pyplot as plt
+  2: 
+  3: plt.plot([1,3,2,4,5,8])
+  4: plt.ylabel('A SImple Line Graph')
+  5: plt.waitforbuttonpress()
+  6: plt.show()
+
+```
+
+Or a bar graph:
+
+```
+  1: import matplotlib.pyplot as plt
+  2: 
+  3: x = [   21,20,23,4,7,
+  4:         6,78,8,3,10,
+  5:         41,22,53,33,
+  6:         31,37,39,12,
+  7:         45,30,100]
+  8: plt.hist(x, 5, facecolor='green')
+  9: plt.waitforbuttonpress()
+ 10: plt.show()
+
+```
+
+
+# Copyright
+
+Copyright (C) University of Wyoming, 2021.
