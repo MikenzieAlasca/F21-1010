@@ -65,22 +65,21 @@ table tbody tr td {
 On a boat with no gas working gages.
 
 ```
-  1: 
-  2: # 5g + 17m = 30.5
-  3: # 8g + 22m = 41
-  4: 
-  5: # Can be solved in NumPy using
-  6: import numpy as np
-  7: 
-  8: coeffs  = np.array([[5, 17], [8, 22]])
-  9: depvars = np.array([30.5, 41])
- 10: solution = np.linalg.solve(coeffs, depvars)
- 11: 
- 12: # solution
- 13: print ( solution )
- 14: # array([1, 1.5])
- 15: # means g=1, m=1.5 or 1 gallon per hour for generator,
- 16: # 1.5 gallon per hour for main moter
+  1: # 5g + 17m = 30.5
+  2: # 8g + 22m = 41
+  3: 
+  4: # Can be solved in NumPy using
+  5: import numpy as np
+  6: 
+  7: coeffs  = np.array([[5, 17], [8, 22]])
+  8: depvars = np.array([30.5, 41])
+  9: solution = np.linalg.solve(coeffs, depvars)
+ 10: 
+ 11: # solution
+ 12: print ( solution )
+ 13: # array([1, 1.5])
+ 14: # means g=1, m=1.5 or 1 gallon per hour for generator,
+ 15: # 1.5 gallon per hour for main moter
 
 ```
 
@@ -138,14 +137,13 @@ NumPy:
 Python:
 
 ```
-  1: 
-  2: a = [1,2,3,4,5]
-  3: x = a[1:3]
-  4: print ( "x={}".format(x))
-  5: x[0] = 400
-  6: print ( "a={} x={}".format(a,x) )
-  7: 
-  8: a[1:3] = 200
+  1: a = [1,2,3,4,5]
+  2: x = a[1:3]
+  3: print ( "x={}".format(x))
+  4: x[0] = 400
+  5: print ( "a={} x={}".format(a,x) )
+  6: 
+  7: a[1:3] = 200
 
 ```
 
@@ -162,4 +160,105 @@ First check that you have them installed.
   5: print ( "You should not see any errors when this is run" )
 
 ```
+
+
+## Pandas 
+
+Pandas is a widely used system for storage and access of data.  It is an in-memory database
+that allows us to combine and select data that we can then use in NumPy as vectors.  The
+performance is very good for reasonable size data.   For big data sets you usually end up
+using a "database" like "Postgresql".  Many of the concepts in Pandas are the same as
+a database and that is a good way to get the concepts for database down.
+
+Data is organized into 2d tables that are very much like a spreadsheet.   They have 
+columns that are named and allow for you to access stuff by name.  This 2d set of 
+data is called a 'dataframe'.
+
+With Pandas we can do useful analysis like creating pivot tables, summarizing data
+from multiple columns into new columns.  It also intracts with MatPlotLib to allow
+us to easily polot data.
+
+To Import into Python:
+
+```
+>>> import pandas as pd
+```
+
+## Common Pandas Data Types
+
+`pd.Series` takes a list and a set of names and converts this into a column that
+cat be part of a data frame.
+
+`pd.DataFrame` takes a dictionary of `pd.Series` (columns) and creates a object
+that can be selected from and manipulated with a set of columns of named data.
+
+`pd.Panel` creates a dictionary of dataframes.  This would be like the set of
+sets that you have in Microsoft Excel.
+
+Every dataframe has named columns of data and indexes for each item.
+
+An example:
+
+```
+  1: import pandas as pd
+  2: 
+  3: people_dict = {
+  4:         "weight": pd.Series([145, 182, 191],index=["joan", "bob", "mike"]),  
+  5:         "birthyear": pd.Series([2002, 2000, 1999], index=["bob", "joan", "mike"], name="year"),
+  6:         "children": pd.Series([1, 2], index=["mike", "bob"]),
+  7:         "hobby": pd.Series(["Rock Climbing", "Scuba Diving", "Sailing"], index=["joan", "bob", "mike"]),
+  8:         }
+  9: 
+ 10: people = pd.DataFrame(people_dict)
+ 11: 
+ 12: print ( people )
+ 13: 
+
+```
+
+Output
+
+```
+      weight  birthyear  children          hobby
+bob      182       2002       2.0   Scuba Diving
+joan     145       2000       NaN  Rock Climbing
+mike     191       1999       1.0        Sailing
+
+```
+
+There is easy inexorability between Pandas and other tools like Comma Separated Value files (CSV), Excel, HTML and SQL Databases.
+
+For example we have some car data.
+
+Converted into a format that is easy for Pandas to consume.
+
+And some code to read it and make a plot.
+
+```
+  1: import matplotlib.pyplot as plt
+  2: import pandas as pd
+  3: # import seaborn as sns
+  4: 
+  5: # df = pd.read_excel (r'car/CUSR0000SETA02.xls')
+  6: df = pd.read_excel (r'car/car-price-data.xls')
+  7: df['observation_date'] = pd.to_datetime(df['observation_date'])
+  8: print (df)
+  9: print (df.info())
+ 10: 
+ 11: df.set_index('observation_date')['CUSR0000SETA02'].plot();
+ 12: 
+ 13: plt.waitforbuttonpress()
+
+```
+
+![car-price-graph-1.png](car-price-graph-1.png)
+
+Some things from the program:
+
+| Pandas Calls | Description |
+|:----------------|-------------------------------------|
+| head()          | returns the top 5 rows in the dataframe object |
+| info()          | prints the summary of the dataframe |
+| describe()      | gives a nice overview of the main aggregated values over each column |
+| tail()          | returns the bottom 5 rows in the dataframe |
 

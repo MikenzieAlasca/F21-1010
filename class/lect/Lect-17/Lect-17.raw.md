@@ -109,3 +109,74 @@ First check that you have them installed.
 m4_include(install_check.py.nu)
 ```
 
+
+## Pandas 
+
+Pandas is a widely used system for storage and access of data.  It is an in-memory database
+that allows us to combine and select data that we can then use in NumPy as vectors.  The
+performance is very good for reasonable size data.   For big data sets you usually end up
+using a "database" like "Postgresql".  Many of the concepts in Pandas are the same as
+a database and that is a good way to get the concepts for database down.
+
+Data is organized into 2d tables that are very much like a spreadsheet.   They have 
+columns that are named and allow for you to access stuff by name.  This 2d set of 
+data is called a 'dataframe'.
+
+With Pandas we can do useful analysis like creating pivot tables, summarizing data
+from multiple columns into new columns.  It also intracts with MatPlotLib to allow
+us to easily polot data.
+
+To Import into Python:
+
+```
+>>> import pandas as pd
+```
+
+## Common Pandas Data Types
+
+`pd.Series` takes a list and a set of names and converts this into a column that
+cat be part of a data frame.
+
+`pd.DataFrame` takes a dictionary of `pd.Series` (columns) and creates a object
+that can be selected from and manipulated with a set of columns of named data.
+
+`pd.Panel` creates a dictionary of dataframes.  This would be like the set of
+sets that you have in Microsoft Excel.
+
+Every dataframe has named columns of data and indexes for each item.
+
+An example:
+
+```
+m4_include(pd1.py.nu)
+```
+
+Output
+
+```
+m4_include(pd1.txt)
+```
+
+There is easy inexorability between Pandas and other tools like Comma Separated Value files (CSV), Excel, HTML and SQL Databases.
+
+For example we have some car data.
+
+Converted into a format that is easy for Pandas to consume.
+
+And some code to read it and make a plot.
+
+```
+m4_include(read-xls-pd.py.nu)
+```
+
+![car-price-graph-1.png](car-price-graph-1.png)
+
+Some things from the program:
+
+| Pandas Calls | Description |
+|:----------------|-------------------------------------|
+| head()          | returns the top 5 rows in the dataframe object |
+| info()          | prints the summary of the dataframe |
+| describe()      | gives a nice overview of the main aggregated values over each column |
+| tail()          | returns the bottom 5 rows in the dataframe |
+

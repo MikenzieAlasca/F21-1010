@@ -1,16 +1,15 @@
-  1: 
-  2: # 5g + 17m = 30.5
-  3: # 8g + 22m = 41
-  4: 
-  5: # Can be solved in NumPy using
-  6: import numpy as np
-  7: 
-  8: coeffs  = np.array([[5, 17], [8, 22]])
-  9: depvars = np.array([30.5, 41])
- 10: solution = np.linalg.solve(coeffs, depvars)
- 11: 
- 12: # solution
- 13: print ( solution )
- 14: # array([1, 1.5])
- 15: # means g=1, m=1.5 or 1 gallon per hour for generator,
- 16: # 1.5 gallon per hour for main moter
+  1: # 5g + 17m = 30.5
+  2: # 8g + 22m = 41
+  3: 
+  4: # Can be solved in NumPy using
+  5: import numpy as np
+  6: 
+  7: coeffs  = np.array([[5, 17], [8, 22]])
+  8: depvars = np.array([30.5, 41])
+  9: solution = np.linalg.solve(coeffs, depvars)
+ 10: 
+ 11: # solution
+ 12: print ( solution )
+ 13: # array([1, 1.5])
+ 14: # means g=1, m=1.5 or 1 gallon per hour for generator,
+ 15: # 1.5 gallon per hour for main moter
