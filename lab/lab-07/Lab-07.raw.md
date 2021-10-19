@@ -12,11 +12,11 @@ This is taken from chapter 9-1 and 9-4 in the textbook.
 Make a class called Restaurant . The `__init__()` method for Restaurant
 should store two attributes: a `restaurant_name` and a `cuisine_type`.
 Make a method called `describe_restaurant()` that prints these two
-pieces of information, and a method called `open_restaurant()` that
+pieces of information, and a method called `restaurant_open_or_closed()` that
 prints a message indicating that the restaurant is open.
 
 Have a function that sets the boolean (True/False) flag that makes the restaurant
-open or closed.  Call this `set_is_open` and it should take a
+open or closed.  Call this `set_restaurant_status()` and it should take a
 single parameter of True or False.
 
 Make two instances of the restaurant using your class.  One with a
