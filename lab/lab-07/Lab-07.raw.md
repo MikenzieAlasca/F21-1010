@@ -29,6 +29,7 @@ works correctly.
 ## Class Example
 
 An example of a simple class with an automated test.
+A link to the example: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-07/lab-7-ref.txt](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-07/lab-7-ref.txt)
 
 ```
 m4_include(ex1.py)
