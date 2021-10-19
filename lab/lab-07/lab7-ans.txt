@@ -1,0 +1,43 @@
+class Restaurant:
+	def __init__(self, restaurant_name, cuisine_type):
+		print("")
+		#initialize a variable restaurant_name for the class Restaurant
+		#initialize a variable cuisine_type for the class Restaurant
+		#Create a variable is_open for this class and initialize it to False
+
+	def describe_restaurant(self):
+		print("")
+		#print the restaurant name and cuisine type
+
+	def restaurant_open_or_closed(self):
+		print("")
+		#if the restaurant is open print "Restaurant is open.". else print "Restaurant is closed.". 
+		#Use is_open variable of this class to check if the restaurant is open or closed.
+
+	def set_restaurant_status ( self, b ):
+		print("")
+		#Assign the value of b to the is_open variable of this class.
+
+# Automated Test
+if __name__ == "__main__":
+	print("")
+	# Create an Instance of the Class Restaurant with "Good Eats" as the reestaurant name and "French Food" as the cuisine type.
+	# Create an Instance of the Class Restaurant with "Family Dinter" as the reestaurant name and "Burgers and Fries" as the cuisine type.
+	# call the function describe_restaurant() for the first instance
+	# call the function open_resturant() for the first instance
+	# call the function describe_restaurant() for the second instance
+	# call the function open_resturant() for the second instance
+	
+	#set the first restaurant to open. Call the set_restaurant_status for the first instance with value "True".
+	#if the first restaurant is not open, then print ( "Error: Test 1: restaurant is_open not working as, expected" ). Check aginst the value is_open of the first instance if the restaurant is open or not.
+	
+	#set the first restaurant to closed. Call the set_restaurant_status for the first instance with value "False".
+	#if the first restaurant is not closed, then print ( "Error: Test 1: restaurant is_open not working as, expected" ). Check aginst the value is_open of the first instance if the restaurant is open or not.
+
+	#set the second restaurant to open. Call the set_restaurant_status for the second instance with value "True".
+	#if the first restaurant is not open, then print ( "Error: Test 1: restaurant is_open not working as, expected" ). Check aginst the value is_open of the first instance if the restaurant is open or not.
+	
+	#set the second restaurant to closed. Call the set_restaurant_status for the first intance with value "False".
+	#if the first restaurant is not closed, then print ( "Error: Test 1: restaurant is_open not working as, expected" ). Check aginst the value is_open of the first instance if the restaurant is open or not.
+
+
