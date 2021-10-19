@@ -34,7 +34,12 @@ An example of a simple class with an automated test.
 m4_include(ex1.py)
 ```
 
+The link to the starter file for this is: [https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-07/lab7-ans.txt](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-07/lab7-ans.txt)  
 
+```
+m4_include(lab7-ans.txt)
+
+```
 
 
 
