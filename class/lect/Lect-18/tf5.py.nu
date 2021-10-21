@@ -1,12 +1,16 @@
-  1: 
-  2: import tensorflow as tf
-  3: 
-  4: v3 = tf.constant(3)
+  1: import tensorflow as tf
+  2: 
+  3: v3 = tf.constant(3)
+  4: tf.print(v3)
   5: v5 = tf.constant(5)
-  6: b = tf.math.add(v3,v5)
-  7: print_output = tf.print(b)
-  8: 
-  9: v2 = tf.constant(2)
- 10: c = tf.math.multiply ( print_output, v2 )
- 11: 
- 12: print(c)
+  6: tf.print(v5)
+  7: 
+  8: b = tf.math.add(v3,v5)
+  9: print_output = tf.print(b)
+ 10: 
+ 11: v2 = tf.constant(2)
+ 12: # c = tf.math.multiply ( print_output, v2 )
+ 13: c = tf.math.multiply ( b, v2 )
+ 14: 
+ 15: print(c)
+ 16: tf.print(c)

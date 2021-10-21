@@ -21,16 +21,14 @@ print('Y_test:  '  + str(test_y.shape))
 
 # Show a sample of images in the dataset
 
-## for i in range(9):
-##     pyplot.subplot(330 + 1 + i)
-##     pyplot.imshow(train_X[i], cmap=pyplot.get_cmap('gray'))
-
-num = 15
-images = train_X[:num]
+num = 15        # 15 images
+images = train_X[:num]  # create slices of the data.
 labels = train_Y[:num]
 
-num_row = 3
-num_col = 5 # plot images
+num_row = 3     # Arrange as 3 rows of 5 images
+num_col = 5
+
+# plot images
 fig, axes = plt.subplots(num_row, num_col, figsize=(1.5*num_col,2*num_row))
 for i in range(num):
     ax = axes[i//num_col, i%num_col]

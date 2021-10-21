@@ -33,7 +33,6 @@ y = tf.Variable(tf.add(tf.multiply(a, x), b))
 print ( "result is:" )
 tf.print ( y )
 
-
 ```
 
 Elements are positionaly identifiable.  So A at i,j,k is `Ai,j,k`.

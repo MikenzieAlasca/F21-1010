@@ -8,4 +8,3 @@
   8: 
   9: print ( "result is:" )
  10: tf.print ( y )
- 11: 
