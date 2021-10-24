@@ -716,6 +716,42 @@ ol {
 
 <p>200pts - Due  Nov 1, 2021</p>
 
+<p>An example of a recursive definition is:</p>
+
+<pre><code>    sum(n) = { 0 if n &lt;= 0
+             { n + sum(n-1) if n &gt; 0
+</code></pre>
+
+<p>Then we can build a function that matches this.</p>
+
+<pre><code>  1: 
+  2: def recursive_sum ( n ):
+  3:     if n &lt;= 0:
+  4:         return 0
+  5:     return n + recursive_sum(n-1)
+  6: 
+  7: 
+  8: 
+  9: # Automated Test
+ 10: if __name__ == &quot;__main__&quot;:
+ 11:     n_err = 0
+ 12:     x = recursive_sum ( 5 )
+ 13:     if x !=  15:
+ 14:         n_err = n_err + 1
+ 15:         print ( &quot;Error: Test 1: sum not working, expected {} got {}&quot;.format (  15, x ) )
+ 16:     x = recursive_sum ( 0 )
+ 17:     if x != 0:
+ 18:         n_err = n_err + 1
+ 19:         print ( &quot;Error: Test 2: sum conversion not working, expected {} got {}&quot;.format ( 0, x ) )
+ 20: 
+ 21:     if n_err == 0 :
+ 22:         print ( &quot;PASS&quot; )
+ 23:     else:
+ 24:         print ( &quot;FAILED&quot; )
+ 25: 
+
+</code></pre>
+
 <p>Given our definition for a Fibonacci number</p>
 
 <pre><code>	fib(n) = { 0 : n = 0
@@ -723,7 +759,7 @@ ol {
              { fib(n-1) + fib(n-2)
 </code></pre>
 
-<p>Implement a recursive function that calculates this in python.  Supply a test.</p>
+<p>Implement a recursive function that calculates this in python.  Supply an automated test.</p>
 
 <p>Turn in your code.</p>
 

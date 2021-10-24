@@ -9,6 +9,28 @@ m4_include(./../../setup.m4)
 
 200pts - Due  Nov 1, 2021
 
+An example of a recursive definition is:
+
+```
+    sum(n) = { 0 if n <= 0
+             { n + sum(n-1) if n > 0
+```
+
+Then we can build a function that matches this.
+
+```
+m4_include(r_add.py.nu)
+```
+
+
+
+
+
+
+
+
+
+
 Given our definition for a Fibonacci number
 
 ```
@@ -17,7 +39,7 @@ Given our definition for a Fibonacci number
              { fib(n-1) + fib(n-2)
 ```
 
-Implement a recursive function that calculates this in python.  Supply a test.
+Implement a recursive function that calculates this in python.  Supply an automated test.
 
 Turn in your code.
    
