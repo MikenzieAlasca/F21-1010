@@ -728,6 +728,44 @@ ol {
 
 <div class="pagebreak"></div>
 
+<p>An example of a recursive addition</p>
+
+<p>Let&rsquo;s define the sum of values from 0 to n as</p>
+
+<pre><code>    sum(n) = { 0 if n &lt;= 0
+             { n + sum(n-1) if n &gt; 0
+</code></pre>
+
+<p>Then we can build a function that matches this.</p>
+
+<pre><code>  1: 
+  2: def recursive_sum ( n ):
+  3:     if n &lt;= 0:
+  4:         return 0
+  5:     return n + recursive_sum(n-1)
+  6: 
+  7: 
+  8: 
+  9: # Automated Test
+ 10: if __name__ == &quot;__main__&quot;:
+ 11:     n_err = 0
+ 12:     x = recursive_sum ( 5 )
+ 13:     if x !=  15:
+ 14:         n_err = n_err + 1
+ 15:         print ( &quot;Error: Test 1: sum not working, expected {} got {}&quot;.format (  15, x ) )
+ 16:     x = recursive_sum ( 0 )
+ 17:     if x != 0:
+ 18:         n_err = n_err + 1
+ 19:         print ( &quot;Error: Test 2: sum conversion not working, expected {} got {}&quot;.format ( 0, x ) )
+ 20: 
+ 21:     if n_err == 0 :
+ 22:         print ( &quot;PASS&quot; )
+ 23:     else:
+ 24:         print ( &quot;FAILED&quot; )
+ 25: 
+
+</code></pre>
+
 <p>What is a recursive function definition:</p>
 
 <p><img src="01re.png" alt="01re.png" /></p>

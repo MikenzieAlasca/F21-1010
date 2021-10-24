@@ -23,6 +23,22 @@ Why Recursion?
 
 <div class="pagebreak"></div>
 
+An example of a recursive addition
+
+Let's define the sum of values from 0 to n as
+
+```
+    sum(n) = { 0 if n <= 0
+             { n + sum(n-1) if n > 0
+```
+
+Then we can build a function that matches this.
+
+```
+m4_include(r_add.py.nu)
+```
+
+
 What is a recursive function definition:
 
 ![01re.png](01re.png)
