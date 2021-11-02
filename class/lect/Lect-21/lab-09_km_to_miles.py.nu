@@ -55,38 +55,40 @@
  55: print ( dataset.head() )
  56: 
  57: ############################### ###############################
- 58: 
- 59: # Next, we’ll convert the strings in the below columns into float values.
- 60: # Remember that we can only work with numerical values.
- 61: 
- 62: #  Year  Kilometers_Driven Fuel_Type Transmission Owner_Type  Mileage  Engine   Power  Price
- 63: # 1. Kilometers_Driven -> Miles_Driven
- 64: # 2. Milage is in kmpl (Km Per Leter) -> convert to Mi per Gal
- 65: 
- 66: dataset['Mileage'] = pd.Series([int(float(str(val))*2.3521458)
- 67:     for val in dataset['Mileage']], index = dataset.index)
- 68: dataset['Engine'] = pd.Series([float(str(val))
- 69:     for val in dataset['Engine']], index = dataset.index)
- 70: 
- 71: ## Lab 09 - TODO - for the column 'Power' in the dataset, convert it to a float 
- 72: ## Lab 09 - TODO - for the column 'Seats' in the dataset, convert it to a float 
- 73: ## Lab 09 - TODO - create the column 'Miles_Driven' from the column
- 74: ##                'Kilometers_Driven' by converting to a float and 
- 75: ##                 Multiplying by 0.621371, then convert to an integer so
- 76: ##                 that we don't have small fractional values.
- 77: ##
- 78: ##                 Example of Conversion in just code
- 79: ##                 x = "23.0"      # A string, with a number in it.
- 80: ##                 r = int(float(x)*0.621371)  
- 81: ##                     # Convert from string to float,
- 82: ##                     # Km to Mi, then back to an integer.
- 83: 
- 84: # Discard the Kilometers_Driven column.
- 85: dataset = dataset.drop(columns=['Kilometers_Driven'])
- 86: 
- 87: print ( dataset.head() )
+ 58: # Part 5 - 
+ 59: ############################### ###############################
+ 60: 
+ 61: # Next, we’ll convert the strings in the below columns into float values.
+ 62: # Remember that we can only work with numerical values.
+ 63: 
+ 64: #  Year  Kilometers_Driven Fuel_Type Transmission Owner_Type  Mileage  Engine   Power  Price
+ 65: # 1. Kilometers_Driven -> Miles_Driven
+ 66: # 2. Milage is in kmpl (Km Per Leter) -> convert to Mi per Gal
+ 67: 
+ 68: dataset['Mileage'] = pd.Series([int(float(str(val))*2.3521458)
+ 69:     for val in dataset['Mileage']], index = dataset.index)
+ 70: dataset['Engine'] = pd.Series([float(str(val))
+ 71:     for val in dataset['Engine']], index = dataset.index)
+ 72: 
+ 73: ## Lab 09 - TODO - for the column 'Power' in the dataset, convert it to a float 
+ 74: ## Lab 09 - TODO - for the column 'Seats' in the dataset, convert it to a float 
+ 75: ## Lab 09 - TODO - create the column 'Miles_Driven' from the column
+ 76: ##                'Kilometers_Driven' by converting to a float and 
+ 77: ##                 Multiplying by 0.621371, then convert to an integer so
+ 78: ##                 that we don't have small fractional values.
+ 79: ##
+ 80: ##                 Example of Conversion in just code
+ 81: ##                 x = "23.0"      # A string, with a number in it.
+ 82: ##                 r = int(float(x)*0.621371)  
+ 83: ##                     # Convert from string to float,
+ 84: ##                     # Km to Mi, then back to an integer.
+ 85: 
+ 86: # Discard the Kilometers_Driven column.
+ 87: dataset = dataset.drop(columns=['Kilometers_Driven'])
  88: 
- 89: # Save data to file so we can open in Excel
- 90: dataset.to_csv(path_or_buf="new-car-data.csv")
- 91: 
- 92: 
+ 89: print ( dataset.head() )
+ 90: 
+ 91: # Save data to file so we can open in Excel
+ 92: dataset.to_csv(path_or_buf="new-car-data.csv")
+ 93: 
+ 94: 

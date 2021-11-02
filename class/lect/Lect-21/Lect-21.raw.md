@@ -8,8 +8,10 @@ Let's take a close look at the code for data cleanup.
 1. Input
 2. Discarding nonexistent data. - The first cleanup step.
 3. Fixing Columns of data.
+4. Fix Strings.
 
-0. Generating on-hot-encoding
+5. Generating one-hot-encoding
+
 0. Some Graphs
 0. Saving data - Output
 
@@ -38,14 +40,22 @@ Get rid of Text in numeric fields.
 m4_include(lab-09_text_in_fields.py.nu)
 ```
 
-## Part 3 - Third cleanup.
+## Part 4 - Fix strings
 
 Convert numbers, get rid of more missing data.
-
 
 ```
 m4_include(lab-09_numbers_and_missing_data.py.nu)
 ```
+
+## Part 5 - Km to Miles (And 1st part of Lab Data Cleanup)
+
+This is the first part where you have some work to do in the data cleanup.
+
+```
+m4_include(lab-09_km_to_miles.py.nu)
+```
+
 
 
 
