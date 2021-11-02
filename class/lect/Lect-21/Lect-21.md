@@ -591,6 +591,8 @@ This is the third part where you have some work to do in the data cleanup.
 
 ## Your Code to start with for the lab.
 
+This code is in the lab pdf also - with a link to download your file.
+
 ```
   1: 
   2: import numpy as np

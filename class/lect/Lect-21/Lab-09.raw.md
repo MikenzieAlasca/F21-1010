@@ -11,6 +11,10 @@ Given the following code:
 m4_include(lab-09_start.py)
 ```
 
+And the datq
+
+[https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-21/train-data.csv](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-21/train-data.csv)
+
 Take the 3 sections with the TODO's and implement them.
 
 1. The conversion of columns from strings to float and from km to mi. Lines 62 to 73 in the file.

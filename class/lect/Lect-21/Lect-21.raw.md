@@ -84,6 +84,8 @@ m4_include(lab-09_plot_stuff.py.nu)
 
 ## Your Code to start with for the lab.
 
+This code is in the lab pdf also - with a link to download your file.
+
 ```
 m4_include(lab-09_start.py.nu)
 ```
