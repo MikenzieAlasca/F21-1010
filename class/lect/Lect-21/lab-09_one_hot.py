@@ -1,4 +1,5 @@
 
+
 import numpy as np
 import pandas as pd
 import re
@@ -79,6 +80,9 @@ print ( dataset.head() )
 dataset.to_csv(path_or_buf="new-car-data.csv")
 
 
+############################### ###############################
+# one hot
+############################### ###############################
 
 ## One-Hot the Fule_Type
 
@@ -108,16 +112,3 @@ print ( dataset.head() )
 # Save the data again - take a look at it.
 
 dataset.to_csv(path_or_buf="new-car-data2.csv")
-
-############################### ###############################
-# Plot some stuff.
-############################### ###############################
-
-
-dataset.plot(kind='scatter',x='Price',y='Year',color='blue')
-plt.show()
-
-## Lab - 09 - TODO - Plot Price v.s. Miles_Driven
-## Lab - 09 - TODO - Plot Price v.s. Power
-## Lab - 09 - TODO - Plot Price v.s. Milage
-## Lab - 09 - TODO - Plot Price v.s. Seats

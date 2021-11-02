@@ -56,6 +56,26 @@ This is the first part where you have some work to do in the data cleanup.
 m4_include(lab-09_km_to_miles.py.nu)
 ```
 
+## Part 6 - One hot encoding
+
+This is the second part where you have some work to do.
+
+```
+m4_include(lab-09_one_hot.py.nu)
+```
+
+## Part 7 - Plot some stuff.
+
+This is the third part where you have some work to do in the data cleanup.
+
+```
+m4_include(lab-09_plot_stuff.py.nu)
+```
+
+
+
+
+
 
 
 
