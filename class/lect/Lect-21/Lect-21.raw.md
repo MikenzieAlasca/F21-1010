@@ -18,11 +18,15 @@ Let's take a close look at the code for data cleanup.
 Your lab...
 Add in some sections - add some graphs.
 
+<div class="pagebreak"></div>
+
 ## Part 1 - read data.
 
 ```
 m4_include(lab-09_input.py.nu)
 ```
+
+<div class="pagebreak"></div>
 
 ## Part 2 - First cleanup.
 
@@ -32,6 +36,8 @@ Get rid of columns you don't need at all.  Get rid of missing data.
 m4_include(lab-09_first_cleanup.py.nu)
 ```
 
+<div class="pagebreak"></div>
+
 ## Part 3 - Second cleanup.
 
 Get rid of Text in numeric fields.
@@ -39,6 +45,8 @@ Get rid of Text in numeric fields.
 ```
 m4_include(lab-09_text_in_fields.py.nu)
 ```
+
+<div class="pagebreak"></div>
 
 ## Part 4 - Fix strings
 
@@ -48,6 +56,8 @@ Convert numbers, get rid of more missing data.
 m4_include(lab-09_numbers_and_missing_data.py.nu)
 ```
 
+<div class="pagebreak"></div>
+
 ## Part 5 - Km to Miles (And 1st part of Lab Data Cleanup)
 
 This is the first part where you have some work to do in the data cleanup.
@@ -56,6 +66,8 @@ This is the first part where you have some work to do in the data cleanup.
 m4_include(lab-09_km_to_miles.py.nu)
 ```
 
+<div class="pagebreak"></div>
+
 ## Part 6 - One hot encoding
 
 This is the second part where you have some work to do.
@@ -63,6 +75,8 @@ This is the second part where you have some work to do.
 ```
 m4_include(lab-09_one_hot.py.nu)
 ```
+
+<div class="pagebreak"></div>
 
 ## Part 7 - Plot some stuff.
 
@@ -81,6 +95,8 @@ m4_include(lab-09_plot_stuff.py.nu)
 
 
 
+
+<div class="pagebreak"></div>
 
 ## Your Code to start with for the lab.
 

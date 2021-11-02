@@ -30,6 +30,8 @@ Let's take a close look at the code for data cleanup.
 Your lab...
 Add in some sections - add some graphs.
 
+<div class="pagebreak"></div>
+
 ## Part 1 - read data.
 
 ```
@@ -61,6 +63,8 @@ Add in some sections - add some graphs.
  26: print ( dataset.head() )
 
 ```
+
+<div class="pagebreak"></div>
 
 ## Part 2 - First cleanup.
 
@@ -111,6 +115,8 @@ Get rid of columns you don't need at all.  Get rid of missing data.
 
 ```
 
+<div class="pagebreak"></div>
+
 ## Part 3 - Second cleanup.
 
 Get rid of Text in numeric fields.
@@ -159,6 +165,8 @@ Get rid of Text in numeric fields.
  41: print ( dataset.head() )
 
 ```
+
+<div class="pagebreak"></div>
 
 ## Part 4 - Fix strings
 
@@ -223,6 +231,8 @@ Convert numbers, get rid of more missing data.
  56: 
 
 ```
+
+<div class="pagebreak"></div>
 
 ## Part 5 - Km to Miles (And 1st part of Lab Data Cleanup)
 
@@ -325,6 +335,8 @@ This is the first part where you have some work to do in the data cleanup.
  94: 
 
 ```
+
+<div class="pagebreak"></div>
 
 ## Part 6 - One hot encoding
 
@@ -447,6 +459,8 @@ This is the second part where you have some work to do.
 114: dataset.to_csv(path_or_buf="new-car-data2.csv")
 
 ```
+
+<div class="pagebreak"></div>
 
 ## Part 7 - Plot some stuff.
 
@@ -588,6 +602,8 @@ This is the third part where you have some work to do in the data cleanup.
 
 
 
+
+<div class="pagebreak"></div>
 
 ## Your Code to start with for the lab.
 
