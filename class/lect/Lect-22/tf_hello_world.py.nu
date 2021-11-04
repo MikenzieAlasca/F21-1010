@@ -1,26 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Lecture 22 - TensorFlow Hello World
-
-## TensorFlow
-
-Hello World of Tensor Flow: from: [https://www.tensorflow.org/tutorials/quickstart/beginner](https://www.tensorflow.org/tutorials/quickstart/beginner)
-There are also 2 YouTube videos to watch: [https://www.tensorflow.org/tutorials](https://www.tensorflow.org/tutorials)
-
-```
   1: # Download and install the TensorFlow 2 package. Import TensorFlow into your program:
   2: 
   3: from __future__ import absolute_import, division, print_function, unicode_literals
@@ -54,6 +31,3 @@ There are also 2 YouTube videos to watch: [https://www.tensorflow.org/tutorials]
  31: model.fit(x_train, y_train, epochs=5)
  32: 
  33: model.evaluate(x_test,  y_test, verbose=2)
-
-```
-
