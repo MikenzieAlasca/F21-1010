@@ -18,6 +18,7 @@
 ## TensorFlow
 
 Hello World of Tensor Flow: from: [https://www.tensorflow.org/tutorials/quickstart/beginner](https://www.tensorflow.org/tutorials/quickstart/beginner)
+
 There are also 2 YouTube videos to watch: [https://www.tensorflow.org/tutorials](https://www.tensorflow.org/tutorials)
 
 ```
@@ -57,3 +58,37 @@ There are also 2 YouTube videos to watch: [https://www.tensorflow.org/tutorials]
 
 ```
 
+## What is `__future__`
+
+This changes the behavior of Python to have additional capabilities.
+
+```
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+x_train, x_test = x_train / 255.0, x_test / 255.0
+```
+
+## What the data looks like
+
+![minst-data.png](minst-data.png)
+
+Or run the program that generates this.
+
+```
+  1: # example of loading and plotting the mnist dataset
+  2: from tensorflow.keras.datasets.mnist import load_data
+  3: from matplotlib import pyplot
+  4: # load dataset
+  5: (trainX, trainy), (testX, testy) = load_data()
+  6: # summarize loaded dataset
+  7: print('Train: X=%s, y=%s' % (trainX.shape, trainy.shape))
+  8: print('Test: X=%s, y=%s' % (testX.shape, testy.shape))
+  9: # plot first few images
+ 10: for i in range(25):
+ 11:     # define subplot
+ 12:     pyplot.subplot(5, 5, i+1)
+ 13:     # plot raw pixel data
+ 14:     pyplot.imshow(trainX[i], cmap=pyplot.get_cmap('gray'))
+ 15: # show the figure
+ 16: pyplot.show()
+
+```
