@@ -1,0 +1,27 @@
+2019-10-15 08:31:17.641641: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-10-15 08:31:17.651335: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7ff762c5fc90 executing computations on platform Host. Devices:
+2019-10-15 08:31:17.651350: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+Train on 60000 samples
+Epoch 1/10
+60000/60000 [==============================] - 2s 33us/sample - loss: 0.4935 - accuracy: 0.8274
+Epoch 2/10
+60000/60000 [==============================] - 2s 30us/sample - loss: 0.3743 - accuracy: 0.8651
+Epoch 3/10
+60000/60000 [==============================] - 2s 28us/sample - loss: 0.3375 - accuracy: 0.8774
+Epoch 4/10
+60000/60000 [==============================] - 2s 28us/sample - loss: 0.3095 - accuracy: 0.8867
+Epoch 5/10
+60000/60000 [==============================] - 2s 28us/sample - loss: 0.2949 - accuracy: 0.8909
+Epoch 6/10
+60000/60000 [==============================] - 2s 29us/sample - loss: 0.2799 - accuracy: 0.8953
+Epoch 7/10
+60000/60000 [==============================] - 2s 29us/sample - loss: 0.2665 - accuracy: 0.9018
+Epoch 8/10
+60000/60000 [==============================] - 2s 29us/sample - loss: 0.2571 - accuracy: 0.9045
+Epoch 9/10
+60000/60000 [==============================] - 2s 29us/sample - loss: 0.2495 - accuracy: 0.9074
+Epoch 10/10
+60000/60000 [==============================] - 2s 29us/sample - loss: 0.2395 - accuracy: 0.9112
+10000/1 - 0s - loss: 0.2682 - accuracy: 0.8832
+
+Test accuracy: 0.8832

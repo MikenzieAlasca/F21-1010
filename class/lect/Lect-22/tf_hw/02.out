@@ -1,0 +1,17 @@
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+11493376/11490434 [==============================] - 1s 0us/step
+2019-10-15 06:59:06.582269: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-10-15 06:59:06.598215: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fe54a8321a0 executing computations on platform Host. Devices:
+2019-10-15 06:59:06.598231: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+Train on 60000 samples
+Epoch 1/5
+60000/60000 [==============================] - 2s 33us/sample - loss: 0.2915 - accuracy: 0.9155
+Epoch 2/5
+60000/60000 [==============================] - 2s 27us/sample - loss: 0.1411 - accuracy: 0.9579
+Epoch 3/5
+60000/60000 [==============================] - 2s 27us/sample - loss: 0.1025 - accuracy: 0.9686
+Epoch 4/5
+60000/60000 [==============================] - 2s 27us/sample - loss: 0.0875 - accuracy: 0.9728
+Epoch 5/5
+60000/60000 [==============================] - 2s 27us/sample - loss: 0.0728 - accuracy: 0.9774
+10000/1 - 0s - loss: 0.0356 - accuracy: 0.9764
