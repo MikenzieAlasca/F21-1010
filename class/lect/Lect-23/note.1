@@ -1,0 +1,303 @@
+https://vinvashishta.substack.com/
+
+Zillow Just Gave Us A Look At Machine Learning's Future It's put
+up or shut up time for Data Science teams. When the business depends
+on our work for revenue growth, success is expected. Failure is
+fatal.
+
+Vin Vashishta Nov 4 5 12 Zillow’s stock is down over 30% in 5 days
+and their CEO put a lot of blame on the Data Science team. That’s
+eye opening for our industry. 25% of their staff just got laid off
+in the fallout. They closed an entire business unit, something
+Zillow tied their revenue growth to, and a major investor walked
+away.
+
+I’ve been predicting this type of scenario for a couple of years
+now, but even I didn’t expect something this catastrophic. I don’t
+know how their current CEO survives this.
+
+Think about that. Models failed in production. As a result, 25% of
+Zillow employees lost their jobs and Zillow lost 30% of its value
+in 5 days. This is the largest and most public failure, but not the
+first. It also won’t be the last. What happened?
+
+Zillow has home value estimation models. They started out showing
+users an estimate of home value to help them decide if they were
+getting a good deal. From the earliest days, real estate agents and
+experts were vocal about estimate quality. The company stood by
+their models and inference served to users.
+
+At the end of the day, Zillow didn’t lose any money if their estimates
+were off by a few percentage points. Especially as home prices spent
+the better part of 5 years on a massive run up, no one really noticed
+inaccuracies. This overconfidence setup what came next.
+
+Zillow believed their inference quality was high enough to support
+a new business model. They’d start buying and flipping homes. It’s
+a simple use case. The homeowner comes to the platform. Zillow uses
+its models to predict 2 things, a current price the homeowner will
+accept and the price of the home in 6 months. If the profit margin
+was high enough, the platform offered to buy the home at the current
+predicted price.
+
+The business knew the margin of error was very small. They called
+it out early in the planning process. The models had to be exceptionally
+accurate for this business to be viable. The prediction of current
+price needed to attract a significant percentage of sellers. The 6
+month price prediction needed to be dead on to generate the expected
+profit margins.
+
+The CEO said repeatedly, there was a narrow window of accuracy that
+would create a sustainable business. Everything else would result
+in failure. This is the connection between model metrics and business
+metrics. Small inaccuracy ranges could cause cascading failure.
+
+·         Too low on the initial home value estimations and homeowners would not accept the offer.
+
+·         Too high on the initial estimation, margins would not be optimized.
+
+·         Miss on the customer behavioral model, and homeowners would not accept the offers at a high enough rate.
+
+·         Too low on the 6 month home value prediction and opportunities would be missed.
+
+·         Too high on the 6 month estimate and margins would not be optimized or offers would be extended when they shouldn’t be.
+
+The street warned of issues with the new business model. It was
+predicated upon the assumption that housing prices would continue
+to climb without interruption at a stable rate. They said no
+investment does that. The domain experts warned of issues with the
+predictions. The business plowed ahead anyway.
+
+I have been there. In fact, I have almost put my clients in Zillow’s
+shoes. My background in software quality has saved me from calamity
+over the last 10 years. I have learned through watching hard failure
+that the simulation used to test any complex system must be dead
+on or every test after is unreliable. All the performance metrics
+gathered from those tests are unreliable. The resulting models are
+unreliable.
+
+The simulations and tests Zillow ran were incomplete. The assumption
+of stability is baked into most statistical models. In real world
+complex systems involving people making decisions, stability is
+NEVER an assumption that will hold in the long run. As I said in a
+previous post about experiments, these types of models will pass
+early validation, even using statistical experimental methods, then
+fail suddenly and catastrophically.
+
+The problem is in the dynamics of real world data. The distribution
+changes. Training data’s distributions have distributions. The
+result is a probability of a starting distribution being part of
+serving accurate inference. I think of this in terms of inference
+spaces. When I advise Data Scientists to understand Topology and
+Differential Geometry, this is why.
+
+A distribution of distributions can be modeled as deformations of
+the inference space. Pull back the covers on large scale deep
+learning models and this is one reason overfitting creates miraculous
+accuracy. Large scale models have a primitive understanding of the
+deformations leading to a degree of generalization. The more the
+model learns about how the inference space changes over time, the
+better it generalizes.
+
+For that to happen, data needs to be gathered which seems disconnected
+from the outcomes being predicted. The data used to build the initial
+models where there is some relationship to outcome, is itself built
+from a system. Predicting changes in that system allows Data
+Scientists to understand the dynamic processes that generate their
+training data and could cause its distributions to change.
+
+This requires experimentation. How do we know what data to gather
+if the relationships between features and outcomes is obscured by
+distance? We run experiments to find these features and validate
+the distant relationships to outcomes.
+
+This creates a chain of models, and it gets ugly to maintain. Enter
+causal modeling vs large scale deep learning models. One camp
+contends these problems can be overcome by throwing extraordinary
+datasets at deep learning models. The model will work out the complex
+interactions. It will handle multiple systems, their interactions,
+and emergent behaviors within the layers.
+
+The other camp points out the long list of large scale deep learning
+model failures and flaws. They offer causal methods as a way forward
+although no one has a complete grasp on efficiently doing all the
+work necessary to support a causal model (creation, implementation,
+deployment, and support).
+
+The resources necessary to follow either approach are beyond the
+reach of all but the largest, most mature tech players. I have built
+complex pricing models with both methodologies. It’s expensive.
+
+The tooling and automation required to execute is a large scale
+project in and of itself. There is a massive tools gap here and
+custom built is the only way to go. Models need to be built to
+recommend data to be gathered and hypothesis to test. The distance
+between intervention and outcome makes it difficult for us to design
+experiments. Sifting through the data necessary to guess at those
+relationships is not something people can manually do in business
+timelines.
+
+I have had to work with teams to automate the process of running
+multiple model architectures against each other with several different
+initial feature sets and initial model states. The system sends the
+outputs from each run to another model that filters in promising
+results for further study. As you can imagine, there are thousands
+of dead ends for every promising lead. Iteration times need to be
+reduced to days. Automation is the only option and there is no off
+the shelf experiment management system with this type of functionality.
+
+Feature stores need to recommend features which could improve model
+accuracy and feed into an experiment management system. They need
+to provide data discovery capabilities to support building a data
+catalogue. Again, there is a gap in off the shelf products.
+
+I have oversimplified and glossed over a lot here that I will likely
+explore in future posts. My point is to expose the complexity rather
+than comprehensively detail the problems and solutions.
+
+The review process is grueling. Even with automation, the data
+gathering and experimentation required is extensive. There are no
+shortcuts. Most projects are either unfeasible or cannot be justified
+by significant ROI. Just building a team who can do this means
+throwing a lot of money at people.
+
+Those investments must be sustainable and the only way to support
+them is through revenue growth. Machine Learning capabilities and
+infrastructure are recurring and increasing costs, not a onetime
+cost. The business model must be built to monetize machine learning.
+
+It’s not just hard to execute on projects. It’s hard to pull the
+pieces together to make execution possible. Harder to make success
+likely. Companies like Amazon, Facebook, and Google abandoned their
+early efforts for all these reasons. However, they quickly realized
+that for them to sustain their growth trajectories, they’d have to
+figure it out.
+
+Companies who compete with them have followed. While no one saw
+COVID coming, some saw the impacts early on. In February and March
+2020, 2 of my clients saw the changes in early chain models which
+indicated the instabilities to come. As a result, we studied the
+data and retrained those models to prevent impacts to late chain
+models. We caught the failure before it impacted pricing model
+stability. Zillow didn’t.
+
+Inflation was another example. Most of my clients have been studying
+the impacts of our current inflationary cycle on pricing for over
+2 years. Their models are ready, and they’ve already trained their
+customers to be less sensitive to price increases caused by inflation.
+They understand the behavioral component of pricing and can PREPARE.
+Why?
+
+The coming inflation cycle was obvious. The fact that it could
+impact buying behaviors was obvious. A model that could explain
+what to do about it is the competitive advantage. Price sensitivity’s
+driving forces and how to change them is the competitive advantage.
+
+It’s a chain. Price->Inflation->Customer Behaviors->Churn->Price
+Sensitivity->Customer Perception Dynamics. With a model handling
+all that complexity, the complete picture is comprehensible, and
+the best courses of action are easier to evaluate. For over a year
+now companies have been preparing their customers. Zillow didn’t.
+
+As a result, Zillow didn’t realize they needed to prepare their
+customers for the new business model. Their machine learning models
+were disconnected from their customers. Their pricing predictions
+were not within the margin of error. Customers only accepted Zillow’s
+offers 5% of the time. 95% of customers were unserved and a substantial
+number of them were unsatisfied. Failure here was impacting Zillow’s
+core business model as well as the new one.
+
+Zillow’s estimates of 6 month home values were not modified in
+enough time to minimize the impacts of COVID and their margins were
+outside the narrow range the business model needed to succeed. They
+realized events impacting stability could happen again and the
+business lacked the capabilities to accurately predict them.
+
+I’m pretty sure they saw the cost of addressing that shortcoming
+and could not justify it based on the new business model’s revenue
+potential. They have an exceptionally talented Data Science team
+who likely presented a plan outlining everything necessary to
+succeed. The timeline would have been too long and the price tag
+too high.
+
+The business model could not be supported fast enough to stop the
+losses. The business would have incurred a large up front expense
+and sustained inconsistent returns for an indefinite amount of time.
+As a business, you cannot think that’s the right course of action
+no matter how painful the alternative is.
+
+Zillow had a business model which could monetize machine learning.
+They failed because they overestimated their capabilities and
+underestimated the complexity of executing.
+
+You know what happened next and the fallout. The CEO points directly
+to the failure of their Data Science team as the root cause. Their
+investors aren’t buying it and I don’t either. Zillow’s Data Science
+team is excellent. The business knew the risks and ignored expert
+advice. The initial rollout should have been far more limited and
+cautious.
+
+The Data Science team didn’t go to the lengths necessary to support
+their models. That was their failing. However, the business is
+ultimately responsible for betting the farm without demanding a
+real world track record to support those models. Their quest for
+cheap, quick growth relying on unproven technology is an old story
+of tragedy. I don’t see their senior leadership surviving this
+intact.
+
+For Data Scientists, there are several lessons. You’d better
+understand the science before taking on significant projects. When
+revenue starts getting booked against Machine Learning projects,
+model reliability is critical. Research methodology is essential.
+When revenue growth starts being built around Machine Learning
+capabilities, those capabilities need to be comprehensive. The body
+of evidence supporting core models needs to be substantial. Even
+when the burden of accountability rests firmly on senior leadership,
+it’s the Data Science team’s jobs that are on the line.
+
+For businesses, the lesson is sobering. Zillow is at the top 10%
+of Machine Learning maturity and they missed. Luckily, their survival
+did not depend on this business model, and they will walk away with
+the benefits of lessons learned. It’s unlikely they fail a second
+time, and their future growth will come from those hard lessons.
+
+Legacy business models are working to transform and compete in the
+Machine Learning driven competitive landscape. Their survival does
+depend on new business models because their existing model is no
+longer viable. For them, missing the same way means they go out of
+business.
+
+Their challenge is extreme. Turn a weakness, machine learning
+capabilities, into a strength. Find a new business model that
+monetizes what is currently a weakness. Build out Machine Learning
+capabilities and infrastructure while transforming the business at
+the same time. The pitfall? The current Data Science team who
+delivers efficiency projects and supporting features now is not the
+same team who will deliver models reliable enough to support the
+updated business model. Legacy companies will need to execute better
+than a very mature business could.
+
+All this must be done while returns from the current business model
+decline. The up front investment is being sustained by stagnating
+revenues. The new business model will take time to become cash
+positive and sustaining losses for even a year is difficult. It
+takes discipline and belief to keep an entire business aligned with
+a massive change that is not immediately profitable.
+
+Businesses have put off making the jump but now understand the
+imperative. The next 3 years will see more Zillow like stories but
+unlike Zillow, those stories will end with the business in bankruptcy.
+
+This is the direction of our field for the next 5 years. The
+opportunities are huge because we will finally be living up to some
+of our hype and delivering in a way turns businesses around. It’s
+fun to be the superhero. However, don’t promise to deliver if you
+can’t. The cost of failure is your job and a significant career
+setback. For Data Scientists and businesses, this is win or die.
+
+
+
+
+
+-------------- Philip Learn -----------------------------------------------------
+https://realpython.com/sentiment-analysis-python/
