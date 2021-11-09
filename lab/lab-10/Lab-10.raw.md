@@ -5,7 +5,7 @@ m4_include(./../../setup.m4)
 
 Given the following code:
 
-[https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-21/lab-09_start.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/class/lect/Lect-21/lab-09_start.py)
+[https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-10/shirt_or_boot.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-10/shirt_or_boot.py)
 
 ```
 m4_include(shirt_or_boot.py)
