@@ -125,8 +125,30 @@ The article on this:
 
 Or when the dog is walking around in your house and not set off the alarm.
 
+The Github for an example animal detector:
 
-## Shoplifting Prevention / Detection
+[https://github.com/gaiar/animal-detector/tree/dev](https://github.com/gaiar/animal-detector/tree/dev)
+
+and a "medium" paywalled article on it:
+
+[https://towardsdatascience.com/detecting-animals-in-the-backyard-practical-application-of-deep-learning-c030d3263ba8](https://towardsdatascience.com/detecting-animals-in-the-backyard-practical-application-of-deep-learning-c030d3263ba8)
+
+
+
+
+## Generation of Fake Faces
+
+It used to be true that if you had an image of a person that you probably had
+a real live perosn:  How about this:
+
+![fake-person.png](fake-person.png)
+
+
+This is not a real person.  You can buy images like this by the thousands!
+And the source code is available on github.com!
+
+
+
 
 ## Maps and Routing - Uber / Google-Maps / Apple-Maps / Waymo-Self driving - routing.
 

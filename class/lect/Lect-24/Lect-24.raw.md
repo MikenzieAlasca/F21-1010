@@ -121,9 +121,34 @@ and a "medium" paywalled article on it:
 
 [https://towardsdatascience.com/detecting-animals-in-the-backyard-practical-application-of-deep-learning-c030d3263ba8](https://towardsdatascience.com/detecting-animals-in-the-backyard-practical-application-of-deep-learning-c030d3263ba8)
 
-## Shoplifting Prevention / Detection
+
+
+
+## Generation of Fake Faces
+
+It used to be true that if you had an image of a person that you probably had
+a real live perosn:  How about this:
+
+![fake-person.png](fake-person.png)
+
+
+This is not a real person.  You can buy images like this by the thousands!
+And the source code is available on github.com!
+
+
+
 
 ## Maps and Routing - Uber / Google-Maps / Apple-Maps / Waymo-Self driving - routing.
+
+Lots of stuff is based on using ML to optimize transportation.
+
+Routing is one.  Google maps.
+
+Dynamic pricing - uber, lyft etc.
+
+
+## Deep Fakes
+
 
 
 ## Credits
