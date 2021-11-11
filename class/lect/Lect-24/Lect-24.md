@@ -152,6 +152,25 @@ And the source code is available on github.com!
 
 ## Maps and Routing - Uber / Google-Maps / Apple-Maps / Waymo-Self driving - routing.
 
+Lots of stuff is based on using ML to optimize transportation.
+
+Routing is one.  Google maps.
+
+Dynamic pricing - uber, lyft etc.
+
+
+## Deep Fakes
+
+Fake of Obama.
+
+Detection of Deep Fakes.
+
+[deepfake-detect.com site](deepfake-detect.com.png)
+
+And the source:
+
+[https://github.com/aaronchong888/DeepFake-Detect](https://github.com/aaronchong888/DeepFake-Detect)
+
 
 ## Credits
 

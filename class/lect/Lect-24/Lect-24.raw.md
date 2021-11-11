@@ -149,6 +149,15 @@ Dynamic pricing - uber, lyft etc.
 
 ## Deep Fakes
 
+Fake of Obama.
+
+Detection of Deep Fakes.
+
+[deepfake-detect.com site](deepfake-detect.com.png)
+
+And the source:
+
+[https://github.com/aaronchong888/DeepFake-Detect](https://github.com/aaronchong888/DeepFake-Detect)
 
 
 ## Credits
