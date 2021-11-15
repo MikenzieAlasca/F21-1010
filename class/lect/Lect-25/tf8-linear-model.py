@@ -71,5 +71,3 @@ print("Average test loss: ", np.average(training_history.history['loss']))
 
 ## Save our trained model
 model.save ( "./save/model.h5" )
-
-

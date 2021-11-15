@@ -71,5 +71,3 @@
  71: 
  72: ## Save our trained model
  73: model.save ( "./save/model.h5" )
- 74: 
- 75: 
