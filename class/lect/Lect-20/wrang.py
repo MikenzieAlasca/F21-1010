@@ -43,8 +43,7 @@ dataset = dataset.reset_index(drop=True)
 print ( dataset.head() )
 
 
-dataset['Mileage'] = pd.Series([re.sub('[^.0-9]', '',
-    str(val)) for val in dataset['Mileage']], index = dataset.index)
+dataset['Mileage'] = pd.Series([re.sub('[^.0-9]', '', str(val)) for val in dataset['Mileage']], index = dataset.index)
 dataset['Engine'] = pd.Series([re.sub('[^.0-9]', '',
     str(val)) for val in dataset['Engine']], index = dataset.index)
 dataset['Power'] = pd.Series([re.sub('[^.0-9]', '',

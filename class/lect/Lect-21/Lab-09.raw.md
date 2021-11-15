@@ -1,5 +1,5 @@
 
-m4_include(../../../setup.m4)
+m4_include(./../../setup.m4)
 
 # Lab 09 - Finish the data cleanup.
 

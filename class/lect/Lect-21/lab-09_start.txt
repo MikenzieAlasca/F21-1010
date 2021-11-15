@@ -59,10 +59,6 @@ dataset['Mileage'] = pd.Series([int(float(str(val))*2.3521458)
 dataset['Engine'] = pd.Series([float(str(val))
     for val in dataset['Engine']], index = dataset.index)
 
-dataset['Power'] = pd.Series([float(str(val))
-    for val in dataset['Power']], index = dataset.index)
-dataset['Seats'] = pd.Series([float(str(val))
-    for val in dataset['Seats']], index = dataset.index)
 ## Lab 09 - TODO - for the column 'Power' in the dataset, convert it to a float 
 ## Lab 09 - TODO - for the column 'Seats' in the dataset, convert it to a float 
 ## Lab 09 - TODO - create the column 'Miles_Driven' from the column
