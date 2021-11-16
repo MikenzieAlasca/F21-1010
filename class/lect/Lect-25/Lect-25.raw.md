@@ -74,7 +74,6 @@ Key Terms: Linear Regression, L-Squared, Minimization of Loss
 
 
 
-
 ## Linear Model Example - Gradient Decent
 
 Gradient Decent - this has a "tunable" learning rate parameter.

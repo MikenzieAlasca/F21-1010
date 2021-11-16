@@ -14,7 +14,7 @@
 
 # Lecture 21 - Machine Learning Models
 
-[https://www.youtube.com/watch?v=cQ54GDm1eL0](https://www.youtube.com/watch?v=cQ54GDm1eL0)
+
 
 
 ## Two types of machine learning
@@ -80,17 +80,6 @@ Key Terms: Linear Regression, L-Squared, Minimization of Loss
 
 
 
-At some core level it all comes down to a function and finding 
-the minimums in that function.  There is no "magic"  way to get
-to the right value for this - some experience and some trial and 
-error.
-
-Too fast:
-
-
-Or just right:
-
-
 
 
 
@@ -141,6 +130,16 @@ This runs into the problem - if I have 10,000,000 input images and I guess it ta
 forever to train.  There is good reason to believe that you can guess/train to figure
 out the "learning rate" on 10 to 1000 for a data size and then use this on the full
 set of data.
+
+## Over fitting
+
+In the real world.
+
+![https://danluu.com/car-safety/](https://danluu.com/car-safety/)
+
+
+
+
 
 ## Learn Based on a Linear Model
 
