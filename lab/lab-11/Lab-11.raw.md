@@ -22,7 +22,7 @@ So the data looks like:
 
 
 The code:
-[github.com](https://github.com)
+[https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-11/linear1.py](https://github.com/Univ-Wyo-Education/F21-1010/blob/main/lab/lab-11/linear1.py)
 
 ```
 m4_include(linear1.py.nu)
