@@ -12,9 +12,10 @@ plt.style.use('seaborn-whitegrid')
 import numpy as np
 
 print("TensorFlow version: ", tf.__version__)
-assert version.parse(tf.__version__).release[0] >= 2, "This notebook requires TensorFlow 2.0 or above."
+assert version.parse(tf.__version__).release[0] >= 2,
+    "This notebook requires TensorFlow 2.0 or above."
 
-########################################################################33
+#######################################################################34
 
 data_size = 1000
 # 80% of the data is for training.
@@ -41,7 +42,7 @@ plt.show()
 # input("Press Enter to continue...")
 # exit(0)
 
-########################################################################33
+#######################################################################33
 
 logdir = "logs/scalars/" + datetime.now().strftime("%Y%m%d-%H%M%S")
 tensorboard_callback = keras.callbacks.TensorBoard(log_dir=logdir)

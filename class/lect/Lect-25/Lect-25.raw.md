@@ -135,6 +135,7 @@ In the real world.
 m4_include(tf8-linear-model.py.nu)
 ```
 
+<div class="pagebreak"></div>
 
 ## A runner that lets us predict
 
@@ -144,6 +145,5 @@ m4_include(tf9.py.nu)
 
 ![Figure-1.png](Figure-1.png)
 
-## Budgeting
 
 
