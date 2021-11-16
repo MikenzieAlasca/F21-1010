@@ -792,7 +792,16 @@ if it is or is not spam.</p>
 
 <p>Key Terms: Linear Regression, L-Squared, Minimization of Loss</p>
 
-<h2>Linear Model Example</h2>
+<p>At some core level it all comes down to a function and finding
+the minimums in that function.  There is no &ldquo;magic&rdquo;  way to get
+to the right value for this - some experience and some trial and
+error.</p>
+
+<p>Too fast:</p>
+
+<p>Or just right:</p>
+
+<h2>Linear Model Example - Gradient Decent</h2>
 
 <p>Gradient Decent - this has a &ldquo;tunable&rdquo; learning rate parameter.</p>
 
@@ -808,9 +817,21 @@ the next point as <code>5.5*0.02</code> or .11 away from the current point.</p>
 
 <p>Example of Too Big</p>
 
+<p><img src="too-big.png" alt="too-big.png" /></p>
+
 <p>Example of Too Small</p>
 
+<p><img src="too-small.png" alt="too-small.png" /></p>
+
 <p>Example of Just Right</p>
+
+<p><img src="just-right.png" alt="just-right.png" /></p>
+
+<p>Nothing says that you get the &ldquo;right&rdquo; solution either.</p>
+
+<p>Example - Interactive 3d.</p>
+
+<p><a href="https://blog.skz.dev/gradient-descent">https://blog.skz.dev/gradient-descent</a></p>
 
 <p>There is math in this - The ideal learning rate in 2D is 1/(f(x))&rdquo; - 2nd derivative
 of the function.   In more dimensions it is the second partial derivative.   The problem
