@@ -710,5 +710,81 @@ ol {
 
 <h1>Simple Linear Model</h1>
 
+<p>The example linear fit model uses an equation of</p>
+
+<pre><code>y = 2x -1 
+</code></pre>
+
+<p>So the data looks like:</p>
+
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>y</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>-1</td>
+<td>-3</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>-1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+
+<p>The code:
+<a href="https://github.com">github.com</a></p>
+
+<pre><code>  1: import tensorflow as tf
+  2: import numpy as np
+  3: from tensorflow import keras
+  4: model = tf.keras.Sequential([keras.layers.Dense(units=1, input_shape=[1])])
+  5: model.compile(optimizer='sgd', loss='mean_squared_error')
+  6: 
+  7: # y = 2x -1 
+  8: xs = np.array([-1.0,  0.0, 1.0, 2.0, 3.0, 4.0], dtype=float)
+  9: ys = np.array([-3.0, -1.0, 1.0, 3.0, 5.0, 7.0], dtype=float)
+ 10: 
+ 11: model.fit(xs, ys, epochs=500)
+ 12: 
+ 13: print(&quot;expect output of approx. 19.0&quot;)
+ 14: print(model.predict([10.0]))
+
+</code></pre>
+
+<p>Create a new linear fit set of data with the equation</p>
+
+<pre><code>y = 4x - 6
+</code></pre>
+
+<p>Update the data and re-train the model to use the new set of
+data.  Then do a perdition with it.</p>
+
 </div>
 
