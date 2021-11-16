@@ -123,7 +123,7 @@ set of data.
 
 In the real world.
 
-![https://danluu.com/car-safety/](https://danluu.com/car-safety/)
+[https://danluu.com/car-safety/](https://danluu.com/car-safety/)
 
 
 
